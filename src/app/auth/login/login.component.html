@@ -1,0 +1,23 @@
+
+<div class="container">
+  <form class="mt-5" [formGroup]="loginForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" class="form-control" formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" class="form-control" formControlName="password">
+    </div>
+    <div class="d-flex flex-column">
+      <button class="btn btn-primary mb-3" (click)="login()">Login</button>
+<!--      <button class="btn btn-primary mb-3" (click)="stop()">Stop</button>-->
+      <button type="button" class="btn btn-success" routerLink="/register">Register</button>
+      <a routerLink="/forgot-password">Forgot Password</a>
+    </div>
+  </form>
+
+</div>
+
+<!--<app-register></app-register>-->
