@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 import { AuthService } from '../../core/services/auth.service';
 // import { Subscription } from 'rxjs';
 
@@ -24,6 +23,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(
     private authService: AuthService,
     private fb: FormBuilder,
+    private router: Router
     // private router: Router
   ) { }
 
@@ -34,9 +34,22 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   async login() {
-    this.count ++;
-    this.authService.dataStream$.next(this.count);
-    this.authService.dataStreamTT$.next(this.count);
+    const data = this.loginForm.value;
+    // this.authService.login(data.email, data.password).subscribe(result=>{
+    //   if(result) {
+    //     this.router.navigate(['home'])
+    //   }
+    // })
+
+    //For temporary without API
+    if (data.email && data.password){
+      await this.router.navigate(['home']);
+    }
+    
+    // this.count ++;
+    // this.authService.dataStream$.next(this.count);
+    // this.authService.dataStreamTT$.next(this.count);
+    // console.log(this.count)
     // try {
     //   this.isLoading = true;
     //   const data = this.loginForm.value;
