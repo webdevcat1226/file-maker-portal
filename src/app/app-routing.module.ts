@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 // import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 
 const routes: Routes = [
@@ -13,6 +14,8 @@ const routes: Routes = [
   }, {
     path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   }, {
+    path: 'forgot-password', component: ForgotPasswordComponent
+  }, {
     path: '**', redirectTo: 'login'
   }
 ];
@@ -21,4 +24,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
