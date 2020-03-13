@@ -3,19 +3,19 @@
   <form class="mt-5" [formGroup]="loginForm">
     <div class="form-group">
       <label for="email">Email</label>
-      <input id="email" type="email" class="form-control" formControlName="email">
+      <input id="email" type="email" class="form-control badge-primary" formControlName="email">
     </div>
 
     <div class="form-group">
       <label for="password">Password</label>
-      <input id="password" type="password" class="form-control" formControlName="password">
+      <input id="password" type="password" class="form-control badge-primary" formControlName="password">
     </div>
     <div class="d-flex flex-column">
-      <button class="btn btn-primary mb-3" (click)="login()">Login</button>
+      <button class="btn btn-primary mb-3 badge-pill" (click)="login()">Login</button>
 <!--      <button class="btn btn-primary mb-3" (click)="stop()">Stop</button>-->
-      <button type="button" class="btn btn-success mb-3" routerLink="/register">Register</button>
+      <button type="button" class="btn btn-success mb-3 badge-pill" routerLink="/register">Register</button>
 <!--      <a class="text-center" routerLink="/forgot-password">Forgot Password</a>-->
-      <button type="button" class="btn btn-link" routerLink="/forgot-password">Forgot Password ?</button>
+      <button type="button" class="btn btn-link badge-pill" routerLink="/forgot-password">Forgot Password ?</button>
     </div>
   </form>
 

@@ -43,9 +43,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     //For temporary without API
     if (data.email && data.password){
-      await this.router.navigate(['home']);
+      await this.router.navigate(['home/about']);
     }
-    
+
     // this.count ++;
     // this.authService.dataStream$.next(this.count);
     // this.authService.dataStreamTT$.next(this.count);
