@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { AuthRoutingModule } from './auth-routing.module';
+import { UiKitModule } from '../common/ui-kit/ui-kit.module';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -24,7 +25,8 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    UiKitModule
   ]
 })
 export class AuthModule {

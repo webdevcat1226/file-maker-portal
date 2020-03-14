@@ -12,7 +12,10 @@
   </div>
 
   <div class="d-flex flex-column mt-5">
-    <button class="btn btn-primary mb-3 badge-pill" (click)="login()">Login</button>
+    <button class="btn btn-primary mb-3 badge-pill btn-has-spinner" (click)="login()" [disabled]="isLoading">
+      <app-spinner *ngIf="isLoading"></app-spinner>
+      Login
+    </button>
     <button type="button" class="btn btn-success mb-3 badge-pill" routerLink="/register">Register</button>
     <button type="button" class="btn btn-link badge-pill" routerLink="/forgot-password">Forgot Password ?</button>
   </div>

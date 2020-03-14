@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { AuthResponse } from '../models/auth';
 
@@ -8,9 +8,6 @@ import { AuthResponse } from '../models/auth';
   providedIn: 'root'
 })
 export class AuthService {
-
-  dataStream$: Subject<number> = new Subject<number>();
-  dataStreamTT$: BehaviorSubject<number> = new BehaviorSubject(null);
 
   constructor(
     private http: HttpClient

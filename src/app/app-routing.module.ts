@@ -6,10 +6,11 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 
 import { LayoutComponent } from './layout/layout.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: '', component: LayoutComponent, children: [
+    path: '', component: LayoutComponent, canActivate: [AuthGuard], children: [
       {
         path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
       }, {

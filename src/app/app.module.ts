@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 import { AuthModule } from './auth/auth.module';
 import { LayoutModule } from './layout/layout.module';
@@ -21,6 +23,7 @@ import { AppComponent } from './app.component';
     LayoutModule
   ],
   providers: [
+    {provide: HTTP_INTERCEPTORS, multi: true, useClass: AuthInterceptor}
   ],
   bootstrap: [AppComponent]
 })
