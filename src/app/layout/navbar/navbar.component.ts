@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  menu = [
+    { label: 'Home', route: '/home' },
+    { label: 'Quote', route: '/quote' },
+    { label: 'Applications', route: '/applications' },
+    { label: 'My Account', route: '/account' },
+    { label: 'Refresh', route: '/refresh' },
+    { label: 'Search', route: '/search' },
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

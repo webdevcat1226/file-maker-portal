@@ -16,6 +16,12 @@ const routes: Routes = [
         path: 'quote', loadChildren: () => import('./pages/quote/quote.module').then(m => m.QuoteModule)
       }, {
         path: 'applications', loadChildren: () => import('./pages/applications/applications.module').then(m => m.ApplicationsModule)
+      }, {
+        path: 'refresh', loadChildren: () => import('./pages/refresh/refresh.module').then(m => m.RefreshModule)
+      }, {
+        path: 'account', loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule)
+      }, {
+        path: 'search', loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule)
       }
     ]
   }, {
