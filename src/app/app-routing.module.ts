@@ -9,12 +9,6 @@ import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   {
-    path: 'login', component: LoginComponent
-  }, {
-    path: 'register', component: RegisterComponent
-  }, {
-    path: 'forgot-password', component: ForgotPasswordComponent
-  }, {
     path: '', component: LayoutComponent, children: [
       {
         path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)

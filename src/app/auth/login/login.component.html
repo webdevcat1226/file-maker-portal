@@ -1,25 +1,19 @@
+<h1 class="mb-5">Login</h1>
 
-<div class="container">
-  <form class="mt-5 col-12" [formGroup]="loginForm">
-    <h2 class="text-center">Login Form</h2>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input id="email" type="email" class="form-control" formControlName="email">
-    </div>
+<form [formGroup]="loginForm">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input id="email" type="email" class="form-control" formControlName="email">
+  </div>
 
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input id="password" type="password" class="form-control" formControlName="password">
-    </div>
-    <div class="d-flex flex-column">
-      <button class="btn btn-primary mb-3 badge-pill" (click)="login()">Login</button>
-<!--      <button class="btn btn-primary mb-3" (click)="stop()">Stop</button>-->
-      <button type="button" class="btn btn-success mb-3 badge-pill" routerLink="/register">Register</button>
-<!--      <a class="text-center" routerLink="/forgot-password">Forgot Password</a>-->
-      <button type="button" class="btn btn-link badge-pill" routerLink="/forgot-password">Forgot Password ?</button>
-    </div>
-  </form>
-</div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input id="password" type="password" class="form-control" formControlName="password">
+  </div>
 
-<!--<app-forgot-password></app-forgot-password>-->
-<!--<app-reset-password></app-reset-password>-->
+  <div class="d-flex flex-column mt-5">
+    <button class="btn btn-primary mb-3 badge-pill" (click)="login()">Login</button>
+    <button type="button" class="btn btn-success mb-3 badge-pill" routerLink="/register">Register</button>
+    <button type="button" class="btn btn-link badge-pill" routerLink="/forgot-password">Forgot Password ?</button>
+  </div>
+</form>

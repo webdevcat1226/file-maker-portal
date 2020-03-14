@@ -14,10 +14,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    AuthModule,
     AppRoutingModule,
     HttpClientModule,
     // authentication
-    AuthModule,
     LayoutModule
   ],
   providers: [

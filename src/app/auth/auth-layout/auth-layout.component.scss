@@ -1,0 +1,34 @@
+.auth-background {
+  position: relative;
+  width: 70vw;
+  height: 100vh;
+  background-image: url('/assets/background-images/auth-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .auth-background-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+  }
+  & > div:nth-child(2) {
+    position: relative;
+    z-index: 2;
+    h1 {
+      font-size: 70px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+}
+
+.auth-form-wrapper {
+  padding: 60px;
+  text-align: left;
+  margin-bottom: 160px;
+}
