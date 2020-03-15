@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.loginForm.disable();
       await waitForMilliSecond(3000); // will call api
       this.isLoading = false;
-      this.router.navigate(['/home']);
+      await this.router.navigate(['/home']);
     } catch (e) {
 
     } finally {
