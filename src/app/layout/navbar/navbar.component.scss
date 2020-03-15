@@ -26,13 +26,16 @@ ul {
       margin-bottom: 10px;
     }
     a {
-      font-size: 11px;
+      font-size: 13px;
       color: #007bff;
     }
+    a:hover {
+      text-decoration: none;
+    }
     &.active {
-      color: black;
       a {
-        color: black;
+        color: darkblue;
+        font-weight: bolder
       }
     }
   }

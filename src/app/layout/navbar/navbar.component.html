@@ -15,8 +15,10 @@
 <nav>
   <ul>
     <li *ngFor="let item of menu" routerLinkActive="active">
-      <i [ngClass]="item.icon"></i>
-      <a [routerLink]="item.route">{{ item.label }}</a>
+      <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="item.route">
+        <i [ngClass]="item.icon"></i>
+        <label>{{ item.label }}</label>
+      </a>
     </li>
   </ul>
 </nav>
