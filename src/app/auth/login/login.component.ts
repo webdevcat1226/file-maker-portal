@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 import { AuthService } from '../../core/services/auth.service';
 import { waitForMilliSecond } from '../../core/utils/common.util';
@@ -13,9 +13,6 @@ import { waitForMilliSecond } from '../../core/utils/common.util';
 export class LoginComponent implements OnInit, OnDestroy {
 
   isLoading = false;
-
-  count = 0;
-
   loginForm: FormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required]
@@ -25,7 +22,9 @@ export class LoginComponent implements OnInit, OnDestroy {
     private authService: AuthService,
     private fb: FormBuilder,
     private router: Router
-  ) { }
+  ) {
+
+  }
 
   ngOnInit(): void {
   }
@@ -33,13 +32,22 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
   }
 
+  private static validateEmail(email: boolean | string | ((control: AbstractControl) => (ValidationErrors | null)) | (string | ((control: AbstractControl) => (ValidationErrors | null))[])[] | "email") {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
   async login() {
     try {
-      this.isLoading = true;
-      this.loginForm.disable();
+      // this.loginForm.disable();
+
+      this.isLoading = LoginComponent.validateEmail(this.loginForm.value.email);
       await waitForMilliSecond(3000); // will call api
-      this.isLoading = false;
-      await this.router.navigate(['/home']);
+
+      console.log(this.loginForm.value.email, this.isLoading);
+      if(this.isLoading){
+        await this.router.navigate(['/home']);
+      }
     } catch (e) {
 
     } finally {
