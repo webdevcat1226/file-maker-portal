@@ -9,11 +9,11 @@ export class NavbarComponent implements OnInit {
 
   menu = [
     { label: 'Home', route: '/home', icon: 'icon-home' },
-    { label: 'Quote', route: '/quote', icon: 'icon-trophy'},
-    { label: 'Applications', route: '/applications', icon: 'icon-diamond' },
-    { label: 'My Account', route: '/account', icon: 'icon-handbag' },
-    { label: 'Refresh', route: '/refresh', icon: 'icon-drawer' },
-    { label: 'Search', route: '/search', icon: 'icon-picture' },
+    { label: 'Quote', route: '/quote', icon: 'icon-note'},
+    { label: 'Applications', route: '/applications', icon: 'icon-grid' },
+    { label: 'Refresh', route: '/refresh', icon: 'icon-refresh' },
+    { label: 'My Account', route: '/account', icon: 'icon-user' },
+    { label: 'Search', route: '/search', icon: 'icon-magnifier-remove' }
   ];
 
   constructor() { }
