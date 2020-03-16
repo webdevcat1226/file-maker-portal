@@ -2,7 +2,13 @@
   width: 100%;
   display: block;
 }
-.login-warning{
+
+.login-warning {
+  color: red;
+  font-size: 11px;
+}
+
+.required-value {
   color: red;
   font-size: 11px;
 }
