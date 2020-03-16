@@ -32,22 +32,14 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
   }
 
-  private static validateEmail(email: boolean | string | ((control: AbstractControl) => (ValidationErrors | null)) | (string | ((control: AbstractControl) => (ValidationErrors | null))[])[] | "email") {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
-
   async login() {
     try {
+      this.isLoading = true;
       // this.loginForm.disable();
-
-      this.isLoading = LoginComponent.validateEmail(this.loginForm.value.email);
       await waitForMilliSecond(3000); // will call api
-
-      console.log(this.loginForm.value.email, this.isLoading);
-      if(this.isLoading){
-        await this.router.navigate(['/home']);
-      }
+      console.log(this.loginForm.value.email);
+      this.isLoading = false;
+      await this.router.navigate(['/home']);
     } catch (e) {
 
     } finally {
