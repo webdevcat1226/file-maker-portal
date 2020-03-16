@@ -18,7 +18,10 @@
   </div>
 
   <div class="d-flex flex-column mt-5">
-    <button class="btn btn-success badge-pill mb-3" routerLink="/login">Sign Up</button>
+    <button class="btn btn-success badge-pill mb-3 btn-has-spinner" (click)="signUp()" [disabled]="isLoading || registerForm.invalid">
+      <app-spinner *ngIf="isLoading"></app-spinner>
+      Sign Up
+    </button>
     <button class="btn btn-primary badge-pill" routerLink="/login">Back to Login</button>
   </div>
 </form>
