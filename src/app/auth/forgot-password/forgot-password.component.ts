@@ -15,6 +15,7 @@ export class ForgotPasswordComponent implements OnInit {
   });
 
   isLoading = false;
+
   constructor(
     private fb: FormBuilder,
     private router: Router
