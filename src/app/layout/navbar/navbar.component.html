@@ -1,9 +1,15 @@
 <nav>
   <ul>
     <li *ngFor="let item of menu" routerLinkActive="active">
-      <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="item.route">
+      <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="item.route" >
         <i [ngClass]="item.icon"></i>
         <label>{{ item.label }}</label>
+      </a>
+    </li>
+    <li routerLinkActive="active" (click)="logout()">
+      <a class="d-flex flex-column align-items-center justify-content-center" >
+        <i class="icon-logout"></i>
+        <label>Logout</label>
       </a>
     </li>
   </ul>

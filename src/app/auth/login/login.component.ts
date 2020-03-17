@@ -34,12 +34,14 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   async login() {
     try {
+      this.authService.isLogin = true;
       this.isLoading = true;
       // this.loginForm.disable();
       await waitForMilliSecond(3000); // will call api
       console.log(this.loginForm.value.email);
       this.isLoading = false;
       await this.router.navigate(['/home']);
+
     } catch (e) {
 
     } finally {
