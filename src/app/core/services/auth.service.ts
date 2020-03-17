@@ -9,7 +9,7 @@ import { AuthResponse } from '../models/auth';
 })
 export class AuthService {
 
-  isLogin = false;
+  isLogin = false; //isLogin variable is for judging whether logged in or not. true means logged in
 
   constructor(
     private http: HttpClient

@@ -18,6 +18,9 @@ export class LoginComponent implements OnInit, OnDestroy {
     password: ['', Validators.required]
   });
 
+  private userEmail = "test@test.com";
+  private userPassword = "123456";
+
   constructor(
     private authService: AuthService,
     private fb: FormBuilder,
@@ -34,16 +37,19 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   async login() {
     try {
-      this.authService.isLogin = true;
-      this.isLoading = true;
-      // this.loginForm.disable();
-      await waitForMilliSecond(3000); // will call api
       console.log(this.loginForm.value.email);
-      this.isLoading = false;
-      await this.router.navigate(['/home']);
-
+      if (this.loginForm.value.email == this.userEmail && this.loginForm.value.password == this.userPassword) {
+        this.authService.isLogin = true; // logged in
+        this.isLoading = true;
+        // this.loginForm.disable();
+        await waitForMilliSecond(3000); // will call api
+        this.isLoading = false;
+        await this.router.navigate(['/home']);
+      } else {
+        throw "Incorrect User Email or Password"
+      }
     } catch (e) {
-
+      console.log(e);
     } finally {
 
     }
