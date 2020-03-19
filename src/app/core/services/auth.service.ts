@@ -24,6 +24,4 @@ export class AuthService {
   isLogged() {
     this.isLogin = false;
   }
-
-
 }

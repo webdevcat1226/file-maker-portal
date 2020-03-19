@@ -12,7 +12,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.35);
     z-index: 1;
   }
   & > div:nth-child(2) {
@@ -24,6 +24,12 @@
     p {
       font-size: 25px;
     }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .auth-background {
+    display: none !important;
   }
 }
 

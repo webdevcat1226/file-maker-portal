@@ -1,12 +1,16 @@
-nav {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 8px 20px;
+.nav-bar-container {
+  position: relative;
   box-shadow: 0 2px 6px 1px #007bff59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  margin-top: 10px;
+  padding: 8px 10px;
   border-radius: 8px;
-  min-width: 554.53px;
+  //min-width: 554.53px;
 }
 
 ul {
@@ -15,6 +19,7 @@ ul {
   align-items: center;
   margin: 0;
   padding: 0;
+
   li {
     display: flex;
     align-items: center;
@@ -22,21 +27,65 @@ ul {
     padding: 0;
     margin: 0 10px;
     color: #007bff;
+
     i {
       margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+
+      .tooltip-text {
+        visibility: hidden;
+        width: 100px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top: 25px;
+        left: -35px;
+      }
     }
+
     a {
       font-size: 13px;
       color: #007bff;
     }
+
     a:hover {
       text-decoration: none;
+      color: darkcyan;
+      font-weight: bold;
     }
+
     &.active {
       a {
-        color: darkblue;
+        color: darkcyan;
         font-weight: bolder
       }
     }
+  }
+}
+
+.small-view-label {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  label {
+    display: none;
+  }
+  .small-view-label {
+    display: block;
+  }
+  .large-view-label {
+    display: none;
+  }
+
+  i:hover .tooltip-text {
+    visibility: visible !important;
   }
 }

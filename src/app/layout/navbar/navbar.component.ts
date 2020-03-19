@@ -27,9 +27,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logout() {
-    console.log('cksdljfksd');
     this.authService.isLogin = false;
     this.router.navigate(['/login']);
   }
-
 }

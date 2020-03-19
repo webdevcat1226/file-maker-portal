@@ -1,16 +1,22 @@
-<nav>
-  <ul>
-    <li *ngFor="let item of menu" routerLinkActive="active">
-      <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="item.route" >
-        <i [ngClass]="item.icon"></i>
-        <label>{{ item.label }}</label>
-      </a>
-    </li>
-    <li routerLinkActive="active" (click)="logout()">
-      <a class="d-flex flex-column align-items-center justify-content-center" >
-        <i class="icon-logout"></i>
-        <label>Logout</label>
-      </a>
-    </li>
-  </ul>
-</nav>
+<div class="nav-bar-container">
+  <nav>
+    <ul>
+      <li *ngFor="let item of menu" routerLinkActive="active">
+        <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="item.route">
+          <i class="small-view-label" [ngClass]="item.icon">
+            <span class="tooltip-text">{{ item.label }}</span>
+          </i>
+          <label title="">{{ item.label }}</label>
+        </a>
+      </li>
+      <li>
+        <a class="d-flex flex-column align-items-center justify-content-center" (click)="logout()" title="Logout">
+          <i class="icon-logout small-view-label">
+            <span class="tooltip-text">Logout</span>
+          </i>
+          <label title="">Logout</label>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
