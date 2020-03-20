@@ -32,6 +32,7 @@
         color: white;
         line-height: 11px;
         box-shadow: 0 0 5px 0;
+        border-radius: 2px;
       }
 
       .new-table-button-small {
@@ -47,6 +48,7 @@
 
     .table-body {
       font-size: 12px;
+      background: white;
     }
   }
 
@@ -57,7 +59,7 @@
       }
 
       .table-body {
-        border: 1px solid #32dbc6;
+        border: 2px solid #32dbc6;
         border-top: none;
       }
     }
@@ -70,7 +72,7 @@
       }
 
       .table-body {
-        border: 1px solid #75b3e8;
+        border: 2px solid #75b3e8;
         border-top: none;
       }
     }
@@ -83,7 +85,7 @@
       }
 
       .table-body {
-        border: 1px solid #c44c36;
+        border: 2px solid #c44c36;
         border-top: none;
       }
     }

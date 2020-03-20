@@ -1,5 +1,11 @@
 .main-content {
-  margin-top: 50px;
-  height: calc(100vh - 150px);
+  padding-top: 50px;
+  height: calc(100vh - 76px);
+  background: linear-gradient(0deg, #c4d3f6, transparent);
 }
 
+@media (max-width: 550px) {
+  .main-content {
+    height: calc(100vh - 49px);
+  }
+}
