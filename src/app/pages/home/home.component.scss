@@ -54,6 +54,7 @@
     .table-body::-webkit-scrollbar {
       display: none;
     }
+
     .table-body {
       font-size: 12px;
       background: white;
@@ -81,7 +82,11 @@
           height: 50.1875px;
           background: transparent;
           position: relative;
-          text-align: center;
+
+          span {
+            color: red;
+          }
+
         }
       }
     }
@@ -108,6 +113,15 @@
       .table-head {
         background: #c44c36;
       }
+    }
+  }
+
+  .col-md-12 {
+    .table-head {
+      span {
+        margin: 0 !important;
+      }
+      justify-content: center !important;
     }
   }
 }
@@ -147,12 +161,12 @@
 
 @media (max-width: 992px) {
   .table-body {
-    height: 60vh !important;
+    height: 59vh !important;
   }
 }
 
 @media (max-width: 768px) {
   .table-body {
-    height: 40vh !important;
+    height: calc(48vh + 3px) !important;
   }
 }

@@ -23,25 +23,10 @@
           <div class="odd-column"></div>
           <div class="even-column"></div>
         </div>
-        <div class="tbody-content">
-          <div>My Content1</div>
-          <div>My Content2</div>
-          <div>My Content3</div>
-          <div>My Content4</div>
-          <div>My Content5</div>
-          <div>My Content6</div>
-          <div>My Content7</div>
-          <div>My Content8</div>
-          <div>My Content9</div>
-          <div>My Content10</div>
-          <div>My Content11</div>
-          <div>My Content12</div>
-          <div>My Content13</div>
-          <div>My Content14</div>
-          <div>My Content15</div>
-          <div>My Content16</div>
-          <div>My Content17</div>
-          <div>My Content18</div>
+        <div class="tbody-content" *ngFor="let item of quotes">
+          <div class="d-flex justify-content-center align-items-center">
+            <span>Quote {{item.number}}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -70,11 +55,17 @@
           <div class="odd-column"></div>
           <div class="even-column"></div>
         </div>
-        <div class="tbody-content"></div>
+        <div class="tbody-content">
+          <div class="tbody-content" *ngFor="let item of submittedApplications">
+            <div class="d-flex justify-content-center align-items-center">
+              <span>Application {{item.number}}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-12 col-md-6 col-lg-4">
+  <div class="col-sm-12 col-md-12 col-lg-4">
     <div class="homepage-table">
       <div class="table-head">
         <span class="table-title">Processed Applications</span>
@@ -96,7 +87,13 @@
           <div class="odd-column"></div>
           <div class="even-column"></div>
         </div>
-        <div class="tbody-content"></div>
+        <div class="tbody-content">
+          <div class="tbody-content" *ngFor="let item of processedApplications">
+            <div class="d-flex justify-content-center align-items-center">
+              <span>Applications {{item.number}}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
