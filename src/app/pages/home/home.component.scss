@@ -54,6 +54,22 @@
       border-bottom-right-radius: 15px;
       box-shadow: 0 0 5px 0 lightyellow;
       min-height: 75vh;
+      position: relative;
+      overflow: hidden;
+      .tbody-background {
+        position: absolute;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        height: 100%;
+        width: 100%;
+        div {
+          width: 100%;
+          height: 50.1875px;
+        }
+        .even-column {
+          background: #ecf1f9;
+        }
+      }
     }
   }
 
