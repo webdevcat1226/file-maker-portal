@@ -16,6 +16,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      box-shadow: 0 0 5px -2px lightyellow;
 
       span {
         margin-left: -20%;
@@ -31,7 +32,7 @@
         height: 30px;
         color: white;
         line-height: 11px;
-        box-shadow: 0 0 5px 0;
+        box-shadow: 0 0 5px -2px;
         border-radius: 2px;
       }
 
@@ -49,6 +50,10 @@
     .table-body {
       font-size: 12px;
       background: white;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      box-shadow: 0 0 5px 0 lightyellow;
+      height: 50vh;
     }
   }
 
@@ -56,11 +61,6 @@
     div {
       .table-head {
         background: #22cbb6;
-      }
-
-      .table-body {
-        border: 2px solid #32dbc6;
-        border-top: none;
       }
     }
   }
@@ -70,11 +70,6 @@
       .table-head {
         background: #75b3e8;
       }
-
-      .table-body {
-        border: 2px solid #75b3e8;
-        border-top: none;
-      }
     }
   }
 
@@ -82,11 +77,6 @@
     div {
       .table-head {
         background: #c44c36;
-      }
-
-      .table-body {
-        border: 2px solid #c44c36;
-        border-top: none;
       }
     }
   }
