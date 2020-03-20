@@ -1,21 +1,121 @@
 .homepage-view {
-  height: 100%;
-  margin: 0 20px;
-}
-.homepage-table thead {
-  background: red;
-  position: relative;
-  text-align: center;
+  margin: 0 50px;
+
+  .homepage-table {
+    margin-bottom: 10px;
+
+    .table-head {
+      font-size: 13px;
+      font-weight: bold;
+      color: white;
+      height: 40px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        margin-left: -20%;
+      }
+
+      button {
+        background: #ffa10d;
+        border: none;
+        position: absolute;
+        font-size: 11px;
+        right: 10px;
+        width: 75px;
+        height: 30px;
+        color: white;
+        line-height: 11px;
+        box-shadow: 0 0 5px 0;
+      }
+
+      .new-table-button-small {
+        display: none;
+        width: 30px;
+        height: 20px;
+
+        span {
+          margin-left: -3px;
+        }
+      }
+    }
+
+    .table-body {
+      font-size: 12px;
+    }
+  }
+
+  .col-sm-12:first-child {
+    div {
+      .table-head {
+        background: #22cbb6;
+      }
+
+      .table-body {
+        border: 1px solid #32dbc6;
+        border-top: none;
+      }
+    }
+  }
+
+  .col-sm-12:nth-child(2) {
+    div {
+      .table-head {
+        background: #75b3e8;
+      }
+
+      .table-body {
+        border: 1px solid #75b3e8;
+        border-top: none;
+      }
+    }
+  }
+
+  .col-sm-12:last-child {
+    div {
+      .table-head {
+        background: #c44c36;
+      }
+
+      .table-body {
+        border: 1px solid #c44c36;
+        border-top: none;
+      }
+    }
+  }
 }
 
-.homepage-table {
-  border: 1px solid red;
-  margin: 0 10px;
-  width: 100%;
+@media (max-width: 1400px) {
+  .homepage-view {
+    margin: 0 20px !important;
+  }
 }
 
 @media (max-width: 400px) {
   .homepage-view {
     margin: 0 !important;
+
+    .table-head {
+      justify-content: left !important;
+
+      .table-title {
+        padding-left: 10px !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 285px) {
+  .new-table-button {
+    display: none !important;
+  }
+  .new-table-button-small {
+    display: block !important;
   }
 }

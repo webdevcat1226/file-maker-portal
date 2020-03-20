@@ -46,7 +46,7 @@ ul {
         position: absolute;
         z-index: 1;
         top: 25px;
-        left: -35px;
+        left: -40px;
       }
     }
 
@@ -87,5 +87,18 @@ ul {
 
   i:hover .tooltip-text {
     visibility: visible !important;
+  }
+
+  ul {
+    li:first-child {
+      i:hover .tooltip-text {
+        left: 0 !important;
+      }
+    }
+    li:last-child {
+      i:hover .tooltip-text {
+        left: -90px !important;
+      }
+    }
   }
 }
