@@ -1,5 +1,5 @@
 .homepage-view {
-  margin: 0 50px;
+  margin: 0 100px;
 
   .homepage-table {
     margin-bottom: 10px;
@@ -32,8 +32,8 @@
         height: 30px;
         color: white;
         line-height: 11px;
-        box-shadow: 0 0 5px -2px;
-        border-radius: 2px;
+        box-shadow: 0 0 5px 0;
+        border-radius: 5px;
       }
 
       .new-table-button-small {
@@ -53,7 +53,7 @@
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       box-shadow: 0 0 5px 0 lightyellow;
-      height: 50vh;
+      min-height: 75vh;
     }
   }
 
@@ -82,7 +82,7 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
   .homepage-view {
     margin: 0 20px !important;
   }
@@ -96,18 +96,27 @@
       justify-content: left !important;
 
       .table-title {
-        padding-left: 10px !important;
+        padding-left: 20px;
         margin-left: 0 !important;
       }
     }
   }
 }
 
-@media (max-width: 285px) {
+@media (max-width: 315px) {
   .new-table-button {
     display: none !important;
   }
   .new-table-button-small {
     display: block !important;
+  }
+  .table-title {
+    padding-left: 10px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .table-body {
+    min-height: 40vh !important;
   }
 }
