@@ -27,6 +27,7 @@ ul {
     padding: 0;
     margin: 0 10px;
     color: #007bff;
+    position: relative;
 
     i {
       margin-bottom: 10px;
@@ -53,18 +54,40 @@ ul {
     a {
       font-size: 13px;
       color: #007bff;
+      position: relative;
+      label {
+        position: relative;
+      }
     }
 
     a:hover {
       text-decoration: none;
       color: darkcyan;
-      font-weight: bold;
+      //font-weight: bold;
+      .navbar-active-icon-background {
+        display: block;
+        background: #e1eaec;
+      }
+    }
+
+    .navbar-active-icon-background {
+      display: none;
+      position: absolute;
+      background: #cbd4d6;
+      left: -10px;
+      right: -10px;
+      top: -18px;
+      bottom: -8px;
     }
 
     &.active {
       a {
         color: darkcyan;
-        font-weight: bolder
+        //font-weight: bolder;
+      }
+
+      .navbar-active-icon-background {
+        display: block;
       }
     }
   }
@@ -95,6 +118,7 @@ ul {
         left: 0 !important;
       }
     }
+
     li:last-child {
       i:hover .tooltip-text {
         left: -90px !important;
