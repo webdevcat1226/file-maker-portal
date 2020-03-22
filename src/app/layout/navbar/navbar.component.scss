@@ -4,13 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: dimgrey;
 }
 
 nav {
   margin-top: 10px;
   padding: 8px 10px;
   border-radius: 8px;
-  //min-width: 554.53px;
 }
 
 ul {
@@ -26,7 +26,6 @@ ul {
     flex-direction: column;
     padding: 0;
     margin: 0 10px;
-    color: #007bff;
     position: relative;
 
     i {
@@ -53,7 +52,7 @@ ul {
 
     a {
       font-size: 13px;
-      color: #007bff;
+      color: aliceblue;
       position: relative;
       label {
         position: relative;
