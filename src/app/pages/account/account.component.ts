@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
+  myAccountInfo = {
+    name: "Satan Leo",
+    email: "leosatan1226@gmail.com",
+    phone: "15702323446",
+    accountType: "Agent"
+  };
   constructor() { }
 
   ngOnInit(): void {

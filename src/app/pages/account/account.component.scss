@@ -1,0 +1,203 @@
+.account-page-view {
+  width: 100vw;
+  min-height: calc(100vh - 76px);
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding-top: 100px;
+  position: relative;
+
+  .account-table {
+    background: white;
+    box-shadow: -1px 1px 10px -2px #0077cc;
+    margin-bottom: 30px !important;
+
+    .table-head {
+      background: #0077cc;
+      height: 50px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .table-body {
+      min-height: 40vh;
+      padding-top: 20px;
+      font-size: 13px;
+      height: fit-content;
+    }
+  }
+
+  .account-info-table {
+    .table-body {
+      padding-bottom: 10px;
+
+      .table-column-cell {
+        font-size: 12px;
+        margin: 5px 0;
+
+        .column-cell-name {
+          font-weight: bold;
+          flex: 1;
+          text-align: right;
+          padding: 5px 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .column-cell-value {
+          flex: 3;
+          padding: 5px 10px;
+          position: relative;
+
+          input {
+            padding: 2px 5px;
+            border: 1px solid #0077cc;
+            border-radius: 2px;
+            transform: translateX(-5px);
+            width: 200px;
+          }
+
+          img {
+            border: 1px solid #0077cc;
+            border-radius: 5px;
+            width: 200px;
+            transform: translateX(-5px);
+          }
+
+          button {
+            box-shadow: 0 0 10px -3px #0077cc;
+            border-radius: 0 !important;
+            font-size: 12px;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  .colleagues-info-table {
+    .table-head {
+      span:nth-child(2) {
+        font-size: 10px;
+      }
+    }
+
+    .table-body {
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 450px !important;
+      max-height: 630px;
+
+      .tbody-background {
+        position: absolute;
+        width: 100%;
+
+        div {
+          width: 100%;
+          height: 45px;
+        }
+
+        .even-column {
+          background: #ecf1f9;
+        }
+      }
+
+      .tbody-content::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tbody-content {
+        position: relative;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .account-page-view {
+    .col-xl-12 {
+      max-width: 30vw;
+    }
+
+    .col-xl-12:nth-child(2) {
+      max-width: 40vw !important;
+    }
+
+    .account-info-table {
+      margin-left: 30px;
+    }
+
+    .company-info-table {
+      margin-right: 30px;
+    }
+
+    .colleagues-info-table {
+      margin: 0 30px;
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .account-page-view {
+    width: 98vw !important;
+
+    .col-xl-12 {
+      min-width: 49vw !important;
+      max-width: 49vw !important;
+
+      .account-table {
+        margin-left: 40px !important;
+      }
+    }
+
+    .col-xl-12:nth-child(2) {
+      min-width: 98vw !important;
+      max-width: 98vw !important;
+      order: 3;
+
+      .account-table {
+        margin-right: 40px !important;
+      }
+    }
+
+    .col-xl-12:last-child {
+      order: 2;
+
+      .account-table {
+        margin-left: 0 !important;
+        margin-right: 40px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .account-page-view {
+    padding-top: 75px;
+
+    .account-table {
+      margin: 0 50px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .account-page-view {
+    padding-top: 50px;
+
+    .account-table {
+      margin: 0;
+
+      .column-cell-value {
+        input, img {
+          width: 180px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,76 @@
-<p>account works!</p>
+<div class="account-page-view row d-flex justify-content-center">
+  <div class="col-xl-12">
+    <div class="account-table account-info-table">
+      <div class="table-head">
+        <span>My Account Information</span>
+      </div>
+      <div class="table-body">
+        <div class="table-column-cell d-flex">
+          <div class="column-cell-name">Email</div>
+          <div class="column-cell-value">{{ myAccountInfo.email }}</div>
+        </div>
+
+        <div class="table-column-cell d-flex">
+          <div class="column-cell-name">Name</div>
+          <div class="column-cell-value">{{ myAccountInfo.name }}</div>
+        </div>
+
+        <div class="table-column-cell d-flex">
+          <div class="column-cell-name">Mobile</div>
+          <div class="column-cell-value">
+            <input type="text" value="{{myAccountInfo.phone}}">
+          </div>
+        </div>
+
+        <div class="table-column-cell d-flex">
+          <div class="column-cell-name">Account Type</div>
+          <div class="column-cell-value">{{ myAccountInfo.accountType }}</div>
+        </div>
+
+        <div class="table-column-cell d-flex">
+          <div class="column-cell-name">Logo</div>
+          <div class="column-cell-value">
+            <img src="/assets/background-images/user-logo.png">
+          </div>
+        </div>
+
+        <div class="table-column-cell d-flex">
+          <div class="column-cell-name">Password</div>
+          <div class="column-cell-value">
+            <button class="btn btn-outline-primary btn-sm">Change</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-12">
+    <div class="account-table colleagues-info-table">
+      <div class="table-head">
+        <span>My Colleagues</span>
+        <span>Contact information can be updated by calling us</span>
+      </div>
+      <div class="table-body">
+        <div class="tbody-background">
+          <ng-container  *ngFor="let item of [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10, 11, 12, 13]">
+            <div class="odd-column"></div>
+            <div class="even-column"></div>
+          </ng-container>
+        </div>
+        <div class="tbody-content">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-12 actual-company-info-table">
+    <div class="account-table company-info-table">
+      <div class="table-head">
+        <span>My Company</span>
+      </div>
+      <div class="table-body"></div>
+    </div>
+  </div>
+</div>
