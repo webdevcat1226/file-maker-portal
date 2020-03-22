@@ -29,6 +29,7 @@
     }
   }
 
+  /*MyAccount Info Table CSS*/
   .account-info-table {
     .table-body {
       padding-bottom: 10px;
@@ -78,6 +79,7 @@
     }
   }
 
+  /*Colleagues Info Table CSS*/
   .colleagues-info-table {
     .table-head {
       span:nth-child(2) {
@@ -85,12 +87,17 @@
       }
     }
 
+    .table-body::-webkit-scrollbar {
+      display: none;
+    }
+
     .table-body {
       padding: 0;
       position: relative;
       overflow: hidden;
-      min-height: 450px !important;
-      max-height: 630px;
+      min-height: 40vh !important;
+      max-height: 60vh !important;
+      overflow-y: auto;
 
       .tbody-background {
         position: absolute;
@@ -106,13 +113,87 @@
         }
       }
 
-      .tbody-content::-webkit-scrollbar {
-        display: none;
-      }
-
       .tbody-content {
         position: relative;
-        overflow-y: auto;
+        padding: 0 10px 0 20px;
+
+        .tbody-content-cell {
+          font-weight: bold;
+          font-size: 11px;
+          height: 45px;
+
+          .colleague-info-name {
+            flex: 3;
+          }
+
+          .colleague-info-contact {
+            flex: 1.1;
+            position: relative;
+
+            div {
+              position: absolute;
+              right: 0;
+
+              i {
+                position: relative;
+                right: 5px;
+                display: inline-block;
+                background: #0077cc;
+                border-radius: 50%;
+                font-size: 16px;
+                color: white;
+
+                .tooltip-text {
+                  visibility: hidden;
+                  width: 100px;
+                  background-color: #0077cc;
+                  color: #fff;
+                  text-align: center;
+                  border-radius: 6px;
+                  padding: 5px 0;
+                  font-size: 11px;
+
+                  /* Position the tooltip */
+                  position: absolute;
+                  left: -100px;
+                  top: 15px;
+                  z-index: 1;
+                }
+              }
+            }
+          }
+
+          i:hover {
+            .tooltip-text {
+              visibility: visible !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*Company Info Table CSS*/
+  .company-info-table {
+    font-size: 14px;
+    font-weight: bold;
+
+    .table-body {
+      padding: 0 50px 30px;
+
+      div {
+        position: relative;
+        margin: 10px 0;
+        padding: 5px 0;
+        border: 1px solid #0077cc;
+        border-radius: 2px;
+        width: 100%;
+        text-align: center;
+      }
+
+      div:first-child {
+        border: none !important;
+        margin-top: 0 !important;
       }
     }
   }
