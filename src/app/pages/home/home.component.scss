@@ -5,16 +5,12 @@
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
-    //border-bottom-left-radius: 15px;
-    //border-bottom-right-radius: 15px;
 
     .table-head {
       font-size: 13px;
       font-weight: bold;
       color: white;
       height: 45px;
-      //border-top-left-radius: 15px;
-      //border-top-right-radius: 15px;
       overflow: hidden;
       position: relative;
       display: flex;
@@ -27,8 +23,6 @@
       }
 
       button {
-        background: #ffffff;
-        border: none;
         position: absolute;
         font-size: 11px;
         right: 10px;
@@ -37,7 +31,6 @@
         color: white;
         line-height: 11px;
         box-shadow: 0 0 5px 0;
-        //border-radius: 5px;
       }
 
       .new-table-button-small {
@@ -82,11 +75,6 @@
           height: 50.1875px;
           background: transparent;
           position: relative;
-
-          span {
-            color: red;
-          }
-
         }
       }
     }
@@ -96,8 +84,53 @@
     div {
       .table-head {
         background: #22cbb6;
+
         button {
-          color: #22cbb6;
+          border: 1px solid white;
+          color: white;
+          background: #22cbb6;
+
+          &:hover {
+            color: #22cbb6;
+            background: white;
+            border: none;
+          }
+        }
+      }
+
+      .table-body {
+        .tbody-content {
+          padding: 0 15px;
+
+          div {
+            span {
+              width: 100%;
+
+              &:first-child {
+                flex: 2;
+              }
+
+              &:nth-child(2) {
+                flex: 3;
+              }
+
+              &:nth-child(3) {
+                flex: 5;
+              }
+            }
+
+            button {
+              height: 80%;
+              background: white;
+              color: #22cbb6;
+              border: 1px solid #22cbb6;
+
+              &:hover {
+                background: #22cbb6;
+                color: white;
+              }
+            }
+          }
         }
       }
     }
@@ -107,8 +140,17 @@
     div {
       .table-head {
         background: #75b3e8;
+
         button {
-          color: #75b3e8;
+          border: 1px solid white;
+          background: #75b3e8;
+          color: white;
+
+          &:hover {
+            color: #75b3e8;
+            border: none;
+            background: white;
+          }
         }
       }
     }
@@ -127,6 +169,7 @@
       span {
         margin: 0 !important;
       }
+
       justify-content: center !important;
     }
   }
@@ -176,6 +219,7 @@
     height: calc(48vh + 3px) !important;
   }
 }
+
 div.home-body {
   width: 100%;
   height: 100%;

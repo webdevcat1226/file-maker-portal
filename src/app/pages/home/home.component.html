@@ -15,8 +15,11 @@
             </ng-container>
           </div>
           <div class="tbody-content" *ngFor="let item of quotes">
-            <div class="d-flex justify-content-center align-items-center">
-              <span>Quote {{item.number}}</span>
+            <div class="d-flex align-items-center">
+              <span class="quote-availability">{{item.availability}}</span>
+              <span class="quote-type">{{item.type}}</span>
+              <span class="quote-status">{{item.status}}</span>
+              <button style="{{item.buttonStyle}}">View</button>
             </div>
           </div>
         </div>
