@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { ApplicationsRoutingModule } from './applications-routing.module';
 import { ApplicationsComponent } from './applications.component';
+import { ViewLayoutComponent } from './view-layout/view-layout.component';
+import { ViewDetailComponent } from './view-detail/view-detail.component';
 
 
 @NgModule({
-  declarations: [ApplicationsComponent],
+  declarations: [ApplicationsComponent, ViewLayoutComponent, ViewDetailComponent],
   imports: [
     CommonModule,
     ApplicationsRoutingModule
