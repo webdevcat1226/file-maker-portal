@@ -18,9 +18,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     password: ['', Validators.required]
   });
 
-  private userEmail = "test@test.com";
-  private userPassword = "123456";
-
   constructor(
     private authService: AuthService,
     private fb: FormBuilder,
@@ -30,24 +27,23 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.authService.isLogin = this.loginForm.value.email == this.userEmail && this.loginForm.value.password == this.userPassword;
   }
 
   ngOnDestroy(): void {
   }
 
   async login() {
-    this.ngOnInit();
     try {
-      console.log(this.loginForm.value.email);
-      if (this.authService.isLogin) {
+      const form = this.loginForm.value;
+      const match = this.authService.login(form.email, form.password);
+      console.log(match);
+      if (match) {
         this.isLoading = true;
-        // this.loginForm.disable();
-        await waitForMilliSecond(3000); // will call api
+        await waitForMilliSecond(3000);
         this.isLoading = false;
         await this.router.navigate(['/home']);
       } else {
-        throw "Incorrect Email or Password";
+        alert('Incorrect email or password');
       }
     } catch (e) {
       console.log(e);

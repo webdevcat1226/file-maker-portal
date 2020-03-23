@@ -1,27 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
-import { AuthResponse } from '../models/auth';
+import { users } from '../../_fake-db/users';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  isLogin = false; //isLogin variable is for judging whether logged in or not. true means logged in
+  users = users;
 
   constructor(
     private http: HttpClient
-  ) {
-    this.isLogged();
+  ) {}
+
+  login(email: string, password: string) {
+    const found = this.users.find(user => user.email === email);
+    return found && found.password === password;
   }
 
-  login(email: string, password: string): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>('/login', {email, password});
-  }
-
-  isLogged() {
-    this.isLogin = false;
-  }
 }
