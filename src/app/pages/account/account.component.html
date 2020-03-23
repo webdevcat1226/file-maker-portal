@@ -58,8 +58,8 @@
             <div class="even-column"></div>
           </ng-container>
         </div>
-        <div class="tbody-content d-flex flex-column" *ngFor="let item of colleagueInfo">
-          <div class="tbody-content-cell d-flex position-relative align-items-center">
+        <div class="tbody-content d-flex flex-column" >
+          <div class="tbody-content-cell d-flex position-relative align-items-center" *ngFor="let item of colleagueInfo">
             <div class="colleague-info-name">{{item.name}} - {{item.email}}</div>
             <div class="colleague-info-contact d-flex">{{item.contact}}
               <div>

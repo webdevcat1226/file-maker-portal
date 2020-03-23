@@ -1,6 +1,38 @@
 <div class="applications-page-container">
+  <div class="top-right-box d-flex">
+    <button class="btn btn-link">Inspection</button>
+    <button class="btn btn-link">View</button>
+  </div>
   <div class="applications-table">
-    <div class="table-head"></div>
-    <div class="table-body"></div>
+    <div class="table-head d-flex align-items-center">
+      <span class="project-name-title">RHBC Ref</span>
+      <span class="project-address-title">Project Address</span>
+      <span class="final-certificate-title">Final Certificate</span>
+      <span class="unresolved-amendments-title">Unresolved Amendments</span>
+      <span class="unresolved-highlights-title">Unresolved Highlights</span>
+      <span class="reviewed-doc-title">Documents being Reviewed by RHBC</span>
+      <span class="warranty-title">Warranty</span>
+      <span class="inspector-title">Inspector</span>
+    </div>
+    <div class="table-body">
+      <div class="tbody-background">
+        <ng-container *ngFor="let item of [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10]">
+          <div class="odd-column"></div>
+          <div class="even-column"></div>
+        </ng-container>
+      </div>
+      <div class="tbody-content d-flex flex-column">
+        <div class="tbody-content-cell d-flex align-items-center" *ngFor="let item of applicationsInfo">
+          <span class="project-name">{{item.name}}</span>
+          <span class="project-address">{{item.address}}</span>
+          <span class="final-certificate">{{item.certificate}}</span>
+          <span class="unresolved-amendments">{{item.unresolvedAmendments}}</span>
+          <span class="unresolved-highlights">{{item.unresolvedHighlights}}</span>
+          <span class="reviewed-doc">{{item.reviewedDocs}}</span>
+          <span class="warranty">{{item.warranty}}</span>
+          <span class="inspector">{{item.inspector}}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

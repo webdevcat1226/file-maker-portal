@@ -23,6 +23,7 @@
 
     .table-body {
       min-height: 40vh;
+      max-height: 60vh;
       padding-top: 20px;
       font-size: 13px;
       height: fit-content;
@@ -81,23 +82,22 @@
 
   /*Colleagues Info Table CSS*/
   .colleagues-info-table {
+    overflow: hidden;
+    position: relative;
+
     .table-head {
       span:nth-child(2) {
         font-size: 10px;
       }
     }
 
-    .table-body::-webkit-scrollbar {
-      display: none;
-    }
-
     .table-body {
       padding: 0;
-      position: relative;
-      overflow: hidden;
-      min-height: 40vh !important;
-      max-height: 60vh !important;
       overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       .tbody-background {
         position: absolute;
