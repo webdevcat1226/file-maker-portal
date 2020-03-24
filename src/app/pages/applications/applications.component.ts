@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApplicationService } from '../../core/services/application.service';
+
 
 @Component({
   selector: 'app-applications',
@@ -7,23 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationsComponent implements OnInit {
 
-  applicationsInfo = [
-    {
-      name: "Test4",
-      address: "1 East Fen Common, Soham, CH75JH",
-      certificate: "No",
-      unresolvedAmendments: 1,
-      unresolvedHighlights: 14,
-      reviewedDocs: 0,
-      warranty: "Advantage",
-      inspector: "Will Jarvis"
-    },
-  ];
+  applicationsInfo = [];
 
-  constructor() {
+  constructor(
+    private applicationService: ApplicationService
+  ) {
+
   }
 
   ngOnInit(): void {
+    this.applicationsInfo = this.applicationService.getAll();
   }
 
 }

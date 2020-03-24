@@ -1,2 +1,43 @@
-<p>view-layout works!</p>
-<router-outlet></router-outlet>
+<div class="view-layout-container d-flex flex-column">
+  <div class="application-brief-info d-flex flex-column">
+    <span>Application &nbsp;&nbsp;- &nbsp;&nbsp;{{data.name}} &nbsp;&nbsp;- &nbsp;&nbsp;{{data.address}}</span>
+    <span>Single storey extensions to front and rear and replace flat roof to pitched roof to front elevation at dwelling</span>
+  </div>
+
+  <div class="applications-page-navbar">
+    <nav>
+      <ul>
+        <li>
+          <a class="d-flex flex-column align-items-center justify-content-center" routerLink="/applications">
+            <div class="navbar-active-icon-background"></div>
+            <i class="small-view-label icon-action-undo">
+              <span class="tooltip-text">Back to Applications</span>
+            </i>
+            <label>Back to Applications</label>
+          </a>
+        </li>
+        <li *ngFor="let item of menu" routerLinkActive="active">
+          <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="'/applications/view/' + this.id + item.route">
+            <div class="navbar-active-icon-background"></div>
+            <i class="small-view-label" [ngClass]="item.icon">
+              <span class="tooltip-text">{{ item.label }}</span>
+            </i>
+            <label>{{ item.label }}</label>
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="'/applications/inspections/' + this.id">
+            <div class="navbar-active-icon-background"></div>
+            <i class="small-view-label icon-cursor">
+              <span class="tooltip-text">Inspections</span>
+            </i>
+            <label>Inspections</label>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
+

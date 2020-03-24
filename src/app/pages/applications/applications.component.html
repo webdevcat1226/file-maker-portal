@@ -32,8 +32,8 @@
           <span class="warranty">{{item.warranty}}</span>
           <span class="inspector">{{item.inspector}}</span>
           <div class="button-box">
-            <button class="btn btn-link">Inspections</button>
-            <button class="btn btn-link">View</button>
+            <button class="btn btn-link" [routerLink]="'/applications/inspections/' + item.id">Inspections</button>
+            <button class="btn btn-link" [routerLink]="'/applications/view/' + item.id + '/home'">View</button>
           </div>
         </div>
       </div>

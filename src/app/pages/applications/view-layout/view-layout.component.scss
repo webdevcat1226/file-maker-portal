@@ -1,0 +1,153 @@
+.view-layout-container {
+  min-height: calc(100vh - 76px);
+  padding: 30px;
+
+  .application-brief-info {
+    text-align: center;
+    position: relative;
+
+    span {
+      &:first-child {
+        font-size: 14px;
+        font-weight: bold;
+        color: darkviolet;
+      }
+
+      &:last-child {
+        font-size: 12px;
+        font-weight: 500;
+        color: darkviolet;
+      }
+    }
+  }
+
+  .applications-page-navbar {
+    position: relative;
+    box-shadow: 0 2px 6px 1px #007bff59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: dimgrey;
+  }
+
+  nav {
+    margin-top: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 0;
+      margin: 0 10px;
+      position: relative;
+
+      i {
+        margin-bottom: 10px;
+        position: relative;
+        display: inline-block;
+
+        .tooltip-text {
+          visibility: hidden;
+          width: 100px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+
+          /* Position the tooltip */
+          position: absolute;
+          z-index: 1;
+          top: 25px;
+          left: -40px;
+        }
+      }
+
+      a {
+        font-size: 13px;
+        color: aliceblue;
+        position: relative;
+
+        label {
+          position: relative;
+        }
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: darkcyan;
+        //font-weight: bold;
+        .navbar-active-icon-background {
+          display: block;
+          background: #e1eaec;
+        }
+      }
+
+      .navbar-active-icon-background {
+        display: none;
+        position: absolute;
+        background: #cbd4d6;
+        left: -10px;
+        right: -10px;
+        top: -18px;
+        bottom: -8px;
+      }
+
+      &.active {
+        a {
+          color: darkcyan;
+          //font-weight: bolder;
+        }
+
+        .navbar-active-icon-background {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .small-view-label {
+    display: none;
+  }
+
+  @media (max-width: 550px) {
+    label {
+      display: none;
+    }
+    .small-view-label {
+      display: block;
+    }
+    .large-view-label {
+      display: none;
+    }
+
+    i:hover .tooltip-text {
+      visibility: visible !important;
+    }
+
+    ul {
+      li:first-child {
+        i:hover .tooltip-text {
+          left: 0 !important;
+        }
+      }
+
+      li:last-child {
+        i:hover .tooltip-text {
+          left: -90px !important;
+        }
+      }
+    }
+  }
+
+}

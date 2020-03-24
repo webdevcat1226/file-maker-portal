@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ApplicationService } from '../../../core/services/application.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-view-detail',
-  templateUrl: './view-detail.component.html',
-  styleUrls: ['./view-detail.component.scss']
+  selector: 'app-inspections',
+  templateUrl: './inspections.component.html',
+  styleUrls: ['./inspections.component.scss']
 })
-export class ViewDetailComponent implements OnInit {
+export class InspectionsComponent implements OnInit {
 
   id: string;
   data: any;
@@ -15,11 +15,12 @@ export class ViewDetailComponent implements OnInit {
   constructor(
     private applicationService: ApplicationService,
     private route: ActivatedRoute
-  ) {
-  }
+  ) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
+    console.log(this.route.snapshot.params);
     this.data = this.applicationService.findById(this.id);
   }
+
 }
