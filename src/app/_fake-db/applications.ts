@@ -12,6 +12,26 @@ export const applications = [{
   "warranty": "Advantage",
   "inspector": "Will Jarvis"
 }, {
+  "id": "6b8037ad-5705-4407-b684-d4ae14e0d4f6",
+  "name": "Concrete",
+  "address": "328 Floy Overpass Apt. 140",
+  "certificate": "Texas 24 hour",
+  "unresolvedAmendments": 17,
+  "unresolvedHighlights": 16,
+  "reviewedDocs": 9,
+  "warranty": "Disadvantage",
+  "inspector": "Shirley Langworth"
+}, {
+  "id": "f7c40cad-0e81-4a73-ad79-28217cc59b03",
+  "name": "Generic",
+  "address": "24479 Luella Walk Apt. 100",
+  "certificate": "Legacy Response",
+  "unresolvedAmendments": 0,
+  "unresolvedHighlights": 14,
+  "reviewedDocs": 20,
+  "warranty": "Disadvantage",
+  "inspector": "Megane Auer"
+}, {
   "id": "afc8d431-b603-4a7b-9664-bf71704418e1",
   "name": "open-source",
   "address": "353 Mante Inlet Apt. 715",
@@ -51,27 +71,20 @@ export const applications = [{
   "reviewedDocs": 13,
   "warranty": "Disadvantage",
   "inspector": "Afton Lubowitz"
-}, {
-  "id": "6b8037ad-5705-4407-b684-d4ae14e0d4f6",
-  "name": "Concrete",
-  "address": "328 Floy Overpass Apt. 140",
-  "certificate": "Texas 24 hour",
-  "unresolvedAmendments": 17,
-  "unresolvedHighlights": 16,
-  "reviewedDocs": 9,
-  "warranty": "Disadvantage",
-  "inspector": "Shirley Langworth"
-}, {
-  "id": "f7c40cad-0e81-4a73-ad79-28217cc59b03",
-  "name": "Generic",
-  "address": "24479 Luella Walk Apt. 100",
-  "certificate": "Legacy Response",
-  "unresolvedAmendments": 0,
-  "unresolvedHighlights": 14,
-  "reviewedDocs": 20,
-  "warranty": "Disadvantage",
-  "inspector": "Megane Auer"
 }];
+
+function addingWarrantyColor(object) {
+  object.forEach(element => {
+    if (element.warranty == "Advantage") {
+      element.warrantyColor = "lightgreen";
+    } else {
+      element.warrantyColor = "red"
+    }
+  });
+}
+
+addingWarrantyColor(applications);
+
 
 export function generateFakeApplications(count: number) {
   const warranty = [ApplicationWarranty.Advantage, ApplicationWarranty.Disadvantage];
@@ -91,3 +104,4 @@ export function generateFakeApplications(count: number) {
   }
   return data;
 }
+

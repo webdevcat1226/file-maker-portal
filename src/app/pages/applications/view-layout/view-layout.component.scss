@@ -1,6 +1,6 @@
 .view-layout-container {
   min-height: calc(100vh - 76px);
-  padding: 30px;
+  padding-top: 30px;
 
   .application-brief-info {
     text-align: center;
@@ -23,15 +23,16 @@
 
   .applications-page-navbar {
     position: relative;
-    box-shadow: 0 2px 6px 1px #007bff59;
+    box-shadow: 0 0 5px 0 #413f42;
     display: flex;
     justify-content: center;
     align-items: center;
     background: dimgrey;
+    width: fit-content;
+    margin: 10px auto;
   }
 
   nav {
-    margin-top: 10px;
     padding: 8px 10px;
     border-radius: 8px;
   }
@@ -80,13 +81,14 @@
 
         label {
           position: relative;
+          margin-bottom: 0 !important;
         }
       }
 
       a:hover {
         text-decoration: none;
         color: darkcyan;
-        //font-weight: bold;
+
         .navbar-active-icon-background {
           display: block;
           background: #e1eaec;
@@ -99,14 +101,13 @@
         background: #cbd4d6;
         left: -10px;
         right: -10px;
-        top: -18px;
+        top: -8px;
         bottom: -8px;
       }
 
       &.active {
         a {
           color: darkcyan;
-          //font-weight: bolder;
         }
 
         .navbar-active-icon-background {
@@ -120,7 +121,7 @@
     display: none;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 555px) {
     label {
       display: none;
     }
@@ -149,5 +150,4 @@
       }
     }
   }
-
 }

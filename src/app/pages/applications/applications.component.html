@@ -29,7 +29,7 @@
           <span class="unresolved-amendments">{{item.unresolvedAmendments}}</span>
           <span class="unresolved-highlights">{{item.unresolvedHighlights}}</span>
           <span class="reviewed-doc">{{item.reviewedDocs}}</span>
-          <span class="warranty">{{item.warranty}}</span>
+          <span class="warranty" [style]="'color: ' + item.warrantyColor">{{item.warranty}}</span>
           <span class="inspector">{{item.inspector}}</span>
           <div class="button-box">
             <button class="btn btn-link" [routerLink]="'/applications/inspections/' + item.id">Inspections</button>
