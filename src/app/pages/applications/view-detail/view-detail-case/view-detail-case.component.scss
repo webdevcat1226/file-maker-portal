@@ -4,6 +4,7 @@
     margin: 20px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0 5px 0 #555555;
 
     .table-head {
       background: #a16cc4;
@@ -64,6 +65,94 @@
               height: 20px;
               border-radius: 50%;
               border: 1px solid black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .plot-info-container {
+    margin: 0 20px 20px;
+
+    .info-view-title {
+      margin-left: 20px;
+      font-size: 18px;
+      font-weight: bolder;
+      color: darkblue;
+    }
+
+    .plot-info-table {
+      position: relative;
+      background: white;
+      overflow: hidden;
+
+      .table-head {
+        height: 50px;
+        display: flex;
+        background: #75b3e8;
+        align-items: center;
+        padding-left: 30px;
+
+        span {
+          font-weight: bold;
+          padding-left: 10px;
+
+          &:first-child {
+            flex: 1;
+          }
+
+          &:nth-child(2) {
+            flex: 3;
+          }
+
+          &:nth-child(3) {
+            flex: 2;
+          }
+
+          &:nth-child(4) {
+            flex: 3;
+          }
+
+          &:last-child {
+            flex: 2;
+          }
+        }
+      }
+
+      .table-body {
+        .tbody-background {
+          position: absolute;
+          width: 100%;
+
+          div {
+            width: 100%;
+            height: 75px;
+          }
+
+          .even-column {
+            background: #ecf1f9;
+          }
+        }
+
+        .tbody-content {
+          padding: 0 10px;
+
+          .tbody-content-row {
+            height: 75px;
+            display: flex;
+            align-items: center;
+
+            .red-circle {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              border: 1px solid black;
+              background: red;
+            }
+
+            .tbody-content-cell {
+              padding-left: 10px;
             }
           }
         }

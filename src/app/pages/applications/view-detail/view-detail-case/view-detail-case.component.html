@@ -80,6 +80,28 @@
     </div>
   </div>
   <div class="plot-info-container">
-
+    <div class="info-view-title">Information on Selected Plot: {{selectedPlot.plotNo}}</div>
+    <div class="plot-info-table">
+      <div class="table-head d-flex">
+        <span class="table-row-title">Plot</span>
+        <span class="table-row-title">Inspection Type</span>
+        <span class="table-row-title">Inspection Date</span>
+        <span class="table-row-title">Details of Highlight</span>
+        <span class="table-row-title">Resolution Remarks</span>
+      </div>
+      <div class="table-body">
+        <div class="tbody-background">
+          <ng-container *ngFor="let item of [1, 2, 3, 4, 5, 6, 7]">
+            <div class="odd-column"></div>
+            <div class="even-column"></div>
+          </ng-container>
+        </div>
+        <div class="tbody-content">
+          <div class="tbody-content-row">
+            <div class="red-circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
