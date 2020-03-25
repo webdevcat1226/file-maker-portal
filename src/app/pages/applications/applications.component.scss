@@ -91,7 +91,7 @@
           }
 
           .reviewed-doc {
-            color: lightgreen;
+            color: limegreen;
           }
 
           span {
@@ -116,15 +116,19 @@
             button {
               padding: 5px 2px;
               font-size: 12px;
+              color: #7700c4;
+
               &:first-child {
                 float: left;
               }
+
               &:last-child {
                 float: right;
               }
 
               &:active, &:hover {
                 text-decoration: none !important;
+                color: lightblue;
               }
             }
           }

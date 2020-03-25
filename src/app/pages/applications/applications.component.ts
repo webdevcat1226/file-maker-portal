@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApplicationService } from '../../core/services/application.service';
+// import { generateFakeApplications } from '../../_fake-db/applications';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { ApplicationService } from '../../core/services/application.service';
 export class ApplicationsComponent implements OnInit {
 
   applicationsInfo = [];
+  // data = generateFakeApplications(8);
 
   constructor(
     private applicationService: ApplicationService
@@ -19,6 +21,7 @@ export class ApplicationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.applicationsInfo = this.applicationService.getAll();
+    // console.log(JSON.stringify(this.data));
   }
 
 }

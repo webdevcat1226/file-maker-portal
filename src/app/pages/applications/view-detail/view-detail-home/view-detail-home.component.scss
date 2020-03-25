@@ -1,4 +1,151 @@
 .view-detail-home-page-container {
-  width: 100%;
+  width: 90%;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 0 7px 1px #a455c5;
+  margin: 20px auto 0;
+  border: 2px solid #a455c5;
+  border-top: 30px solid #a60be8b0;
 
+  .detail-unit-box, .address-info-unit {
+    background: #ffe0e040;
+  }
+
+  .unit-box-container {
+    margin: 50px 0;
+
+    .detail-unit-box {
+      margin: 0 5px;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 0 7px 3px darkgray;
+
+      span {
+        margin: 10px 0;
+
+        &:first-child {
+          font-size: 13px;
+          font-weight: bold;
+          color: #0077cc;
+        }
+
+        &:last-child {
+          font-weight: 500;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .unresolved-highlight, .unresolved-amendment {
+      .detail-unit-data {
+        color: orangered;
+      }
+    }
+
+    .reviewed-doc {
+      .detail-unit-data {
+        color: limegreen;
+      }
+    }
+  }
+
+  .address-info-container {
+    margin: 50px;
+
+    .flex-grow-1 {
+      .address-info-unit {
+        margin: 0 auto;
+        box-shadow: 0 0 7px 3px darkgray;
+        text-align: center;
+
+        span {
+          font-size: 12px;
+          font-weight: 500;
+          margin: 10px 0;
+
+          &:first-child {
+            font-size: 13px;
+            font-weight: bold;
+            color: #0077cc;
+          }
+        }
+      }
+
+      &:first-child, &:last-child {
+        padding-top: 30px;
+
+        .address-info-unit {
+          max-width: 200px;
+        }
+      }
+
+      .agent-contact {
+        max-width: 300px;
+        position: relative;
+
+        i {
+          color: white;
+          position: absolute;
+          background: green;
+          border-radius: 50%;
+          right: 30px;
+          top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .view-detail-home-page-container {
+    display: flex;
+    padding-left: 50px !important;
+    margin-bottom: 20px;
+
+    .unit-box-container {
+      flex: 1;
+      flex-direction: column;
+      margin-bottom: 0 !important;
+    }
+
+    .address-info-container {
+      flex: 2;
+      flex-direction: column;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .view-detail-home-page-container {
+    flex-direction: column;
+    padding: 10px !important;
+
+    .unit-box-container {
+      flex: none;
+      order: 2;
+    }
+
+    .address-info-container {
+      flex: none;
+      order: 1;
+      box-shadow: 0 0 7px 3px darkgray;
+      margin: 0 !important;
+
+      .flex-grow-1 {
+        padding: 0 !important;
+        background: #ffe0e040;
+      }
+
+      .address-info-unit {
+        background: none;
+        box-shadow: none !important;
+        margin: 10px auto !important;
+
+        span {
+          margin: 5px 0 !important;
+        }
+      }
+    }
+  }
 }

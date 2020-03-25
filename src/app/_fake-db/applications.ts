@@ -2,9 +2,12 @@ import * as Faker from 'faker';
 import { ApplicationWarranty } from '../core/enums/application-warranty.enum';
 
 export const applications = [{
-  "id": "b69e65b7-3bc7-4861-9097-d5ddd0b19bb2",
-  "name": "Test4",
-  "address": "1 East Fen Common, Soham, CH75JH",
+  "id": "6fa7acde-0e2d-44a1-9ac9-2b03e0b34e48",
+  "commencementDate": "2020-03-23T17:11:20.710Z",
+  "phoneNumber": "752-575-1653",
+  "userEmail": "Dovie0@gmail.com",
+  "applicationName": "Test4",
+  "worksAddress": "1 East Fen Common, Soham, CH75JH",
   "certificate": "No",
   "unresolvedAmendments": 1,
   "unresolvedHighlights": 14,
@@ -12,78 +15,121 @@ export const applications = [{
   "warranty": "Advantage",
   "inspector": "Will Jarvis"
 }, {
-  "id": "6b8037ad-5705-4407-b684-d4ae14e0d4f6",
-  "name": "Concrete",
-  "address": "328 Floy Overpass Apt. 140",
-  "certificate": "Texas 24 hour",
-  "unresolvedAmendments": 17,
-  "unresolvedHighlights": 16,
-  "reviewedDocs": 9,
-  "warranty": "Disadvantage",
-  "inspector": "Shirley Langworth"
-}, {
-  "id": "f7c40cad-0e81-4a73-ad79-28217cc59b03",
-  "name": "Generic",
-  "address": "24479 Luella Walk Apt. 100",
-  "certificate": "Legacy Response",
-  "unresolvedAmendments": 0,
-  "unresolvedHighlights": 14,
-  "reviewedDocs": 20,
-  "warranty": "Disadvantage",
-  "inspector": "Megane Auer"
-}, {
-  "id": "afc8d431-b603-4a7b-9664-bf71704418e1",
-  "name": "open-source",
-  "address": "353 Mante Inlet Apt. 715",
-  "certificate": "Pants fuchsia",
-  "unresolvedAmendments": 2,
-  "unresolvedHighlights": 17,
-  "reviewedDocs": 13,
+  "id": "5e237b63-5e48-42a2-bd72-efff87475a46",
+  "commencementDate": "2020-03-24T05:54:11.627Z",
+  "phoneNumber": "950-300-4047",
+  "userEmail": "Marilou59@yahoo.com",
+  "applicationName": "online",
+  "worksAddress": "037 Markus Circles Suite 706",
+  "certificate": "matrix Pike",
+  "unresolvedAmendments": 8,
+  "unresolvedHighlights": 4,
+  "reviewedDocs": 17,
   "warranty": "Advantage",
-  "inspector": "Pearlie Leuschke"
+  "inspector": "Yasmin Hickle"
 }, {
-  "id": "7781b51b-e128-4d81-8033-c3fdba2f31d4",
-  "name": "Marshall Islands",
-  "address": "2821 Ritchie Forge Apt. 516",
-  "certificate": "Loan Account invoice",
-  "unresolvedAmendments": 0,
-  "unresolvedHighlights": 9,
-  "reviewedDocs": 9,
-  "warranty": "Advantage",
-  "inspector": "Lambert Kilback"
-}, {
-  "id": "6555d987-74bc-4cb1-8d80-7ad6864e797a",
-  "name": "Berkshire",
-  "address": "371 Grover Crossing Suite 239",
-  "certificate": "ROI cross-platform",
-  "unresolvedAmendments": 7,
-  "unresolvedHighlights": 5,
-  "reviewedDocs": 11,
-  "warranty": "Disadvantage",
-  "inspector": "Macy Mitchell"
-}, {
-  "id": "162dfa8e-ebd8-46bf-b4d8-e5007fe5cc56",
-  "name": "Total",
-  "address": "13520 Nader Shoals Apt. 245",
-  "certificate": "Checking Account",
-  "unresolvedAmendments": 16,
+  "id": "598bf6f0-09b4-4560-b13d-c3ec21a906e0",
+  "commencementDate": "2020-03-24T00:27:28.558Z",
+  "phoneNumber": "986-871-2020",
+  "userEmail": "Lonie_Cummings@gmail.com",
+  "applicationName": "visualize",
+  "worksAddress": "4594 Abigail Stream Apt. 872",
+  "certificate": "tan Cambridgeshire",
+  "unresolvedAmendments": 13,
   "unresolvedHighlights": 17,
+  "reviewedDocs": 0,
+  "warranty": "Disadvantage",
+  "inspector": "Dejon Osinski"
+}, {
+  "id": "fbcc9611-11d9-4201-8dfd-ce753d0c4297",
+  "commencementDate": "2020-03-24T06:54:38.228Z",
+  "phoneNumber": "698-520-4071",
+  "userEmail": "Clemens.Halvorson@hotmail.com",
+  "applicationName": "Fiji",
+  "worksAddress": "382 Wisozk Tunnel Suite 629",
+  "certificate": "Bedfordshire ADP",
+  "unresolvedAmendments": 0,
+  "unresolvedHighlights": 13,
   "reviewedDocs": 13,
   "warranty": "Disadvantage",
-  "inspector": "Afton Lubowitz"
+  "inspector": "Amparo O'Hara"
+}, {
+  "id": "bfe1f839-1652-46f9-bc7f-9d0e63dd9648",
+  "commencementDate": "2020-03-24T12:38:49.775Z",
+  "phoneNumber": "483-211-3786",
+  "userEmail": "Jewell.Corwin@gmail.com",
+  "applicationName": "Supervisor",
+  "worksAddress": "09723 Jeremie Brooks Apt. 582",
+  "certificate": "cross-platform hacking",
+  "unresolvedAmendments": 9,
+  "unresolvedHighlights": 17,
+  "reviewedDocs": 12,
+  "warranty": "Disadvantage",
+  "inspector": "Lelah Cremin"
+}, {
+  "id": "4eab8de4-9daf-4dca-a023-9410987c02c2",
+  "commencementDate": "2020-03-24T15:44:09.552Z",
+  "phoneNumber": "867-762-7329",
+  "userEmail": "Willard.Doyle77@hotmail.com",
+  "applicationName": "hack",
+  "worksAddress": "46183 Kris Islands Apt. 995",
+  "certificate": "backing up Cheese",
+  "unresolvedAmendments": 1,
+  "unresolvedHighlights": 20,
+  "reviewedDocs": 0,
+  "warranty": "Disadvantage",
+  "inspector": "Makenzie Schneider"
+}, {
+  "id": "8674e8b0-485f-4f6b-a1ee-01b3eaec2b46",
+  "commencementDate": "2020-03-24T03:44:04.651Z",
+  "phoneNumber": "541-889-8659",
+  "userEmail": "Jimmie.Eichmann99@yahoo.com",
+  "applicationName": "leverage",
+  "worksAddress": "39792 Raynor Centers Apt. 742",
+  "certificate": "Buckinghamshire Intelligent Fresh Shirt",
+  "unresolvedAmendments": 14,
+  "unresolvedHighlights": 6,
+  "reviewedDocs": 0,
+  "warranty": "Advantage",
+  "inspector": "Dakota Howell"
+}, {
+  "id": "7d5ae8a5-3419-4f59-a9c9-2bea151e5909",
+  "commencementDate": "2020-03-24T07:46:58.519Z",
+  "phoneNumber": "184-826-0936",
+  "userEmail": "Micaela.Schinner@hotmail.com",
+  "applicationName": "Morocco",
+  "worksAddress": "169 Leanna Forest Apt. 679",
+  "certificate": "Motorway Frozen",
+  "unresolvedAmendments": 18,
+  "unresolvedHighlights": 6,
+  "reviewedDocs": 12,
+  "warranty": "Disadvantage",
+  "inspector": "Norval Monahan"
 }];
 
-function addingWarrantyColor(object) {
+function generateEmail(fullName) {
+  let lastName = fullName.split(" ")[1];
+  let number = Faker.random.number({'min': 1901, 'max': 2012}).toString() + Faker.random.number({
+    'min': 1,
+    'max': 28
+  }).toString();
+  let domain = Faker.random.words(1).toLowerCase();
+  return lastName + number + "@" + domain + ".com";
+}
+
+function addingDynamicValues(object) {
   object.forEach(element => {
     if (element.warranty == "Advantage") {
-      element.warrantyColor = "lightgreen";
+      element.warrantyColor = "limegreen";
     } else {
-      element.warrantyColor = "red"
+      element.warrantyColor = "orangered"
     }
+
+    element.applicantEmail = generateEmail(element.inspector);
   });
 }
 
-addingWarrantyColor(applications);
+addingDynamicValues(applications);
 
 
 export function generateFakeApplications(count: number) {
@@ -92,8 +138,11 @@ export function generateFakeApplications(count: number) {
   for (let i = 0; i < count; i++) {
     data.push({
       id: Faker.random.uuid(),
-      name: Faker.random.word(),
-      address: Faker.helpers.createCard().address.streetC,
+      commencementDate: Faker.date.recent(),
+      phoneNumber: Faker.phone.phoneNumberFormat(),
+      userEmail: Faker.internet.email(),
+      applicationName: Faker.random.word(),
+      worksAddress: Faker.helpers.createCard().address.streetC,
       certificate: Faker.random.words(2),
       unresolvedAmendments: Faker.random.number(20),
       unresolvedHighlights: Faker.random.number(20),
@@ -104,4 +153,3 @@ export function generateFakeApplications(count: number) {
   }
   return data;
 }
-

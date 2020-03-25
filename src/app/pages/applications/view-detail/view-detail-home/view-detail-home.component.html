@@ -1,5 +1,71 @@
-<!--{{data | json}}-->
 <div class="view-detail-home-page-container">
-  
+  <div class="unit-box-container d-flex">
+    <div class="flex-grow-1">
+      <div class="detail-unit-box commencement-date d-flex flex-column">
+        <span class="detail-unit-title">Commencement Date</span>
+        <span class="detail-unit-data">{{data.commencementDate}}</span>
+      </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="detail-unit-box unresolved-amendment d-flex flex-column">
+        <span class="detail-unit-title">Unresolved Amendments</span>
+        <span class="detail-unit-data">{{data.unresolvedAmendments}}</span>
+      </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="detail-unit-box unresolved-highlight d-flex flex-column">
+        <span class="detail-unit-title">Unresolved Highlights</span>
+        <span class="detail-unit-data">{{data.unresolvedHighlights}}</span>
+      </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="detail-unit-box reviewed-doc d-flex flex-column">
+        <span class="detail-unit-title">Reviewing Docs</span>
+        <span class="detail-unit-data">{{data.reviewedDocs}}</span>
+      </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="detail-unit-box warranty d-flex flex-column">
+        <span class="detail-unit-title">Warranty</span>
+        <span class="detail-unit-data" [style]="'color: ' + data.warrantyColor">{{data.warranty}}</span>
+      </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="detail-unit-box inspector d-flex flex-column">
+        <span class="detail-unit-title">Inspector</span>
+        <span class="detail-unit-data">{{data.inspector}}</span>
+      </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="detail-unit-box certificate d-flex flex-column">
+        <span class="detail-unit-title">Final Certicificate</span>
+        <span class="detail-unit-data">{{data.certificate}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="address-info-container d-flex">
+    <div class="flex-grow-1">
+      <div class="address-info-unit applicant-email d-flex flex-column">
+        <span class="address-unit-title">Applicant</span>
+        <span class="address-unit-data">{{data.applicantEmail}}</span>
+      </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="address-info-unit agent-contact d-flex flex-column">
+        <span class="address-unit-title">Agent Contacts on File</span>
+        <i class="icon-minus"></i>
+        <span class="address-unit-data">{{data.inspector}}</span>
+        <span class="address-unit-data">{{data.phoneNumber}}</span>
+        <span class="address-unit-data">{{data.userEmail}}</span>
+      </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="address-info-unit applicant-email d-flex flex-column">
+        <span class="address-unit-title">Works Address</span>
+        <span class="address-unit-data">{{data.worksAddress}}</span>
+      </div>
+    </div>
+  </div>
 </div>
 

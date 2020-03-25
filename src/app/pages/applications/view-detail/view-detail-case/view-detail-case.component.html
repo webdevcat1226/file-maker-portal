@@ -1,2 +1,85 @@
-<p>view-detail-case works!</p>
-{{data | json}}
+<div class="case-sheet-container">
+  <div class="plot-table-container">
+    <div class="table-head d-flex">
+      <div class="table-row-title"></div>
+      <div class="table-row-title"></div>
+      <div class="table-row-title">Foundations</div>
+      <div class="table-row-title">Oversite & DPC</div>
+      <div class="table-row-title">FW</div>
+      <div class="table-row-title">SW</div>
+      <div class="table-row-title">Super Structure</div>
+      <div class="table-row-title">Thermal Insulation</div>
+      <div class="table-row-title">Sound Insulation</div>
+      <div class="table-row-title">Building Services</div>
+      <div class="table-row-title">Accessibility</div>
+      <div class="table-row-title">Protection</div>
+      <div class="table-row-title">Fire Safety</div>
+      <div class="table-row-title">General</div>
+      <div class="table-row-title">Completion</div>
+      <div class="table-row-title">Final Defect</div>
+      <div class="table-row-title">Final Cert</div>
+    </div>
+    <div class="table-body">
+      <div class="tbody-background">
+        <ng-container *ngFor="let item of [1, 2, 3, 4, 5, 6, 7]">
+          <div class="odd-column"></div>
+          <div class="even-column"></div>
+        </ng-container>
+      </div>
+      <div class="tbody-content" *ngFor="let item of plotData">
+        <div class="tbody-content-row d-flex">
+          <div class="tbody-content-cell">Plot{{item.plotNo}}</div>
+          <div class="tbody-content-cell">{{item.domesticOrForeign}}</div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.foundations"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.overSite"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.fw"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.sw"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.superStructure"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.thermalInsulation"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.soundInsulation"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.buildingService"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.accessibility"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.protection"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.fireSafety"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.general"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.completion"></span>
+          </div>
+          <div class="tbody-content-cell">
+            <span [style]="'background: ' + item.finalDefect"></span>
+          </div>
+          <div class="tbody-content-cell">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="plot-info-container">
+
+  </div>
+</div>
