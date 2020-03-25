@@ -1,16 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApplicationService } from '../../../../core/services/application.service';
 import { ActivatedRoute } from '@angular/router';
+import * as Faker from 'faker';
+
 
 @Component({
   selector: 'app-view-detail-case',
   templateUrl: './view-detail-case.component.html',
   styleUrls: ['./view-detail-case.component.scss']
 })
+
 export class ViewDetailCaseComponent implements OnInit {
 
+  @ViewChild('plotNumber') plotNum;
+
   id: string;
-  data: any;
+  applicationData: any;
+
   plotData = [
     {
       plotNo: '1',
@@ -139,7 +145,7 @@ export class ViewDetailCaseComponent implements OnInit {
       finalDefect: 'green'
     },
     {
-      plotNo: '1',
+      plotNo: '8',
       domesticOrForeign: 'Domestic',
       foundations: 'transparent',
       overSite: 'transparent',
@@ -158,9 +164,11 @@ export class ViewDetailCaseComponent implements OnInit {
     },
   ];
 
-  selectedPlot = {
-    plotNo: '1'
-  };
+  selectedPlotInfo = null; // red circle info of selected plot
+  keys = [];
+  filteredKeys = [];
+  filteredPlotInfo = [];
+  filteredCircleColor = [];
 
   constructor(
     private applicationService: ApplicationService,
@@ -170,6 +178,110 @@ export class ViewDetailCaseComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.parent.snapshot.params.id;
-    this.data = this.applicationService.findById(this.id);
+    this.applicationData = this.applicationService.findById(this.id);
+  }
+
+  sendPlotInfo(data) {
+    this.filteredKeys = [];
+    this.filteredPlotInfo = [];
+    this.selectedPlotInfo = data;
+    this.keys = Object.keys(this.selectedPlotInfo).map(key => key);
+    this.keys.forEach(key => {
+      if (this.selectedPlotInfo[key] == 'red' || this.selectedPlotInfo[key] == 'darkorange' || this.selectedPlotInfo[key] == 'green') {
+        this.filteredKeys.push(key);
+        this.filteredCircleColor[key] = this.selectedPlotInfo[key];
+      }
+    });
+    this.setFilteredPlotInfo(this.filteredKeys, data, this.filteredCircleColor);
+    console.log(this.filteredPlotInfo);
+  }
+
+  setFilteredPlotInfo(keys, data,circleColor) {
+    keys.forEach(key => {
+      let object = {
+        color: circleColor[key],
+        plotNo: data.plotNo,
+        inspectionType: '',
+        inspectionDate: '20/02/2020',
+        highlight: '',
+        resolutionRemark: 'None',
+      };
+      switch (key) {
+        case 'foundations': {
+          object.inspectionType = 'Foundations';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'overSite': {
+          object.inspectionType = 'Oversite & DPC';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'fw': {
+          object.inspectionType = 'FW';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'sw': {
+          object.inspectionType = 'SW';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'superStructure': {
+          object.inspectionType = 'Super Structure';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'thermalInsulation': {
+          object.inspectionType = 'Thermal Insulation';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'soundInsulation': {
+          object.inspectionType = 'Sound Insulation';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'buildingService': {
+          object.inspectionType = 'Building Services';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'accessibility': {
+          object.inspectionType = 'Accessibility';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'protection': {
+          object.inspectionType = 'Protection';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'fireSafety': {
+          object.inspectionType = 'Fire Safety';
+          object.highlight = 'fire safety';
+          break;
+        }
+        case 'general': {
+          object.inspectionType = 'General';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'completion': {
+          object.inspectionType = 'Completion';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        case 'finalDefect': {
+          object.inspectionType = 'Final Defect';
+          object.highlight = Faker.random.words(3);
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+      this.filteredPlotInfo.push(object);
+    })
   }
 }

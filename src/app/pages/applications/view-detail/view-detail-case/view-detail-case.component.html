@@ -26,8 +26,8 @@
           <div class="even-column"></div>
         </ng-container>
       </div>
-      <div class="tbody-content" *ngFor="let item of plotData">
-        <div class="tbody-content-row d-flex">
+      <div class="tbody-content">
+        <div class="tbody-content-row d-flex" *ngFor="let item of plotData" (click)="sendPlotInfo(item)" [class.active]="selectedPlotInfo?.plotNo === item.plotNo">
           <div class="tbody-content-cell">Plot{{item.plotNo}}</div>
           <div class="tbody-content-cell">{{item.domesticOrForeign}}</div>
           <div class="tbody-content-cell">
@@ -72,15 +72,15 @@
           <div class="tbody-content-cell">
             <span [style]="'background: ' + item.finalDefect"></span>
           </div>
-          <div class="tbody-content-cell">
+          <div class="tbody-content-cell final-cart">
 
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="plot-info-container">
-    <div class="info-view-title">Information on Selected Plot: {{selectedPlot.plotNo}}</div>
+  <div class="plot-info-container" *ngIf="filteredKeys.length > 0">
+    <div class="info-view-title">Information on Selected Plot: {{selectedPlotInfo.plotNo}}</div>
     <div class="plot-info-table">
       <div class="table-head d-flex">
         <span class="table-row-title">Plot</span>
@@ -97,8 +97,15 @@
           </ng-container>
         </div>
         <div class="tbody-content">
-          <div class="tbody-content-row">
-            <div class="red-circle"></div>
+          <div class="tbody-content-row" *ngFor="let item of filteredPlotInfo">
+            <span class="red-circle" [style]="'background: ' + item.color + ';'"></span>
+            <div class="position-absolute d-flex">
+              <span class="tbody-row-cell">{{item.plotNo}}</span>
+              <span class="tbody-row-cell">{{item.inspectionType}}</span>
+              <span class="tbody-row-cell">{{item.inspectionDate}}</span>
+              <span class="tbody-row-cell">{{item.highlight}}</span>
+              <span class="tbody-row-cell">{{item.resolutionRemark}}</span>
+            </div>
           </div>
         </div>
       </div>
