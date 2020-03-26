@@ -1,21 +1,33 @@
-<div class="nav-bar-container">
+<div class="nav-bar-container d-flex flex-column">
+  <div class="picture-container d-flex flex-column">
+    <div class="logo-container d-flex justify-content-center">
+      <img src="/assets/background-images/small-logo.png">
+      <div class="d-flex align-items-baseline justify-content-end flex-column">
+        <span>RHBC Ltd</span>
+        <span>Building control</span>
+      </div>
+    </div>
+
+    <div class="photo-container">
+      <div class="photo-image" (click)="file.click()">
+        <img [src]="userPhoto">
+        <input #file type="file" style="display: none" (change)="handleFileInput($event.target.files)" accept='image/*'>
+      </div>
+    </div>
+
+  </div>
   <nav>
-    <ul>
+    <ul class="d-flex flex-column">
       <li *ngFor="let item of menu" routerLinkActive="active">
         <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="item.route">
-          <div class="navbar-active-icon-background"></div>
-          <i class="small-view-label" [ngClass]="item.icon">
-            <span class="tooltip-text">{{ item.label }}</span>
-          </i>
+          <i class="small-view-label" [ngClass]="item.icon"></i>
           <label>{{ item.label }}</label>
         </a>
       </li>
       <li>
         <a class="d-flex flex-column align-items-center justify-content-center" (click)="logout()" title="Logout">
           <div class="navbar-active-icon-background"></div>
-          <i class="icon-logout small-view-label">
-            <span class="tooltip-text">Logout</span>
-          </i>
+          <i class="icon-logout small-view-label"></i>
           <label>Logout</label>
         </a>
       </li>

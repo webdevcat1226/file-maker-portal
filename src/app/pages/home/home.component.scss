@@ -5,18 +5,20 @@
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 5px 1px gray;
+    box-shadow: 0 3px 8px 6px lightblue;
+    border-radius: 10px;
 
     .table-head {
       font-size: 13px;
       font-weight: bold;
       color: white;
-      height: 45px;
+      height: 55px;
       overflow: hidden;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
 
       span {
         margin-left: -20%;
@@ -31,6 +33,7 @@
         color: white;
         line-height: 11px;
         box-shadow: 0 0 5px 0;
+        border-radius: 15px;
       }
 
       .new-table-button-small {
@@ -53,6 +56,7 @@
       background: white;
       height: 75vh;
       overflow-y: auto;
+      //border-radius: 10px;
 
       .tbody-background {
         position: absolute;
@@ -82,15 +86,16 @@
   .col-sm-12:first-child {
     div {
       .table-head {
-        background: #22cbb6;
+        background: #4d7cfe;
 
         button {
           border: 1px solid white;
           color: white;
-          background: #22cbb6;
+          background: #4d7cfe;
+          width: 90px;
 
           &:hover {
-            color: #22cbb6;
+            color: #4d7cfe;
             background: white;
             border: none;
           }
@@ -121,11 +126,12 @@
             button {
               height: 80%;
               background: white;
-              color: #22cbb6;
-              border: 1px solid #22cbb6;
+              color: #4d7cfe;
+              border: 1px solid #4d7cfe;
+              border-radius: 5px;
 
               &:hover {
-                background: #22cbb6;
+                background: #4d7cfe;
                 color: white;
               }
             }
@@ -138,15 +144,16 @@
   .col-sm-12:nth-child(2) {
     div {
       .table-head {
-        background: #75b3e8;
+        background: #4d7cfe;
 
         button {
           border: 1px solid white;
-          background: #75b3e8;
+          background: #4d7cfe;
           color: white;
+          width: 90px;
 
           &:hover {
-            color: #75b3e8;
+            color: #4d7cfe;
             border: none;
             background: white;
           }
@@ -158,7 +165,7 @@
   .col-sm-12:last-child {
     div {
       .table-head {
-        background: #c44c36;
+        background: #4d7cfe;
       }
     }
   }

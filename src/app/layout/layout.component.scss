@@ -1,3 +1,10 @@
-.main-content {
-  background: silver;
+.page-container {
+  position: relative;
+  display: flex;
+
+  .main-content {
+    background: #f8fafb;
+    width: 100%;
+    min-height: 100vh;
+  }
 }

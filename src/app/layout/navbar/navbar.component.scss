@@ -1,126 +1,94 @@
 .nav-bar-container {
-  position: relative;
-  box-shadow: 0 2px 6px 1px #413f42;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: dimgrey;
-}
+  box-shadow: 0 0 10px 2px #7fd0ec;
+  min-height: 100%;
+  width: 300px;
+  background: #ffffff;
 
-nav {
-  margin-top: 10px;
-  padding: 8px 10px;
-  border-radius: 8px;
-}
 
-ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  .picture-container {
+    margin-bottom: 30px;
 
-  li {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0;
-    margin: 0 10px;
-    position: relative;
+    .logo-container {
+      width: 100%;
+      padding: 20px;
+      border-bottom: 1px solid #f3f4f3;
 
-    i {
-      margin-bottom: 10px;
-      position: relative;
-      display: inline-block;
+      img {
+        height: 40px;
+        transform: scale(0.7, 1);
+      }
 
-      .tooltip-text {
-        visibility: hidden;
-        width: 100px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
+      div {
+        color: #035ba9;
 
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 1;
-        top: 25px;
-        left: -40px;
+        span:last-child {
+          font-size: 12px;
+        }
       }
     }
 
-    a {
-      font-size: 13px;
-      color: aliceblue;
-      position: relative;
-      label {
+    .photo-container {
+      cursor: pointer;
+      .photo-image {
         position: relative;
-      }
-    }
+        overflow: hidden;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin: 10px auto;
+        border: 2px dashed #4d7cfe;
+        background: #f8fafb;
+        padding: 5px;
 
-    a:hover {
-      text-decoration: none;
-      color: darkcyan;
-      //font-weight: bold;
-      .navbar-active-icon-background {
-        display: block;
-        background: #e1eaec;
-      }
-    }
-
-    .navbar-active-icon-background {
-      display: none;
-      position: absolute;
-      background: #cbd4d6;
-      left: -10px;
-      right: -10px;
-      top: -18px;
-      bottom: -8px;
-    }
-
-    &.active {
-      a {
-        color: darkcyan;
-        //font-weight: bolder;
-      }
-
-      .navbar-active-icon-background {
-        display: block;
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
       }
     }
   }
-}
 
-.small-view-label {
-  display: none;
-}
+  nav {
+    position: sticky;
+    top: 50px;
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
 
-@media (max-width: 550px) {
-  label {
-    display: none;
-  }
-  .small-view-label {
-    display: block;
-  }
-  .large-view-label {
-    display: none;
-  }
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        margin: 0 10px;
+        position: relative;
 
-  i:hover .tooltip-text {
-    visibility: visible !important;
-  }
+        a {
+          font-size: 13px;
+          color: #212529;
+          position: relative;
 
-  ul {
-    li:first-child {
-      i:hover .tooltip-text {
-        left: 0 !important;
-      }
-    }
+          i {
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+          }
 
-    li:last-child {
-      i:hover .tooltip-text {
-        left: -90px !important;
+          &:hover {
+            text-decoration: none;
+            color: darkcyan;
+          }
+        }
+
+        &.active {
+          a {
+            color: darkcyan;
+          }
+        }
       }
     }
   }

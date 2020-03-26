@@ -18,6 +18,8 @@ export class NavbarComponent implements OnInit {
     { label: 'Search', route: '/search', icon: 'icon-magnifier-remove' },
   ];
 
+  userPhoto: any = '/assets/background-images/user.png';
+
   constructor(
     private authService: AuthService,
     private router: Router
@@ -28,5 +30,15 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     this.router.navigate(['/login']);
+  }
+
+  handleFileInput(files) {
+    if (FileReader && files && files.length) {
+      const fr = new FileReader();
+      fr.onload = () => {
+        this.userPhoto = fr.result;
+      };
+      fr.readAsDataURL(files[0]);
+    }
   }
 }
