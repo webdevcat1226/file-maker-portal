@@ -2,10 +2,11 @@
   width: 90%;
   padding: 10px;
   background: white;
-  box-shadow: 0 -1px 5px 0px #4d7cfe;
+  box-shadow: 0 -1px 5px 0px #2982FE;
   margin: 20px auto 0;
-  border-top: 30px solid #4d7cfe;
+  border-top: 30px solid #2982FE;
   border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
 
   .detail-unit-box, .address-info-unit {
     background: #f8fafb;
@@ -18,7 +19,7 @@
       margin: 0 5px;
       padding: 20px 0;
       text-align: center;
-      box-shadow: 0 0 5px 0 #4d7cfe;
+      border: 1px solid #f3f4f3;
 
       span {
         margin: 10px 0;
@@ -26,7 +27,7 @@
         &:first-child {
           font-size: 13px;
           font-weight: bold;
-          color: #4d7cfe;
+          color: #2982FE;
         }
 
         &:last-child {
@@ -55,7 +56,7 @@
     .flex-grow-1 {
       .address-info-unit {
         margin: 0 auto;
-        box-shadow: 0 0 5px 0 #4d7cfe;
+        border: 1px solid #f3f4f3;
         text-align: center;
 
         span {

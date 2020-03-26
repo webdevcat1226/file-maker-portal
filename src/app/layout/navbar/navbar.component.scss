@@ -3,6 +3,7 @@
   width: 300px;
   background: #ffffff;
   border-right: 1px solid #f3f4f3;
+  font-family: 'Roboto', sans-serif;
 
   .top-navbar {
     width: 100%;
@@ -42,7 +43,7 @@
         width: 100px;
         border-radius: 50%;
         margin: 10px auto;
-        border: 2px dashed #4d7cfe;
+        border: 2px dashed #2982FE;
         background: #f8fafb;
         padding: 5px;
 
@@ -75,12 +76,11 @@
         position: relative;
 
         button {
-          position: relative;
           width: 85px;
           height: 75px;
           border: none;
           margin: 5px auto;
-          color: #4d7cfe;
+          color: #2982FE;
           font-weight: 500;
 
           i {
@@ -89,12 +89,12 @@
           }
 
           label {
-            font-size: 11px;
+            font-size: 12px;
             margin-bottom: 0 !important;
           }
 
           &:hover, &:focus {
-            background: #4d7cfe;
+            background: #2982FE;
             color: white;
             box-shadow: none;
           }
@@ -102,7 +102,7 @@
 
         &.active {
           button {
-            background: #4d7cfe;
+            background: #2982FE;
             color: white;
           }
         }

@@ -5,12 +5,18 @@
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 -1px 5px 1px #4d7cfe;
+    box-shadow: 0 -1px 5px 1px #2982FE;
     border-radius: 3px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .table-head {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: bold;
+      font-family: 'Sarabun', sans-serif;
       color: white;
       height: 55px;
       overflow: hidden;
@@ -19,44 +25,30 @@
       justify-content: center;
       align-items: center;
       border-radius: 3px;
-
-      span {
-        margin-left: -20%;
-      }
+      background: #2982FE;
 
       button {
         position: absolute;
-        font-size: 11px;
+        font-size: 12px;
         right: 10px;
-        width: 75px;
-        height: 30px;
-        color: white;
+        width: 90px;
+        height: 40px;
         line-height: 11px;
-        box-shadow: 0 0 5px 0;
-        border-radius: 15px;
-      }
+        background: white;
 
-      .new-table-button-small {
-        display: none;
-        width: 30px;
-        height: 30px;
-
-        span {
-          margin-left: -3px;
+        &:hover, &:focus {
+          color: white;
+          background: #2982FE;
+          border: 1px solid white;
         }
       }
     }
 
-    .table-body::-webkit-scrollbar {
-      display: none;
-    }
-
     .table-body {
       font-size: 12px;
+      font-family: 'Roboto', sans-serif;
       background: white;
       height: 75vh;
-      overflow-y: auto;
-      //border-radius: 10px;
 
       .tbody-background {
         position: absolute;
@@ -85,23 +77,6 @@
 
   .col-sm-12:first-child {
     div {
-      .table-head {
-        background: #4d7cfe;
-
-        button {
-          border: 1px solid white;
-          color: white;
-          background: #4d7cfe;
-          width: 90px;
-
-          &:hover {
-            color: #4d7cfe;
-            background: white;
-            border: none;
-          }
-        }
-      }
-
       .table-body {
         .tbody-content {
           padding: 0 15px;
@@ -126,57 +101,19 @@
             button {
               height: 80%;
               background: white;
-              color: #4d7cfe;
-              border: 1px solid #4d7cfe;
-              border-radius: 5px;
+              color: #2982FE;
+              border: 1px solid #2982FE;
+              border-radius: 3px;
+              font-size: 12px;
 
-              &:hover {
-                background: #4d7cfe;
+              &:hover, &:focus {
+                background: #2982FE;
                 color: white;
               }
             }
           }
         }
       }
-    }
-  }
-
-  .col-sm-12:nth-child(2) {
-    div {
-      .table-head {
-        background: #4d7cfe;
-
-        button {
-          border: 1px solid white;
-          background: #4d7cfe;
-          color: white;
-          width: 90px;
-
-          &:hover {
-            color: #4d7cfe;
-            border: none;
-            background: white;
-          }
-        }
-      }
-    }
-  }
-
-  .col-sm-12:last-child {
-    div {
-      .table-head {
-        background: #4d7cfe;
-      }
-    }
-  }
-
-  .col-md-12 {
-    .table-head {
-      span {
-        margin: 0 !important;
-      }
-
-      justify-content: center !important;
     }
   }
 }
@@ -199,18 +136,6 @@
         margin-left: 0 !important;
       }
     }
-  }
-}
-
-@media (max-width: 315px) {
-  .new-table-button {
-    display: none !important;
-  }
-  .new-table-button-small {
-    display: block !important;
-  }
-  .table-title {
-    padding-left: 10px !important;
   }
 }
 

@@ -9,10 +9,8 @@
       <span class="reviewed-doc-title">Documents being Reviewed by RHBC</span>
       <span class="warranty-title">Warranty</span>
       <span class="inspector-title">Inspector</span>
-      <div class="button-area">
-        <button class="btn btn-link" disabled>Inspections</button>
-        <button class="btn btn-link" disabled>View</button>
-      </div>
+      <button class="btn btn-outline-primary" disabled>Inspections</button>
+      <button class="btn btn-outline-primary" disabled>View</button>
     </div>
     <div class="table-body">
       <div class="tbody-background">
@@ -31,10 +29,8 @@
           <span class="reviewed-doc">{{item.reviewedDocs}}</span>
           <span class="warranty" [style]="'color: ' + item.warrantyColor">{{item.warranty}}</span>
           <span class="inspector">{{item.inspector}}</span>
-          <div class="button-box">
-            <button class="btn btn-link" [routerLink]="'/applications/inspections/' + item.id">Inspections</button>
-            <button class="btn btn-link" [routerLink]="'/applications/view/' + item.id + '/home'">View</button>
-          </div>
+          <button class="btn btn-outline-primary" [routerLink]="'/applications/inspections/' + item.id">Inspections</button>
+          <button class="btn btn-outline-primary" [routerLink]="'/applications/view/' + item.id + '/home'">View</button>
         </div>
       </div>
     </div>
