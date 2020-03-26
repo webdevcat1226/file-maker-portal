@@ -2,13 +2,13 @@
   width: 90%;
   padding: 10px;
   background: white;
-  box-shadow: 0 0 7px 1px #a455c5;
+  box-shadow: 0 -1px 5px 0px #4d7cfe;
   margin: 20px auto 0;
-  border: 2px solid #a455c5;
-  border-top: 30px solid #a60be8b0;
+  border-top: 30px solid #4d7cfe;
+  border-radius: 3px;
 
   .detail-unit-box, .address-info-unit {
-    background: #ffe0e040;
+    background: #f8fafb;
   }
 
   .unit-box-container {
@@ -18,7 +18,7 @@
       margin: 0 5px;
       padding: 20px 0;
       text-align: center;
-      box-shadow: 0 0 7px 3px darkgray;
+      box-shadow: 0 0 5px 0 #4d7cfe;
 
       span {
         margin: 10px 0;
@@ -26,7 +26,7 @@
         &:first-child {
           font-size: 13px;
           font-weight: bold;
-          color: #0077cc;
+          color: #4d7cfe;
         }
 
         &:last-child {
@@ -55,7 +55,7 @@
     .flex-grow-1 {
       .address-info-unit {
         margin: 0 auto;
-        box-shadow: 0 0 7px 3px darkgray;
+        box-shadow: 0 0 5px 0 #4d7cfe;
         text-align: center;
 
         span {
@@ -66,7 +66,7 @@
           &:first-child {
             font-size: 13px;
             font-weight: bold;
-            color: #0077cc;
+            color: #4d7cfe;
           }
         }
       }

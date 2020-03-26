@@ -1,18 +1,18 @@
 .account-page-view {
-  width: 100vw;
-  min-height: calc(100vh - 76px);
+  width: 100%;
   margin-right: 0 !important;
   margin-left: 0 !important;
-  padding-top: 100px;
   position: relative;
 
   .account-table {
     background: white;
-    box-shadow: 0 0 5px 1px gray;
+    box-shadow: 0 0 5px 1px #4d7cfe;
     margin-bottom: 30px !important;
+    border-radius: 3px;
+    overflow: hidden;
 
     .table-head {
-      background: #0077cc;
+      background: #4d7cfe;
       height: 50px;
       color: white;
       display: flex;
@@ -59,13 +59,13 @@
             border: 1px solid #0077cc;
             border-radius: 2px;
             transform: translateX(-5px);
-            width: 200px;
+            width: 170px;
           }
 
           img {
             border: 1px solid #0077cc;
             border-radius: 5px;
-            width: 200px;
+            width: 170px;
             transform: translateX(-5px);
           }
 
@@ -202,11 +202,11 @@
 @media (min-width: 1200px) {
   .account-page-view {
     .col-xl-12 {
-      max-width: 30vw;
+      max-width: 30%;
     }
 
     .col-xl-12:nth-child(2) {
-      max-width: 40vw !important;
+      max-width: 40% !important;
     }
 
     .account-info-table {
@@ -223,13 +223,13 @@
   }
 }
 
-@media (max-width: 1200px) and (min-width: 900px) {
+@media (max-width: 1400px) and (min-width: 1000px) {
   .account-page-view {
-    width: 98vw !important;
+    width: 98% !important;
 
     .col-xl-12 {
-      min-width: 49vw !important;
-      max-width: 49vw !important;
+      min-width: 49% !important;
+      max-width: 49% !important;
 
       .account-table {
         margin-left: 40px !important;
@@ -237,8 +237,8 @@
     }
 
     .col-xl-12:nth-child(2) {
-      min-width: 98vw !important;
-      max-width: 98vw !important;
+      min-width: 98% !important;
+      max-width: 98% !important;
       order: 3;
 
       .account-table {
@@ -257,28 +257,12 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .account-page-view {
     padding-top: 75px;
 
     .account-table {
       margin: 0 50px;
-    }
-  }
-}
-
-@media (max-width: 550px) {
-  .account-page-view {
-    padding-top: 50px;
-
-    .account-table {
-      margin: 0;
-
-      .column-cell-value {
-        input, img {
-          width: 180px !important;
-        }
-      }
     }
   }
 }

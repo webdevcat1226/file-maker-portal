@@ -4,11 +4,13 @@
     margin: 20px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 5px 0 #555555;
+    box-shadow: 0 0 5px 0 #4d7cfe;
+    border-radius: 3px;
 
     .table-head {
-      background: #a16cc4;
+      background: #4d7cfe;
       color: white;
+      border-radius: 3px;
 
       .table-row-title {
         flex: 1;
@@ -89,13 +91,16 @@
       position: relative;
       background: white;
       overflow: hidden;
+      box-shadow: 0 0 5px 0 #4d7cfe;
+      border-radius: 3px;
 
       .table-head {
         height: 50px;
         display: flex;
-        background: #75b3e8;
+        background: #4d7cfe;
         align-items: center;
         padding-left: 30px;
+        border-radius: 3px;
 
         span {
           font-weight: bold;

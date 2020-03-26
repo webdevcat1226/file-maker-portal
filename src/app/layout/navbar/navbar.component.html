@@ -19,17 +19,17 @@
   <nav>
     <ul class="d-flex flex-column">
       <li *ngFor="let item of menu" routerLinkActive="active">
-        <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="item.route">
+        <button class="btn btn-outline-primary d-flex flex-column align-items-center justify-content-center" [routerLink]="item.route">
           <i class="small-view-label" [ngClass]="item.icon"></i>
           <label>{{ item.label }}</label>
-        </a>
+        </button>
       </li>
       <li>
-        <a class="d-flex flex-column align-items-center justify-content-center" (click)="logout()" title="Logout">
+        <button class="btn btn-outline-primary d-flex flex-column align-items-center justify-content-center" (click)="logout()" title="Logout">
           <div class="navbar-active-icon-background"></div>
           <i class="icon-logout small-view-label"></i>
           <label>Logout</label>
-        </a>
+        </button>
       </li>
     </ul>
   </nav>

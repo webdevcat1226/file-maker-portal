@@ -5,8 +5,8 @@
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 3px 8px 6px lightblue;
-    border-radius: 10px;
+    box-shadow: 0 -1px 5px 1px #4d7cfe;
+    border-radius: 3px;
 
     .table-head {
       font-size: 13px;
@@ -18,7 +18,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 10px;
+      border-radius: 3px;
 
       span {
         margin-left: -20%;
@@ -229,5 +229,4 @@
 div.home-body {
   width: 100%;
   height: 100%;
-  padding: 51px 0 !important;
 }

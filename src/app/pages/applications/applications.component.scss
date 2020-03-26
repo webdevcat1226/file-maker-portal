@@ -1,23 +1,25 @@
 .applications-page-container {
   position: relative;
   width: 100%;
-  height: calc(100vh - 76px);
-  padding: 80px 100px 100px;
+  padding: 0 100px;
 
   .applications-table {
     position: relative;
     width: 100%;
-    box-shadow: 0 0 5px 2px #a16cc4;
+    box-shadow: 0 -2px 6px 0px #4d7cfe;
     overflow: hidden;
+    border-radius: 3px;
+    border-bottom: 1px solid #95b1fd;
 
     .table-head {
       width: 100%;
-      background: #a16cc4;
+      background: #4d7cfe;
       padding: 5px 10px;
       color: white;
       font-size: 13px;
       font-weight: 500;
       overflow: hidden;
+      border-radius: 3px;
 
       span {
         flex: 1;
@@ -112,11 +114,12 @@
             position: relative;
             box-shadow: 0 0 2px 2px lightgray;
             text-align: center;
+            min-width: 122px;
 
             button {
               padding: 5px 2px;
               font-size: 12px;
-              color: #7700c4;
+              color: #4d7cfe;
 
               &:first-child {
                 float: left;

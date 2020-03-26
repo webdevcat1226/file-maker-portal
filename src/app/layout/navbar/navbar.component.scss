@@ -1,9 +1,14 @@
 .nav-bar-container {
-  box-shadow: 0 0 10px 2px #7fd0ec;
   min-height: 100%;
   width: 300px;
   background: #ffffff;
+  border-right: 1px solid #f3f4f3;
 
+  .top-navbar {
+    width: 100%;
+    height: 83px;
+    background: white;
+  }
 
   .picture-container {
     margin-bottom: 30px;
@@ -29,6 +34,7 @@
 
     .photo-container {
       cursor: pointer;
+
       .photo-image {
         position: relative;
         overflow: hidden;
@@ -52,6 +58,7 @@
   nav {
     position: sticky;
     top: 50px;
+
     ul {
       list-style: none;
       display: flex;
@@ -67,26 +74,36 @@
         margin: 0 10px;
         position: relative;
 
-        a {
-          font-size: 13px;
-          color: #212529;
+        button {
           position: relative;
+          width: 85px;
+          height: 75px;
+          border: none;
+          margin: 5px auto;
+          color: #4d7cfe;
+          font-weight: 500;
 
           i {
             margin-bottom: 10px;
-            position: relative;
             display: inline-block;
           }
 
-          &:hover {
-            text-decoration: none;
-            color: darkcyan;
+          label {
+            font-size: 11px;
+            margin-bottom: 0 !important;
+          }
+
+          &:hover, &:focus {
+            background: #4d7cfe;
+            color: white;
+            box-shadow: none;
           }
         }
 
         &.active {
-          a {
-            color: darkcyan;
+          button {
+            background: #4d7cfe;
+            color: white;
           }
         }
       }

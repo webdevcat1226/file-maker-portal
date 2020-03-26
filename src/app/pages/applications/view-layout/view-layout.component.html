@@ -8,31 +8,25 @@
     <nav>
       <ul>
         <li>
-          <a class="d-flex flex-column align-items-center justify-content-center" routerLink="/applications">
+          <button class="btn btn-outline-primary d-flex flex-column align-items-center justify-content-center" routerLink="/applications">
             <div class="navbar-active-icon-background"></div>
-            <i class="small-view-label icon-action-undo">
-              <span class="tooltip-text">Back to Applications</span>
-            </i>
-            <label>Back to Applications</label>
-          </a>
+            <i class="icon-action-undo"></i>
+            <label>Back</label>
+          </button>
         </li>
         <li *ngFor="let item of menu" routerLinkActive="active">
-          <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="'/applications/view/' + this.id + item.route">
+          <button class="btn btn-outline-primary d-flex flex-column align-items-center justify-content-center" [routerLink]="'/applications/view/' + this.id + item.route">
             <div class="navbar-active-icon-background"></div>
-            <i class="small-view-label" [ngClass]="item.icon">
-              <span class="tooltip-text">{{ item.label }}</span>
-            </i>
+            <i [ngClass]="item.icon"></i>
             <label>{{ item.label }}</label>
-          </a>
+          </button>
         </li>
         <li routerLinkActive="active">
-          <a class="d-flex flex-column align-items-center justify-content-center" [routerLink]="'/applications/inspections/' + this.id">
+          <button class="btn btn-outline-primary d-flex flex-column align-items-center justify-content-center" [routerLink]="'/applications/inspections/' + this.id">
             <div class="navbar-active-icon-background"></div>
-            <i class="small-view-label icon-cursor">
-              <span class="tooltip-text">Inspections</span>
-            </i>
+            <i class="icon-cursor"></i>
             <label>Inspections</label>
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
