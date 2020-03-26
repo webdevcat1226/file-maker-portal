@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   .auth-background-overlay {
     position: absolute;
     top: 0;
@@ -15,12 +16,15 @@
     background-color: rgba(0, 0, 0, 0.35);
     z-index: 1;
   }
+
   & > div:nth-child(2) {
     position: relative;
     z-index: 2;
+
     h1 {
       font-size: 70px;
     }
+
     p {
       font-size: 25px;
     }
@@ -40,5 +44,11 @@
 }
 
 .logo-image {
-  right: 50px;
+  height: calc(100vw / 9);
+  right: 10%;
+  top: 30px;
+
+  img {
+    height: 100%;
+  }
 }
