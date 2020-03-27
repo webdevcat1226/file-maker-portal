@@ -1,2 +1,24 @@
-<p>view-detail-amendments works!</p>
-{{data | json}}
+<div class="amendments-view-container">
+  <div class="amendments-table">
+    <div class="table-head d-flex align-items-center justify-content-end">
+      <span>Complete</span>
+    </div>
+    <div class="table-body">
+      <div class="tbody-background">
+        <ng-container *ngFor="let item of [1, 2, 3, 4, 5]">
+          <div class="odd-column"></div>
+          <div class="even-column"></div>
+        </ng-container>
+      </div>
+      <div class="tbody-content d-flex flex-column" *ngFor="let item of amendments">
+        <div class="tbody-content-row d-flex align-items-center">
+          <div class="tbody-content-cell">{{item.number}}</div>
+          <div class="tbody-content-cell">{{item.character}} {{item.serial}}</div>
+          <div class="tbody-content-cell">{{item.content}}</div>
+          <button class="tbody-content-cell btn btn-outline-primary">view</button>
+          <div class="tbody-content-cell text-center" [style]="'color: ' + item.color + ';'">{{item.isComplete}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
