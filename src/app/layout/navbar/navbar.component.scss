@@ -13,11 +13,14 @@
 
   .picture-container {
     margin-bottom: 30px;
+    margin-top: 50px;
+
+    position: sticky;
+    top: 0;
 
     .logo-container {
       width: 100%;
       padding: 20px;
-      border-bottom: 1px solid #f3f4f3;
 
       img {
         height: 40px;
@@ -58,7 +61,7 @@
 
   nav {
     position: sticky;
-    top: 50px;
+    top: 170px;
 
     ul {
       list-style: none;
