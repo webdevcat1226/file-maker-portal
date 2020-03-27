@@ -1,0 +1,30 @@
+.inline-edit {
+  position: relative;
+  padding: 0 25px;
+  a.edit {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    display: none;
+  }
+  &:hover {
+    a.edit {
+      display: block;
+    }
+  }
+
+  input {
+    width: 60%;
+    margin: auto;
+    height: 25px;
+  }
+
+  .edit-btn {
+    position: absolute;
+    min-width: 80px;
+    right: 0;
+    a {
+      cursor: pointer;
+    }
+  }
+}

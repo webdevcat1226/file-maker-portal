@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UiKitModule } from '../common/ui-kit/ui-kit.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    UiKitModule
   ],
   exports: [
     LayoutComponent

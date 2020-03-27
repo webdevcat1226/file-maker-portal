@@ -1,17 +1,20 @@
 <div class="nav-bar-container d-flex flex-column">
   <div class="picture-container d-flex flex-column">
-    <div class="logo-container d-flex justify-content-center">
-      <img src="/assets/background-images/small-logo.png">
+    <div class="logo-container d-flex justify-content-center invisible">
+      <img src="assets/background-images/small-logo.png">
       <div class="d-flex align-items-baseline justify-content-end flex-column">
         <span>RHBC Ltd</span>
         <span>Building control</span>
       </div>
     </div>
 
-    <div class="photo-container">
+    <div class="photo-container d-flex flex-column">
       <div class="photo-image" (click)="file.click()">
         <img [src]="userPhoto">
         <input #file type="file" style="display: none" (change)="handleFileInput($event.target.files)" accept='image/*'>
+      </div>
+      <div class="d-flex justify-content-center">
+        <app-inline-edit value="Yevhen Begman"></app-inline-edit>
       </div>
     </div>
 

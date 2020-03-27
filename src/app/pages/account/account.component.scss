@@ -6,13 +6,13 @@
 
   .account-table {
     background: white;
-    box-shadow: 0 0 5px 1px #4d7cfe;
+    box-shadow: 0 0 1px 0 #2982FE;
     margin-bottom: 30px !important;
     border-radius: 3px;
     overflow: hidden;
 
     .table-head {
-      background: #4d7cfe;
+      background: #2982FE;
       height: 50px;
       color: white;
       display: flex;
@@ -84,8 +84,17 @@
   .colleagues-info-table {
     overflow: hidden;
     position: relative;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .table-head {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+
       span:nth-child(2) {
         font-size: 10px;
       }
@@ -93,11 +102,6 @@
 
     .table-body {
       padding: 0;
-      overflow-y: auto;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
 
       .tbody-background {
         position: absolute;

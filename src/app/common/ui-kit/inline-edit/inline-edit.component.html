@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center inline-edit">
+  <ng-container *ngIf="!editing">
+    <p class="mb-0">{{ value }}</p>
+    <a class="edit" (click)="onEdit()"><i class="icon-pencil"></i></a>
+  </ng-container>
+  <ng-container *ngIf="editing">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="form-group w-auto mb-0">
+        <input class="form-control" [(ngModel)]="temp">
+      </div>
+      <div class="edit-btn d-flex align-items-center">
+        <a class="ml-3" (click)="onSave()"><i class="icon-check"></i></a>
+        <a class="ml-2" (click)="onCancel()"><i class="icon-close"></i></a>
+      </div>
+    </div>
+  </ng-container>
+</div>
