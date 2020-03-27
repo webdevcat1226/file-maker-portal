@@ -6,10 +6,9 @@
   .applications-table {
     position: relative;
     width: 100%;
-    box-shadow: 0 -2px 6px 0px #2982FE;
+    box-shadow: 0 0 1px 0 #2982FE;
     overflow: hidden;
-    border-radius: 3px;
-    border-bottom: 1px solid #95b1fd;
+    border-radius: 5px;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
@@ -24,7 +23,6 @@
       font-size: 13px;
       font-weight: 500;
       overflow: hidden;
-      border-radius: 3px;
       position: sticky;
       top: 0;
       z-index: 9999;
@@ -46,6 +44,10 @@
         font-size: 13px;
         border: none;
         color: transparent;
+
+        &:last-child {
+          margin-left: 10px;
+        }
 
         &:hover, &:focus {
           background: transparent;
@@ -112,6 +114,10 @@
             font-size: 13px;
             border: none;
             color: #2982FE;
+
+            &:last-child {
+              margin-left: 10px;
+            }
 
             &:hover, &:focus {
               background: #2982FE;

@@ -4,8 +4,8 @@
     margin: 20px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 5px 0 #2982FE;
-    border-radius: 3px;
+    box-shadow: 0 0 1px 0 #2982FE;
+    border-radius: 5px;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
@@ -15,7 +15,6 @@
     .table-head {
       background: #2982FE;
       color: white;
-      border-radius: 3px;
       font-family: 'Sarabun', sans-serif;
       position: sticky;
       top: 0;
@@ -56,7 +55,7 @@
 
         .tbody-content-row {
           &.active {
-            border: 2px solid lime;
+            border: 2px solid black;
           }
 
           .tbody-content-cell {
@@ -103,7 +102,7 @@
       position: relative;
       background: white;
       overflow: hidden;
-      box-shadow: 0 0 5px 0 #2982FE;
+      box-shadow: 0 0 1px 0 #2982FE;
       border-radius: 3px;
 
       .table-head {

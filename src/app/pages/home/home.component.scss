@@ -5,8 +5,8 @@
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 -1px 5px 1px #2982FE;
-    border-radius: 3px;
+    box-shadow: 0 0 1px 0 #2982FE;
+    border-radius: 5px;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
@@ -24,7 +24,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 3px;
       background: #2982FE;
 
       button {
