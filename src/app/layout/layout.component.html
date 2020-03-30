@@ -1,7 +1,14 @@
+
 <div class="page-container">
   <app-navbar></app-navbar>
   <div class="main-content d-flex flex-column">
-    <div class="top-navbar"></div>
+    <div class="top-navbar">
+      <div class="search-container">
+        <div class="search-hero">
+          <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search...">
+        </div>
+      </div>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>

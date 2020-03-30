@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
@@ -14,7 +15,8 @@ import { UiKitModule } from '../common/ui-kit/ui-kit.module';
   imports: [
     CommonModule,
     RouterModule,
-    UiKitModule
+    UiKitModule,
+    FormsModule
   ],
   exports: [
     LayoutComponent
