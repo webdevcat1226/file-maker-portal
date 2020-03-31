@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbModalModule, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerModule, NgbModalModule, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule } from 'ngx-mask';
 import { FormsModule } from '@angular/forms';
 
@@ -32,7 +32,8 @@ import { InspectionModalComponent } from './inspection-modal/inspection-modal.co
     NgbModalModule,
     ApplicationsRoutingModule,
     NgxMaskModule.forRoot(),
-    FormsModule
+    FormsModule,
+    NgbDatepickerModule
   ]
 })
 export class ApplicationsModule {

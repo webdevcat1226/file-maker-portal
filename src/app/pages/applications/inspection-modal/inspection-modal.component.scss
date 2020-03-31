@@ -1,0 +1,93 @@
+.modal-header {
+  background: #2982FE;
+  color: white;
+  font-family: 'Sarabun', sans-serif;
+  overflow: hidden;
+
+  button {
+    background: white;
+  }
+}
+
+.modal-body {
+  font-family: 'Roboto', sans-serif;
+
+  form {
+    font-size: 14px;
+
+    .form-group {
+      position: relative;
+      width: 100%;
+      margin: 10px 0;
+
+      span {
+        flex: 1;
+        text-align: right;
+        font-weight: bold;
+        color: #0077cc;
+      }
+
+      .input-group {
+        margin-left: 10px;
+        flex: 1.5;
+      }
+
+      input, select {
+        font-size: 14px;
+      }
+
+      &:last-child {
+        .active {
+          background: lightblue;
+        }
+
+        .contact-info {
+          width: 80%;
+          margin: auto;
+
+          &:hover {
+            background: lightgray;
+          }
+
+          span {
+            flex: 1;
+            text-align: center;
+            line-height: 30px;
+            color: black;
+
+            &:last-child {
+              color: gray;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .confirmation-message {
+          color: black;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .submit-button-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    button {
+      margin: 0 20px;
+    }
+  }
+}
+
+.modal-footer {
+  button {
+    background: white;
+    color: #2982FE;
+    border-color: #2982FE;
+
+    &:hover, &:active {
+      background: #2982FE;
+      color: white;
+    }
+  }
+}

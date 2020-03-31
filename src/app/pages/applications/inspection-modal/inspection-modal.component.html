@@ -1,15 +1,172 @@
 <div class="modal-header">
-  <h4 class="modal-title" id="modal-basic-title">New Inspection</h4>
+  <h5 class="modal-title m-auto" id="modal-basic-title">Inspection Booking - <span style="font-weight: bolder">{{data.applicationName}}</span></h5>
   <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-<div class="modal-body">
-  <form>
-    <div class="form-group">
-      {{ data | json}}
+<div class="modal-body pt-5">
+  <form class="form-inline d-flex flex-column">
+    <div class="form-group d-flex">
+      <span>Date of Inspection</span>
+      <div class="input-group">
+        <label>
+          <input class="form-control" placeholder="yyyy-mm-dd"
+                 name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" style="width: 275px">
+        </label>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+        </div>
+      </div>
+    </div>
+    <div class="form-group d-flex">
+      <span>Concrete Booked?</span>
+      <div class="input-group">
+        <label>
+          <select class="form-control" style="width: 150px">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="form-group d-flex">
+      <span>Visit Early or Late as Possible</span>
+      <div class="input-group">
+        <label>
+          <select class="form-control" style="width: 300px">
+            <option value="Early">Early</option>
+            <option value="Late">Late</option>
+            <option value="Don't Mind">Don't Mind</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="form-group d-flex">
+      <span>Notify Before Arrival</span>
+      <div class="input-group">
+        <label>
+          <select class="form-control" style="width: 250px">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="30">30</option>
+          </select>
+        </label>
+      </div>
+      <span style="position: absolute; right: 160px">Mins</span>
+    </div>
+    <div class="form-group d-flex align-items-baseline">
+      <span>Items to Inspect</span>
+      <div class="input-group d-flex flex-column">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-accessibility">
+          <label class="custom-control-label float-left" for="modal-accessibility">Accessibility</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-buildingService" >
+          <label class="custom-control-label float-left" for="modal-buildingService">Building Services</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-completion">
+          <label class="custom-control-label float-left" for="modal-completion">Completion</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-fireSafety">
+          <label class="custom-control-label float-left" for="modal-fireSafety">Fire Safety</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-foundations">
+          <label class="custom-control-label float-left" for="modal-foundations">Foundations</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-fw">
+          <label class="custom-control-label float-left" for="modal-fw">FW</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-general">
+          <label class="custom-control-label float-left" for="modal-general">General</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-oversiteDPC">
+          <label class="custom-control-label float-left" for="modal-oversiteDPC">Oversite DPC</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-protection">
+          <label class="custom-control-label float-left" for="modal-protection">Protection</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-soundInsulation">
+          <label class="custom-control-label float-left" for="modal-soundInsulation">Sound Insulation</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-superStructure">
+          <label class="custom-control-label float-left" for="modal-superStructure">Super Structure</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-sw">
+          <label class="custom-control-label float-left" for="modal-sw">SW</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-thermalInsulation">
+          <label class="custom-control-label float-left" for="modal-thermalInsulation">Thermal Insulation</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group d-flex align-items-baseline">
+      <span>Plots to Inspect</span>
+      <div class="input-group d-flex flex-column">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-firstPlot">
+          <label class="custom-control-label float-left" for="modal-firstPlot">1</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-secondPlot">
+          <label class="custom-control-label float-left" for="modal-secondPlot">2</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-thirdPlot">
+          <label class="custom-control-label float-left" for="modal-thirdPlot">3</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-fourthPlot">
+          <label class="custom-control-label float-left" for="modal-fourthPlot">4</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-fifthPlot">
+          <label class="custom-control-label float-left" for="modal-fifthPlot">5</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-sixthPlot">
+          <label class="custom-control-label float-left" for="modal-sixthPlot">6</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-seventhPlot">
+          <label class="custom-control-label float-left" for="modal-seventhPlot">7</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="modal-eighthPlot">
+          <label class="custom-control-label float-left" for="modal-eighthPlot">8</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group d-flex align-items-baseline mt-5 position-relative" style="height: 180px">
+      <span>Contact for the Booking</span>
+      <div class="input-group" style="background: white; width: 20px; height: 20px"></div>
+      <div class="position-absolute d-flex flex-column" style="top: 45px; width: 100%">
+        <ng-container class="d-flex flex-column" *ngFor="let item of contactInfo">
+          <div class="contact-info d-flex" (click)="selectLinker(item)" [class.active]="selectedLinker?.linker == item.linker">
+            <span>{{item.linker}}</span>
+            <span>{{item.phone}}</span>
+          </div>
+        </ng-container>
+        <span class="confirmation-message text-center mt-3">We will send a confirmation text message to the selected contact if a mobile number exists</span>
+      </div>
     </div>
   </form>
+
+  <div class="submit-button-area d-flex">
+    <button type="submit" class="btn btn-outline-primary">Submit Request</button>
+    <button class="btn btn-outline-primary">Cancel Request</button>
+  </div>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
