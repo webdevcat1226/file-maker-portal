@@ -10,6 +10,7 @@ export class InspectionModalComponent implements OnInit {
 
   data: any;
   model: any;
+
   contactInfo = [
     {
       linker: 'Will Jarvis',

@@ -1,25 +1,25 @@
 .view-detail-home-page-container {
   width: 90%;
   padding: 10px;
-  background: white;
+  background: #f6f9fc;
   box-shadow: 0 0 1px 0 #2982FE;
   margin: 20px auto 0;
-  //border-top: 30px solid #2982FE;
   border-radius: 3px;
   font-family: 'Roboto', sans-serif;
 
   .detail-unit-box, .address-info-unit {
-    background: #f8fafb;
+    background: white;
   }
 
   .unit-box-container {
     margin: 50px 0;
 
     .detail-unit-box {
-      margin: 0 5px;
+      margin: 0 20px;
       padding: 20px 0;
       text-align: center;
-      border: 1px solid #f3f4f3;
+      box-shadow: 0 0 7px 3px #e8ebee;
+      border-radius: 5px;
 
       span {
         margin: 10px 0;
@@ -54,9 +54,12 @@
     margin: 50px;
 
     .flex-grow-1 {
+      padding-top: 30px;
+
       .address-info-unit {
         margin: 0 auto;
-        border: 1px solid #f3f4f3;
+        box-shadow: 0 0 7px 3px #e8ebee;
+        border-radius: 5px;
         text-align: center;
 
         span {
@@ -73,10 +76,9 @@
       }
 
       &:first-child, &:last-child {
-        padding-top: 30px;
-
         .address-info-unit {
           max-width: 200px;
+          height: 150px;
         }
       }
 
