@@ -1,0 +1,90 @@
+.inspection-page-container {
+  .page-title {
+    font-family: 'Roboto', sans-serif;
+
+    button {
+      right: 50px;
+      font-size: 13px;
+    }
+  }
+
+  .inspection-data-container {
+    box-shadow: 0 0 1px 0 #2982FE;
+
+    .inspection-table {
+      .table-head {
+        background: #2982FE;
+        height: 40px;
+        color: white;
+        font-family: 'Sarabun', sans-serif;
+        font-size: 14px;
+      }
+
+      .table-body {
+        font-family: 'Roboto', sans-serif;
+
+        .table-body-row:first-child {
+          margin: 5px 0;
+
+          label {
+            flex: 1;
+
+            input {
+              border: 1px solid #2982FE;
+              font-size: 13px;
+              max-width: 90%;
+              padding-left: 2px;
+              border-radius: 2px;
+            }
+
+            &:nth-child(2) {
+              span {
+                font-size: 12px;
+                color: #2982FE;
+                top: -15px;
+                left: 10%;
+              }
+            }
+
+            &:nth-child(7) {
+              flex: 2;
+
+              span {
+                font-size: 13px;
+                color: limegreen;
+                font-weight: 500;
+              }
+            }
+
+            &:last-child {
+              flex: 2;
+
+              span {
+                font-size: 13px;
+                font-weight: 500;
+                color: red;
+              }
+            }
+          }
+        }
+
+        .table-body-row:nth-child(2), .table-body-row:last-child {
+          .custom-checkbox {
+            font-size: 13px;
+            margin-right: 10px;
+
+            label {
+              padding-top: 4px;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .table-head {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

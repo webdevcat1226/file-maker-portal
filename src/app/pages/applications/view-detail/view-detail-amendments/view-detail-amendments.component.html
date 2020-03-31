@@ -15,8 +15,13 @@
           <div class="tbody-content-cell">{{item.number}}</div>
           <div class="tbody-content-cell">{{item.character}} {{item.serial}}</div>
           <div class="tbody-content-cell">{{item.content}}</div>
-          <button class="tbody-content-cell btn btn-outline-primary">view</button>
+          <button type="button" class="tbody-content-cell btn btn-outline-primary mr-2" placement="left"
+                  container="body"
+                  [ngbPopover]="item.content" [popoverTitle]="item.character + ' - ' + item.serial ">
+            View
+          </button>
           <div class="tbody-content-cell text-center" [style]="'color: ' + item.color + ';'">{{item.isComplete}}</div>
+          <div class="detail-card-viewer"></div>
         </div>
       </div>
     </div>

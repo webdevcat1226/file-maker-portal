@@ -14,3 +14,7 @@
   position: relative;
   overflow: hidden;
 }
+
+ngb-popover-window {
+  z-index: 99999 !important;
+}

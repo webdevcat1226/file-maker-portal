@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxMaskModule } from 'ngx-mask';
+import { FormsModule } from '@angular/forms';
 
 import { ApplicationsRoutingModule } from './applications-routing.module';
 import { ApplicationsComponent } from './applications.component';
@@ -12,10 +15,22 @@ import { ViewDetailAmendmentsComponent } from './view-detail/view-detail-amendme
 
 
 @NgModule({
-  declarations: [ApplicationsComponent, ViewLayoutComponent, ViewDetailComponent, ViewDetailHomeComponent, ViewDetailCaseComponent, InspectionsComponent, ViewDetailAmendmentsComponent],
+  declarations: [
+    ApplicationsComponent,
+    ViewLayoutComponent,
+    ViewDetailComponent,
+    ViewDetailHomeComponent,
+    ViewDetailCaseComponent,
+    InspectionsComponent,
+    ViewDetailAmendmentsComponent
+  ],
   imports: [
     CommonModule,
-    ApplicationsRoutingModule
+    NgbPopoverModule,
+    ApplicationsRoutingModule,
+    NgxMaskModule.forRoot(),
+    FormsModule
   ]
 })
-export class ApplicationsModule { }
+export class ApplicationsModule {
+}
