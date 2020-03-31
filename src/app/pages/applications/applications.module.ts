@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule } from 'ngx-mask';
 import { FormsModule } from '@angular/forms';
 
@@ -12,6 +12,7 @@ import { ViewDetailHomeComponent } from './view-detail/view-detail-home/view-det
 import { ViewDetailCaseComponent } from './view-detail/view-detail-case/view-detail-case.component';
 import { InspectionsComponent } from './inspections/inspections.component';
 import { ViewDetailAmendmentsComponent } from './view-detail/view-detail-amendments/view-detail-amendments.component';
+import { InspectionModalComponent } from './inspection-modal/inspection-modal.component';
 
 
 @NgModule({
@@ -22,11 +23,13 @@ import { ViewDetailAmendmentsComponent } from './view-detail/view-detail-amendme
     ViewDetailHomeComponent,
     ViewDetailCaseComponent,
     InspectionsComponent,
-    ViewDetailAmendmentsComponent
+    ViewDetailAmendmentsComponent,
+    InspectionModalComponent
   ],
   imports: [
     CommonModule,
     NgbPopoverModule,
+    NgbModalModule,
     ApplicationsRoutingModule,
     NgxMaskModule.forRoot(),
     FormsModule

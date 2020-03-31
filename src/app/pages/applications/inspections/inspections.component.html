@@ -1,7 +1,7 @@
 <div class="inspection-page-container ml-5 mr-5">
   <div class="page-title position-relative d-flex justify-content-center align-items-center">
     <div>Inspection Bookings - <span class="font-weight-bold">{{data.applicationName}}</span></div>
-    <button class="position-absolute btn btn-outline-primary">New Inspection</button>
+    <button class="position-absolute btn btn-outline-primary" (click)="openInspectionModal()">New Inspection</button>
   </div>
   <div class="inspection-data-container d-flex flex-column mt-3" >
     <div class="inspection-table" *ngFor="let item of inspectionData">

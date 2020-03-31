@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ApplicationService } from '../../../core/services/application.service';
 import { ActivatedRoute } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ApplicationService } from '../../../core/services/application.service';
+import { InspectionModalComponent } from '../inspection-modal/inspection-modal.component';
 
 @Component({
   selector: 'app-inspections',
@@ -161,7 +163,8 @@ export class InspectionsComponent implements OnInit {
 
   constructor(
     private applicationService: ApplicationService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private modal: NgbModal
   ) {
   }
 
@@ -170,5 +173,16 @@ export class InspectionsComponent implements OnInit {
     this.data = this.applicationService.findById(this.id);
     this.inspectionData['inspector'] = this.data['inspector'];
     console.log(this.data['inspector']);
+  }
+
+  openInspectionModal() {
+    const modalRef = this.modal.open(InspectionModalComponent);
+    modalRef.componentInstance.data = this.data;
+
+    modalRef.result.then(res => {
+      console.log(res);
+    }, reason => {
+      console.log(reason);
+    });
   }
 }
