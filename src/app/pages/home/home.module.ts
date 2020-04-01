@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { HomeRoutingModule } from './home-routing.module';
 
@@ -8,7 +9,6 @@ import { UiKitModule } from '../../common/ui-kit/ui-kit.module';
 import { HomeComponent } from './home.component';
 import { QuoteModalComponent } from './quote-modal/quote-modal.component';
 import { ApplicationModalComponent } from './application-modal/application-modal.component';
-
 
 @NgModule({
   declarations: [
@@ -20,7 +20,9 @@ import { ApplicationModalComponent } from './application-modal/application-modal
     CommonModule,
     HomeRoutingModule,
     // project scope
-    UiKitModule
+    UiKitModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
 

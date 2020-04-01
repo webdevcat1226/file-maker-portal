@@ -1,0 +1,150 @@
+.modal-header {
+  background: #2982FE;
+  color: white;
+  font-family: 'Sarabun', sans-serif;
+  overflow: hidden;
+
+  button {
+    background: white;
+  }
+}
+
+.modal-body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+
+  form {
+    .form-unit {
+      padding: 2rem 2rem 1rem;
+      margin: 2rem;
+      border: 1px solid #2982FE;
+      border-radius: 3px;
+
+      .form-title {
+        span {
+          font-weight: 500;
+
+          &:first-child {
+            color: red;
+            font-size: 16px;
+          }
+
+          &:last-child {
+            color: black;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        label {
+          flex: 1;
+          margin-bottom: 0;
+        }
+
+        input {
+          flex: 3;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .proposed-work {
+      .form-group {
+        input {
+          height: 100px;
+        }
+      }
+    }
+
+    .new-dwelling-info {
+      span {
+        color: limegreen;
+      }
+    }
+
+    .new-dwelling-info, .competent-person-scheme {
+      .form-group {
+        label {
+          flex: 1;
+        }
+
+        select {
+          flex: 1;
+        }
+      }
+    }
+
+    .building-client-type, .services-form {
+      .form-group {
+        label {
+          flex: 1;
+        }
+
+        .checkbox-container {
+          flex: 1;
+
+          label {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .reference-number {
+      .form-group {
+        label {
+          flex: 2.5;
+        }
+
+        input {
+          flex: 1;
+        }
+      }
+    }
+
+    .quoteNote {
+      .form-group {
+        textarea {
+          font-size: 13px;
+          border: none;
+
+          &:active {
+            border: none;
+          }
+        }
+      }
+    }
+
+    .terms-and-conditions {
+      .input-container {
+        button {
+          font-size: 14px;
+        }
+
+        .custom-checkbox {
+          label {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .form-control {
+          font-size: 14px;
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+
+.modal-footer {
+  button {
+    margin-right: 50px;
+  }
+}
