@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { QuoteModalComponent } from './quote-modal/quote-modal.component';
 import { ApplicationModalComponent } from './application-modal/application-modal.component';
+import { QuoteService } from '../../core/services/quote.service';
 
 @Component({
   selector: 'app-home',
@@ -10,21 +12,19 @@ import { ApplicationModalComponent } from './application-modal/application-modal
 })
 export class HomeComponent implements OnInit {
 
-  quotes = [
-    {availability: "N/A", type: "", status: "Unsubmitted", viewButtonStyle: ""},
-    {availability: "N/A", type: "", status: "Unsubmitted", viewButtonStyle: ""},
-    {availability: "N/A", type: "", status: "Unsubmitted", viewButtonStyle: ""},
-    {availability: "N/A", type: "Test", status: "Pending", viewButtonStyle: ""},
-    {availability: "N/A", type: "", status: "Pending", viewButtonStyle: ""},
-  ];
+  quotes = [];
 
   submittedApplications = [];
 
   processedApplications = [];
 
   constructor(
-    private modal: NgbModal
-  ) {
+    private modal: NgbModal,
+    private quoteService: QuoteService
+  ) { }
+
+  ngOnInit(): void {
+    this.quotes = this.quoteService.getAll();
     this.quotes.forEach(function (item) {
       if (item.status == "Unsubmitted") {
         item.viewButtonStyle = "visibility: visible"
@@ -32,9 +32,6 @@ export class HomeComponent implements OnInit {
         item.viewButtonStyle = "visibility: hidden"
       }
     })
-  }
-
-  ngOnInit(): void {
   }
 
   openQuoteModal() {
