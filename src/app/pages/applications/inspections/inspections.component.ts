@@ -176,7 +176,7 @@ export class InspectionsComponent implements OnInit {
   }
 
   openInspectionModal() {
-    const modalRef = this.modal.open(InspectionModalComponent);
+    const modalRef = this.modal.open(InspectionModalComponent, { backdrop: 'static' });
     modalRef.componentInstance.data = this.data;
 
     modalRef.result.then(res => {

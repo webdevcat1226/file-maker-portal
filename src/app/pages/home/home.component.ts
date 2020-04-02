@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private modal: NgbModal,
     private quoteService: QuoteService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     this.quotes = this.quoteService.getAll();
@@ -35,7 +36,7 @@ export class HomeComponent implements OnInit {
   }
 
   openQuoteModal() {
-    const modalRef = this.modal.open(QuoteModalComponent);
+    const modalRef = this.modal.open(QuoteModalComponent, { backdrop: 'static' });
     // modalRef.componentInstance.data = this.data;
 
     modalRef.result.then(res => {
@@ -46,7 +47,7 @@ export class HomeComponent implements OnInit {
   }
 
   openApplicationModal() {
-    const modalRef = this.modal.open(ApplicationModalComponent);
+    const modalRef = this.modal.open(ApplicationModalComponent, { backdrop: 'static' });
     // modalRef.componentInstance.data = this.data;
 
     modalRef.result.then(res => {
