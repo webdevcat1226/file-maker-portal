@@ -1,4 +1,28 @@
 <div class="view-detail-home-page-container">
+  <div class="inspector-info plan-check-inspector position-absolute">
+    <span class="box-title">Plan Check Inspector</span>
+    <div class="photo-container d-flex flex-column">
+      <div class="photo-image" (click)="file.click()">
+        <img [src]="userPhoto1">
+        <input #file type="file" style="display: none" (change)="handleFileInput1($event.target.files)" accept='image/*'>
+      </div>
+    </div>
+    <span class="inspector-name">{{data.inspector}}</span>
+    <span class="inspector-phone">0{{data.phoneNumber | mask: '0000000000'}}</span>
+    <span class="inspector-email">{{data.userEmail}}</span>
+  </div>
+  <div class="inspector-info inspection-inspector position-absolute">
+    <span class="box-title">Inspection Inspector</span>
+    <div class="photo-container d-flex flex-column">
+      <div class="photo-image" (click)="file.click()">
+        <img [src]="userPhoto2">
+        <input #file type="file" style="display: none" (change)="handleFileInput2($event.target.files)" accept='image/*'>
+      </div>
+    </div>
+    <span class="inspector-name">{{data.inspector}}</span>
+    <span class="inspector-phone">0{{data.phoneNumber | mask: '0000000000'}}</span>
+    <span class="inspector-email">{{data.userEmail}}</span>
+  </div>
   <div class="unit-box-container d-flex">
     <div class="flex-grow-1">
       <div class="detail-unit-box commencement-date d-flex flex-column">
