@@ -97,6 +97,17 @@
       }
     }
 
+    .drawing-document-upload {
+      .container {
+        box-shadow: 0 0 3px 0 #2982FE;
+        height: 300px;
+        padding: 15px !important;
+        button {
+          font-size: 11px;
+        }
+      }
+    }
+
     .reference-number {
       .form-group {
         label {
