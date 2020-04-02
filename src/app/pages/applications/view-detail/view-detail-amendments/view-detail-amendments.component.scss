@@ -17,10 +17,10 @@
       border-radius: 3px;
       height: 50px;
       background: #2982FE;
-      padding: 0 30px;
       position: sticky;
       top: 0;
       z-index: 9999;
+      padding: 0 110px 0 30px;
 
       span {
         color: white;
@@ -46,8 +46,8 @@
       }
 
       .tbody-content {
-        padding: 0 30px;
         position: relative;
+        padding: 0 110px 0 30px;
 
         .tbody-content-row {
           height: 60px;
@@ -72,6 +72,11 @@
 
             }
           }
+
+          button {
+            font-size: 13px !important;
+          }
+
           .detail-card-viewer {
             position: absolute;
             display: none;
@@ -85,6 +90,16 @@
           }
         }
 
+      }
+
+      .tbody-content > button {
+        font-size: 13px;
+        position: absolute;
+        right: 5px;
+        margin: auto 0;
+        top: 20%;
+        padding-left: 2px !important;
+        padding-right: 2px !important;
       }
     }
   }
