@@ -15,6 +15,7 @@ export class InspectionsComponent implements OnInit {
   data: any;
   inspectionData = [
     {
+      id:'1',
       date: 'Monday, 02 March 2020',
       isBooked: 'No',
       terminal: 'Early',
@@ -44,6 +45,7 @@ export class InspectionsComponent implements OnInit {
       eighthPlot: false
     },
     {
+      id:'2',
       date: 'Thursday, 23 January 2020',
       isBooked: 'Yes',
       terminal: '',
@@ -73,6 +75,7 @@ export class InspectionsComponent implements OnInit {
       eighthPlot: false
     },
     {
+      id:'3',
       date: 'Thursday, 23 January 2020',
       isBooked: 'No',
       terminal: 'Early',
@@ -102,6 +105,7 @@ export class InspectionsComponent implements OnInit {
       eighthPlot: false
     },
     {
+      id:'4',
       date: 'Wednesday, 22 January 2020',
       isBooked: 'No',
       terminal: "Don't Mind",
@@ -131,6 +135,7 @@ export class InspectionsComponent implements OnInit {
       eighthPlot: false
     },
     {
+      id:'5',
       date: '',
       isBooked: 'No',
       terminal: "",

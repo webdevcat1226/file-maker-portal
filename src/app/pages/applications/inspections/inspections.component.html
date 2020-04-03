@@ -36,94 +36,93 @@
         </div>
         <div class="table-body-row d-flex align-items-center">
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="accessibility" [checked]="item.accessibility">
-            <label class="custom-control-label" for="accessibility">Accessibility</label>
+            <input type="checkbox" class="custom-control-input" [id]="'accessibility' + item.id" [checked]="item.accessibility">
+            <label class="custom-control-label" [for]="'accessibility' + item.id">Accessibility</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="buildingService" [checked]="item.buildingService">
-            <label class="custom-control-label" for="buildingService">Building Services</label>
+            <input type="checkbox" class="custom-control-input" [id]="'buildingService' + item.id" [checked]="item.buildingService">
+            <label class="custom-control-label" [for]="'buildingService' + item.id">Building Services</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="completion" [checked]="item.completion">
-            <label class="custom-control-label" for="completion">Completion</label>
+            <input type="checkbox" class="custom-control-input" [id]="'completion' + item.id" [checked]="item.completion">
+            <label class="custom-control-label" [for]="'completion' + item.id">Completion</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="fireSafety" [checked]="item.fireSafety">
-            <label class="custom-control-label" for="fireSafety">Fire Safety</label>
+            <input type="checkbox" class="custom-control-input" [id]="'fireSafety' + item.id" [checked]="item.fireSafety">
+            <label class="custom-control-label" [for]="'fireSafety' + item.id">Fire Safety</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="foundations" [checked]="item.foundation">
-            <label class="custom-control-label" for="foundations">Foundations</label>
+            <input type="checkbox" class="custom-control-input" [id]="'foundations' + item.id" [checked]="item.foundation">
+            <label class="custom-control-label" [for]="'foundations' + item.id">Foundations</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="fw" [checked]="item.fw">
-            <label class="custom-control-label" for="fw">FW</label>
+            <input type="checkbox" class="custom-control-input" [id]="'fw' + item.id" [checked]="item.fw">
+            <label class="custom-control-label" [for]="'fw' + item.id">FW</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="general" [checked]="item.general">
-            <label class="custom-control-label" for="general">General</label>
+            <input type="checkbox" class="custom-control-input" [id]="'general' + item.id" [checked]="item.general">
+            <label class="custom-control-label" [for]="'general' + item.id">General</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="oversiteDPC" [checked]="item.oversiteDpc">
-            <label class="custom-control-label" for="oversiteDPC">Oversite DPC</label>
+            <input type="checkbox" class="custom-control-input" [id]="'oversiteDPC' + item.id" [checked]="item.oversiteDpc">
+            <label class="custom-control-label" [for]="'oversiteDPC' + item.id">Oversite DPC</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="protection" [checked]="item.protection">
-            <label class="custom-control-label" for="protection">Protection</label>
+            <input type="checkbox" class="custom-control-input" [id]="'protection' + item.id" [checked]="item.protection">
+            <label class="custom-control-label" [for]="'protection' + item.id">Protection</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="soundInsulation" [checked]="item.soundInsulation">
-            <label class="custom-control-label" for="soundInsulation">Sound Insulation</label>
+            <input type="checkbox" class="custom-control-input" [id]="'soundInsulation' + item.id" [checked]="item.soundInsulation">
+            <label class="custom-control-label" [for]="'soundInsulation' + item.id">Sound Insulation</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="superStructure" [checked]="item.superStructure">
-            <label class="custom-control-label" for="superStructure">Super Structure</label>
+            <input type="checkbox" class="custom-control-input" [id]="'superStructure' + item.id" [checked]="item.superStructure">
+            <label class="custom-control-label" [for]="'superStructure' + item.id">Super Structure</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="sw" [checked]="item.sw">
-            <label class="custom-control-label" for="sw">SW</label>
+            <input type="checkbox" class="custom-control-input" [id]="'sw' + item.id" [checked]="item.sw">
+            <label class="custom-control-label" [for]="'sw' + item.id">SW</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="thermalInsulation" [checked]="item.thermalInsulation">
-            <label class="custom-control-label" for="thermalInsulation">Thermal Insulation</label>
+            <input type="checkbox" class="custom-control-input" [id]="'thermalInsulation' + item.id" [checked]="item.thermalInsulation">
+            <label class="custom-control-label" [for]="'thermalInsulation' + item.id">Thermal Insulation</label>
           </div>
         </div>
         <div class="table-body-row d-flex align-items-center">
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="firstPlot" [checked]="item.firstPlot">
-            <label class="custom-control-label" for="firstPlot">1</label>
+            <input type="checkbox" class="custom-control-input" [id]="'firstPlot' + item.id" [checked]="item.firstPlot">
+            <label class="custom-control-label" [for]="'firstPlot' + item.id">1</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="secondPlot" [checked]="item.second">
-            <label class="custom-control-label" for="secondPlot">2</label>
+            <input type="checkbox" class="custom-control-input" [id]="'secondPlot' + item.id" [checked]="item.second">
+            <label class="custom-control-label" [for]="'secondPlot' + item.id">2</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="thirdPlot" [checked]="item.thirdPlot">
-            <label class="custom-control-label" for="thirdPlot">3</label>
+            <input type="checkbox" class="custom-control-input" [id]="'thirdPlot' + item.id" [checked]="item.thirdPlot">
+            <label class="custom-control-label" [for]="'thirdPlot' + item.id">3</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="fourthPlot" [checked]="item.fourthPlot">
-            <label class="custom-control-label" for="fourthPlot">4</label>
+            <input type="checkbox" class="custom-control-input" [id]="'fourthPlot' + item.id" [checked]="item.fourthPlot">
+            <label class="custom-control-label" [for]="'fourthPlot' + item.id">4</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="fifthPlot" [checked]="item.fifthPlot">
-            <label class="custom-control-label" for="fifthPlot">5</label>
+            <input type="checkbox" class="custom-control-input" [id]="'fifthPlot' + item.id" [checked]="item.fifthPlot">
+            <label class="custom-control-label" [for]="'fifthPlot' + item.id">5</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="sixthPlot" [checked]="item.sixthPlot">
-            <label class="custom-control-label" for="sixthPlot">6</label>
+            <input type="checkbox" class="custom-control-input" [id]="'sixthPlot' + item.id" [checked]="item.sixthPlot">
+            <label class="custom-control-label" [for]="'sixthPlot' + item.id">6</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="seventhPlot" [checked]="item.seventhPlot">
-            <label class="custom-control-label" for="seventhPlot">7</label>
+            <input type="checkbox" class="custom-control-input" [id]="'seventhPlot' + item.id" [checked]="item.seventhPlot">
+            <label class="custom-control-label" [for]="'seventhPlot' + item.id">7</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="eighthPlot" [checked]="item.eighthPlot">
-            <label class="custom-control-label" for="eighthPlot">8</label>
+            <input type="checkbox" class="custom-control-input" [id]="'eighthPlot' + item.id" [checked]="item.eighthPlot">
+            <label class="custom-control-label" [for]="'eighthPlot' + item.id">8</label>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!--{{data | json}}-->
