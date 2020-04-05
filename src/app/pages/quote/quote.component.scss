@@ -18,11 +18,13 @@
     color: white;
     height: 55px;
     overflow: hidden;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #2982FE;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
   }
 
   .table-body {
