@@ -13,6 +13,7 @@ import { ViewDetailCaseComponent } from './view-detail/view-detail-case/view-det
 import { InspectionsComponent } from './inspections/inspections.component';
 import { ViewDetailAmendmentsComponent } from './view-detail/view-detail-amendments/view-detail-amendments.component';
 import { InspectionModalComponent } from './inspection-modal/inspection-modal.component';
+import { AmendmentsModalComponent } from './view-detail/amendments-modal/amendments-modal.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { InspectionModalComponent } from './inspection-modal/inspection-modal.co
     ViewDetailCaseComponent,
     InspectionsComponent,
     ViewDetailAmendmentsComponent,
-    InspectionModalComponent
+    InspectionModalComponent,
+    AmendmentsModalComponent
   ],
   imports: [
     CommonModule,
