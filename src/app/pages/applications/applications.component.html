@@ -2,6 +2,7 @@
   <div class="applications-table">
     <div class="table-head d-flex align-items-center">
       <span class="project-name-title">RHBC Ref</span>
+      <span>Your Ref</span>
       <span class="project-address-title">Project Address</span>
       <span class="final-certificate-title">Final Certificate</span>
       <span class="unresolved-amendments-title">Unresolved Amendments</span>
@@ -22,6 +23,7 @@
       <div class="tbody-content d-flex flex-column">
         <div class="tbody-content-cell d-flex align-items-center" *ngFor="let item of applicationsInfo">
           <span class="project-name">{{item.applicationName}}</span>
+          <span class="customer-reference">{{item.customerRef}}</span>
           <span class="project-address">{{item.worksAddress}}</span>
           <span class="final-certificate">{{item.certificate}}</span>
           <span class="unresolved-amendments">{{item.unresolvedAmendments}}</span>

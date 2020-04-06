@@ -20,11 +20,14 @@
       color: white;
       height: 55px;
       overflow: hidden;
-      position: relative;
+      //position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       background: #2982FE;
+      position: sticky;
+      top: 0;
+      z-index: 1;
 
       button {
         position: absolute;
@@ -78,7 +81,7 @@
     div {
       .table-body {
         .tbody-content {
-          padding: 0 10px 0 15px;
+          padding: 0 27px 0 15px;
 
           div {
             span {
@@ -98,7 +101,7 @@
             }
 
             button {
-              height: 80%;
+              height: 70%;
               background: white;
               color: #2982FE;
               border: 1px solid #2982FE;
