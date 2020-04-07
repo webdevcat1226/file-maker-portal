@@ -43,9 +43,9 @@
 
           <div class="tbody-content" *ngFor="let item of submittedApplications">
             <div class="d-flex justify-content-center align-items-center">
-              <span class="our-reference">{{item.ourRef}}</span>
-              <span class="your-reference">{{item.yourRef}}</span>
-              <span class="address">{{item.address}}</span>
+              <span class="our-reference">{{item.applicationName}}</span>
+              <span class="your-reference">{{item.customerRef}}</span>
+              <span class="address">{{item.worksAddress}}</span>
               <button class="btn btn-outline-primary" (click)="openApplicationModal()">View</button>
             </div>
           </div>

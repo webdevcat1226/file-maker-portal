@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { QuoteModalComponent } from './quote-modal/quote-modal.component';
 import { ApplicationModalComponent } from './application-modal/application-modal.component';
 import { QuoteService } from '../../core/services/quote.service';
+import { ApplicationService } from '../../core/services/application.service';
 
 @Component({
   selector: 'app-home',
@@ -14,34 +15,14 @@ export class HomeComponent implements OnInit {
 
   quotes = [];
 
-  submittedApplications = [
-    {
-      ourRef: '123456789',
-      yourRef: '987654321',
-      address: 'Country City Street'
-    },
-    {
-      ourRef: '123456789',
-      yourRef: '987654321',
-      address: 'Country City Street'
-    },
-    {
-      ourRef: '123456789',
-      yourRef: '987654321',
-      address: 'Country City Street'
-    },
-    {
-      ourRef: '123456789',
-      yourRef: '987654321',
-      address: 'Country City Street'
-    },
-  ];
+  submittedApplications = [];
 
   processedApplications = [];
 
   constructor(
     private modal: NgbModal,
-    private quoteService: QuoteService
+    private quoteService: QuoteService,
+    private applicationService: ApplicationService
   ) {
   }
 
@@ -53,7 +34,9 @@ export class HomeComponent implements OnInit {
       } else {
         item.viewButtonStyle = "visibility: hidden"
       }
-    })
+    });
+
+    this.submittedApplications = this.applicationService.getAll();
   }
 
   openQuoteModal() {
