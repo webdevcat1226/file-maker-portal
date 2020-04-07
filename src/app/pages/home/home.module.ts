@@ -9,12 +9,14 @@ import { UiKitModule } from '../../common/ui-kit/ui-kit.module';
 import { HomeComponent } from './home.component';
 import { QuoteModalComponent } from './quote-modal/quote-modal.component';
 import { ApplicationModalComponent } from './application-modal/application-modal.component';
+import { NewQuoteModalComponent } from './new-quote-modal/new-quote-modal.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     QuoteModalComponent,
-    ApplicationModalComponent
+    ApplicationModalComponent,
+    NewQuoteModalComponent
   ],
   imports: [
     CommonModule,

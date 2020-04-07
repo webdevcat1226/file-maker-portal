@@ -1,8 +1,5 @@
 <div class="modal-header">
   <h5 class="modal-title m-auto" id="modal-basic-title">Inspection Booking - <span style="font-weight: bolder">{{data.applicationName}}</span></h5>
-  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-    <span aria-hidden="true">&times;</span>
-  </button>
 </div>
 <div class="modal-body pt-5">
   <form class="form-inline d-flex flex-column">
@@ -11,10 +8,10 @@
       <div class="input-group">
         <label>
           <input class="form-control" placeholder="yyyy-mm-dd"
-                 name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" style="width: 275px">
+                 name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" style="width: 184px; border-bottom-right-radius: 0; border-top-right-radius: 0">
         </label>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+          <button class="btn btn-outline-secondary icon-calendar" (click)="d.toggle()" type="button" style="border-color: gray"></button>
         </div>
       </div>
     </div>
@@ -22,7 +19,7 @@
       <span>Concrete Booked?</span>
       <div class="input-group">
         <label>
-          <select class="form-control" style="width: 150px">
+          <select class="form-control" style="width: 225px">
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
@@ -33,7 +30,7 @@
       <span>Visit Early or Late as Possible</span>
       <div class="input-group">
         <label>
-          <select class="form-control" style="width: 300px">
+          <select class="form-control" style="width: 225px">
             <option value="Early">Early</option>
             <option value="Late">Late</option>
             <option value="Don't Mind">Don't Mind</option>
@@ -45,14 +42,14 @@
       <span>Notify Before Arrival</span>
       <div class="input-group">
         <label>
-          <select class="form-control" style="width: 250px">
+          <select class="form-control" style="width: 225px">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="30">30</option>
           </select>
         </label>
       </div>
-      <span style="position: absolute; right: 160px">Mins</span>
+      <span style="position: absolute; right: 225px">Mins</span>
     </div>
     <div class="form-group d-flex align-items-baseline">
       <span>Items to Inspect</span>
@@ -162,12 +159,8 @@
       </div>
     </div>
   </form>
-
-  <div class="submit-button-area d-flex">
-    <button type="submit" class="btn btn-outline-primary">Submit Request</button>
-    <button class="btn btn-outline-primary">Cancel Request</button>
-  </div>
 </div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+<div class="modal-footer d-flex justify-content-between">
+  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Submit Request')">Submit Request</button>
+  <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss('Cancel Request')">Cancel Request</button>
 </div>

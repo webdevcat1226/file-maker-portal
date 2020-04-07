@@ -37,7 +37,6 @@ export class HomeComponent implements OnInit {
 
   openQuoteModal() {
     const modalRef = this.modal.open(QuoteModalComponent, { backdrop: 'static' });
-    // modalRef.componentInstance.data = this.data;
 
     modalRef.result.then(res => {
       console.log(res);

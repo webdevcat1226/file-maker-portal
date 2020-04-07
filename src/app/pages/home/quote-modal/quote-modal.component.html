@@ -1,8 +1,5 @@
 <div class="modal-header">
   <h5 class="modal-title m-auto" id="modal-basic-title">New Quote - Unsubmitted</h5>
-  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-    <span aria-hidden="true">&times;</span>
-  </button>
 </div>
 <div class="modal-body container pt-5">
   <div class="container">
@@ -263,6 +260,7 @@
     </form>
   </div>
 </div>
-<div class="modal-footer">
-  <button type="submit" class="btn btn-outline-primary" (click)="modal.close('Save click')">Submit New Quote</button>
+<div class="modal-footer d-flex justify-content-between">
+  <button type="submit" class="btn btn-outline-primary" (click)="modal.dismiss('Cancel click')">Cancel to Submit</button>
+  <button type="submit" class="btn btn-outline-primary" (click)="modal.close('Submit click')">Submit New Quote</button>
 </div>

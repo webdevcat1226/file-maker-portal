@@ -3,11 +3,6 @@
   color: white;
   font-family: 'Sarabun', sans-serif;
   overflow: hidden;
-
-  button {
-    background: white;
-    margin-left: 0 !important;
-  }
 }
 
 .modal-body {
@@ -157,7 +152,12 @@
 }
 
 .modal-footer {
+  padding-left: 60px;
+  padding-right: 60px;
+
   button {
-    margin-right: 50px;
+    width: 176px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
   }
 }

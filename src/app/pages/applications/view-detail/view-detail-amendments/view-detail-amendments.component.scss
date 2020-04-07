@@ -1,6 +1,15 @@
 .amendments-view-container {
   width: 100%;
   padding: 30px 50px;
+  position: relative;
+
+  .view-amendment-letter {
+    position: absolute;
+    right: 52px;
+    top: -15px;
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+  }
 
   .amendments-table {
     position: relative;
@@ -75,18 +84,6 @@
 
           button {
             font-size: 13px !important;
-          }
-
-          .detail-card-viewer {
-            position: absolute;
-            display: none;
-            z-index: 1;
-            height: 100px;
-            width: 200px;
-            background: red;
-            border: 1px solid #2982FE;
-            border-radius: 3px;
-            right: 10%;
           }
         }
 

@@ -12,12 +12,12 @@ export class AmendmentsModalComponent implements OnInit {
   @Input() public selectedAmendment;
 
   previousUploadedEvidences = [
-    { checked: true },
-    { checked: false },
-    { checked: true },
-    { checked: false },
-    { checked: false },
-    { checked: true },
+    { isChecked: true },
+    { isChecked: false },
+    { isChecked: true },
+    { isChecked: false },
+    { isChecked: false },
+    { isChecked: true },
   ];
 
   constructor(

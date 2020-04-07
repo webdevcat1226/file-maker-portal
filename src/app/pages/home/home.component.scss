@@ -20,7 +20,6 @@
       color: white;
       height: 55px;
       overflow: hidden;
-      //position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -34,9 +33,10 @@
         font-size: 12px;
         right: 10px;
         width: 90px;
-        height: 40px;
-        line-height: 11px;
+        height: 38px;
+        line-height: 13px;
         background: white;
+        padding: 0;
 
         &:hover, &:focus {
           color: white;

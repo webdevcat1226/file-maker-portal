@@ -14,5 +14,4 @@ export class QuoteModalComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
