@@ -132,18 +132,20 @@
     .terms-and-conditions {
       .input-container {
         button {
-          font-size: 14px;
+          font-size: 13px;
         }
 
         .custom-checkbox {
           label {
             display: flex;
             align-items: center;
+            font-size: 13px;
           }
         }
 
         .form-control {
           font-size: 14px;
+          font-family: 'Dancing Script', cursive;
           width: 250px;
         }
       }

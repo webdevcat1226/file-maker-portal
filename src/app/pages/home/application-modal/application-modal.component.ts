@@ -8,11 +8,23 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ApplicationModalComponent implements OnInit {
 
+  name = '';
+  isChecked = false;
+
   constructor(
     public modal: NgbActiveModal
   ) {
   }
 
   ngOnInit(): void {
+  }
+
+  TermsAndConditionChange() {
+    let element = <HTMLInputElement> document.getElementById("Terms_Conditions");
+    this.isChecked = element.checked;
+    console.log(this.isChecked);
+  }
+  getTermsAndConditionCheckboxStatus() {
+    return this.isChecked;
   }
 }

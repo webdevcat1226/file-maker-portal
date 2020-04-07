@@ -118,6 +118,49 @@
       }
     }
   }
+
+  .col-sm-12:nth-child(2) {
+
+    div {
+      .table-body {
+        .tbody-content {
+          padding: 0 27px 0 15px;
+
+          div {
+            span {
+              width: 100%;
+
+              &:first-child {
+                flex: 1;
+              }
+
+              &:nth-child(2) {
+                flex: 1;
+              }
+
+              &:nth-child(3) {
+                flex: 2;
+              }
+            }
+
+            button {
+              height: 70%;
+              background: white;
+              color: #2982FE;
+              border: 1px solid #2982FE;
+              border-radius: 3px;
+              font-size: 12px;
+
+              &:hover, &:focus {
+                background: #2982FE;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1300px) {

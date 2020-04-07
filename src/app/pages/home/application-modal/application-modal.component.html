@@ -257,6 +257,7 @@
                     placeholder="Enter any further information that you feel may help us accurately quote your requirements"></textarea>
         </div>
       </div>
+
       <div class="terms-and-conditions form-unit">
         <div class="form-title mb-2">
           <span>Terms and Conditions</span>
@@ -270,17 +271,15 @@
           <div class="d-flex align-items-center justify-content-center">
             <button class="btn btn-outline-dark mr-5">View Terms and Conditions</button>
             <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="agentAccept">
-              <label class="custom-control-label float-left" for="agentAccept">Agent Accept on Behalf of Client</label>
-            </div>
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="clientAccept">
-              <label class="custom-control-label float-left" for="clientAccept">Client to Accept</label>
+              <input type="checkbox" class="custom-control-input" id="Terms_Conditions" (click)="TermsAndConditionChange()">
+              <label class="custom-control-label float-left" for="Terms_Conditions">I accept the terms and conditions</label>
+              <span style="color: red; position: absolute; right: -43px; top: 3px;">*</span>
             </div>
           </div>
 
-          <label style="margin-left: 18.3rem;">
-            <input type="text" class="form-control mt-4 mb-3">
+          <label style="margin-left: 22.3rem; display: flex; align-items: center">
+            <input type="text" class="form-control mt-4 mb-3" placeholder="Type your name here" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+            <span style="color: red; margin-left: 5px; padding-top: 13px">*</span>
           </label>
         </div>
       </div>
@@ -289,5 +288,5 @@
 </div>
 <div class="modal-footer d-flex justify-content-between">
   <button type="submit" class="btn btn-outline-primary" (click)="modal.dismiss('Cancel click')">Cancel to Submit</button>
-  <button type="submit" class="btn btn-outline-primary" (click)="modal.close('Submit click')">Submit New Application</button>
+  <button type="submit" class="btn btn-outline-primary" (click)="modal.close('Submit click')" [disabled]="!name || !getTermsAndConditionCheckboxStatus()">Submit New Application</button>
 </div>
