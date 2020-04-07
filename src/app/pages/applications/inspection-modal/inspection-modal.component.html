@@ -52,6 +52,65 @@
       <span style="position: absolute; right: 225px">Mins</span>
     </div>
     <div class="form-group d-flex align-items-baseline">
+      <div class="items-info-popover d-flex align-items-start">
+        <i class="icon-question position-relative" [ngbPopover]="popContent" popoverClass="inspection-popover" placement="right-top"></i>
+        <ng-template #popContent>
+          <div class="popover-content ml-2 d-flex flex-column">
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Accessibility:</span>
+              <span class="row-content"></span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Building Services:</span>
+              <span class="row-content"></span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Completion:</span>
+              <span class="row-content">Finals</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Fire Safety:</span>
+              <span class="row-content">Smoke Alarms / Anything Fire Related</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Foundations:</span>
+              <span class="row-content">Trench / Pad FNDS / Footings / Under Pin / Trial Hole</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">FW:</span>
+              <span class="row-content">Foul Drains</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">General:</span>
+              <span class="row-content">Update / Drive By</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Oversite / DPC:</span>
+              <span class="row-content">Block & Beam / O / Site / H / Core / DPM / DPC</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Protection:</span>
+              <span class="row-content">Staircase / Juliet Balcony</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Sound Insulation:</span>
+              <span class="row-content"></span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Super Structure:</span>
+              <span class="row-content">Roof / Beam / Steel / Pad Stone / Joists / Rafters / Timbers</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">SW:</span>
+              <span class="row-content">S / Away / Surface Water</span>
+            </div>
+            <div class="popover-content-row d-flex align-items-center">
+              <span class="row-title">Thermal Insulation:</span>
+              <span class="row-content">Roof, Wall or Floor INS / Celotex / Windows</span>
+            </div>
+          </div>
+        </ng-template>
+      </div>
       <span>Items to Inspect</span>
       <div class="input-group d-flex flex-column">
         <div class="custom-control custom-checkbox">

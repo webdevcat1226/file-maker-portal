@@ -16,53 +16,96 @@
       width: 100%;
       margin: 10px 0;
 
-      span {
-        flex: 1;
-        text-align: right;
-        font-weight: bold;
-        color: #0077cc;
-      }
+      &:nth-child(5) {
+        .items-info-popover {
+          position: absolute;
+          left: 215px;
+          top: 11px;
+          z-index: 1;
 
-      .input-group {
-        margin-left: 10px;
-        flex: 1.5;
-      }
-
-      input, select {
-        font-size: 14px;
-      }
-
-      &:last-child {
-        .active {
-          background: lightblue;
-        }
-
-        .contact-info {
-          margin: 0 15rem 0 12rem;
-          padding-left: 3rem;
-
-          &:hover {
-            background: lightgray;
+          .icon-question {
+            background: #0077cc;
+            border-radius: 50%;
+            color: white;
+            font-size: 16px;
           }
 
-          span {
-            flex: 1;
-            text-align: left;
-            line-height: 30px;
-            color: black;
+          .popover-content {
+            font-size: 13px;
+            font-family: "Roboto", sans-serif;
+            padding: 5px;
+          }
 
-            &:last-child {
-              flex: 1.5;
-              color: gray;
-              font-weight: 400;
+          .popover-content-row {
+            margin-top: 5px;
+
+            span {
+              color: black;
+            }
+
+            .row-title {
+              flex: 1;
+              text-align: right;
+              font-weight: bold;
+            }
+
+            .row-content {
+              flex: 2.8;
+              text-align: left;
+              font-weight: normal;
+              padding-left: 10px;
             }
           }
         }
+      }
+    }
 
-        .confirmation-message {
-          color: black;
-          font-weight: 400;
+    span {
+      flex: 1;
+      text-align: right;
+      font-weight: bold;
+      color: #0077cc;
+    }
+
+    .input-group {
+      margin-left: 10px;
+      flex: 1.5;
+    }
+
+    input, select {
+      font-size: 14px;
+    }
+
+    &:last-child {
+      .active {
+        background: lightblue;
+      }
+
+      .contact-info {
+        margin: 0 15rem 0 12rem;
+        padding-left: 3rem;
+
+        &:hover {
+          background: lightgray;
         }
+
+        span {
+          flex: 1;
+          text-align: left;
+          line-height: 30px;
+          color: black;
+
+          &:last-child {
+            flex: 1.5;
+            color: gray;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .confirmation-message {
+        color: black;
+        font-weight: 400;
       }
     }
   }

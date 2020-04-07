@@ -10,6 +10,7 @@ export class InspectionModalComponent implements OnInit {
 
   data: any;
   model: any;
+  isPopoverVisible:any;
 
   contactInfo = [
     {
@@ -34,6 +35,7 @@ export class InspectionModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isPopoverVisible = false;
   }
 
   selectLinker(data) {
