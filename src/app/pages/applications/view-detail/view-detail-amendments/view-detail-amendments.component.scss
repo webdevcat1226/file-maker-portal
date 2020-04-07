@@ -19,7 +19,7 @@
       background: #2982FE;
       position: sticky;
       top: 0;
-      z-index: 9999;
+      z-index: 1;
       padding: 0 110px 0 30px;
 
       span {
@@ -80,7 +80,7 @@
           .detail-card-viewer {
             position: absolute;
             display: none;
-            z-index: 99999;
+            z-index: 1;
             height: 100px;
             width: 200px;
             background: red;

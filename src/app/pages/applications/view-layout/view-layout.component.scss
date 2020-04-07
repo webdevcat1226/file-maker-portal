@@ -3,7 +3,7 @@
     text-align: center;
     position: sticky;
     top: 30px;
-    z-index: 9999;
+    z-index: 2;
     background: #ffffff;
     width: fit-content;
     margin: 0 auto;
@@ -30,7 +30,7 @@
   .applications-page-navbar {
     position: sticky;
     top: 89px;
-    z-index: 9999;
+    z-index: 2;
     border-radius: 3px;
     border: 1px solid #f3f4f3;
     display: flex;

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ApplicationService } from '../../../../core/services/application.service';
+
 import { ActivatedRoute } from '@angular/router';
-import * as Faker from 'faker';
+import { ApplicationService } from '../../../../core/services/application.service';
+import { AmendmentsService } from '../../../../core/services/amendments.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AmendmentsModalComponent } from '../amendments-modal/amendments-modal.component';
 
 @Component({
   selector: 'app-view-detail-amendments',
@@ -12,82 +15,32 @@ export class ViewDetailAmendmentsComponent implements OnInit {
 
   id: string;
   data: any;
-  amendments = [
-    {
-      number: '1',
-      character: 'A',
-      serial: '74',
-      content: 'Please provide Engineers design and calculations, upon receipt we will either check in house or pass to our checking engineer. Therefore further comments may follow.',
-      isComplete: 'Yes',
-      color: 'limegreen'
-    },
-    {
-      number: '1',
-      character: 'A',
-      serial: '75',
-      content: 'We appear to have received the structural design but in order to  carry out our structural check we also require the accompanying calculations.',
-      isComplete: 'Yes',
-      color: 'limegreen'
-    },
-    {
-      number: '2',
-      character: 'A',
-      serial: '76',
-      content: 'Due to the recent adverse publicity concerning breathable felts, it is suggested that additional ventilation is provided to avoid the risk of condensation in the roof.',
-      isComplete: 'Yes',
-      color: 'limegreen'
-    },
-    {
-      number: '3',
-      character: 'A',
-      serial: '77',
-      content: 'We appear to have received the structural design but in order to  carry out our structural check we also require the accompanying calculations.',
-      isComplete: 'No',
-      color: 'red'
-    },
-    {
-      number: '1',
-      character: 'A',
-      serial: '74',
-      content: 'Please provide Engineers design and calculations, upon receipt we will either check in house or pass to our checking engineer. Therefore further comments may follow.',
-      isComplete: 'Yes',
-      color: 'limegreen'
-    },
-    {
-      number: '1',
-      character: 'A',
-      serial: '75',
-      content: 'We appear to have received the structural design but in order to  carry out our structural check we also require the accompanying calculations.',
-      isComplete: 'Yes',
-      color: 'limegreen'
-    },
-    {
-      number: '2',
-      character: 'A',
-      serial: '76',
-      content: 'Due to the recent adverse publicity concerning breathable felts, it is suggested that additional ventilation is provided to avoid the risk of condensation in the roof.',
-      isComplete: 'Yes',
-      color: 'limegreen'
-    },
-    {
-      number: '3',
-      character: 'A',
-      serial: '77',
-      content: 'We appear to have received the structural design but in order to  carry out our structural check we also require the accompanying calculations.',
-      isComplete: 'No',
-      color: 'red'
-    },
-
-  ];
+  amendments = [];
 
   constructor(
+    private route: ActivatedRoute,
     private applicationService: ApplicationService,
-    private route: ActivatedRoute
+    private amendmentsService: AmendmentsService,
+    private modal: NgbModal
   ) {
   }
 
   ngOnInit(): void {
     this.id = this.route.parent.snapshot.params.id;
     this.data = this.applicationService.findById(this.id);
+    this.amendments = this.amendmentsService.getAll();
+  }
+
+  openAmendmentsModal(item) {
+    const modalRef = this.modal.open(AmendmentsModalComponent, { backdrop: 'static' });
+
+    modalRef.result.then(res => {
+      console.log(res);
+    }, reason => {
+      console.log(reason);
+    });
+
+    //sending selected amendment data to modal component
+    modalRef.componentInstance.selectedAmendment = item;
   }
 }

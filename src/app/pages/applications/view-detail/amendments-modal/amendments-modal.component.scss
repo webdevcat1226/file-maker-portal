@@ -1,0 +1,76 @@
+.modal-header {
+  background: #2982FE;
+  color: white;
+  font-family: 'Sarabun', sans-serif;
+  overflow: hidden;
+
+  button {
+    background: white;
+    margin-left: 0 !important;
+  }
+}
+
+.modal-body {
+  font-family: 'Roboto', sans-serif;
+
+  form {
+    .new-upload-evidence {
+      flex: 3;
+
+      button {
+        font-size: 14px;
+      }
+    }
+
+    .previously-uploaded-evidence {
+      flex: 2;
+      padding: 10px;
+      border-radius: 2px;
+      box-shadow: 0 0 2px 0 gray;
+
+      .title {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 15px;
+      }
+
+      .individual-evidence {
+        font-size: 14px;
+        margin-top: 10px;
+
+        i {
+          border-radius: 50%;
+          background: limegreen;
+          color: white;
+        }
+      }
+    }
+
+    .note-container {
+      label {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      textarea {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.modal-footer {
+  padding: 0.75rem 28px;
+
+  button {
+    background: white;
+    color: #2982FE;
+    border-color: #2982FE;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    &:hover, &:active {
+      background: #2982FE;
+      color: white;
+    }
+  }
+}

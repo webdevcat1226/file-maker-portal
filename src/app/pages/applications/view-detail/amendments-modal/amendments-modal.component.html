@@ -1,1 +1,37 @@
-<p>amendments-modal works!</p>
+<div class="modal-header">
+  <h5 class="modal-title m-auto" id="modal-basic-title">Amendment <span
+    style="font-weight: bolder">{{selectedAmendment.amendmentName}}</span></h5>
+  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body pt-5">
+  <div class="text-center mx-auto" style="font-size: 14px">Upload new evidence or select previously uploaded evidence for this amendment.</div>
+  <form class="d-flex flex-column mt-5 mb-3 pl-3 pr-3">
+    <div class="d-flex align-items-center">
+      <div class="new-upload-evidence d-flex align-items-center justify-content-center">
+        <button class="btn btn-outline-primary">Upload New</button>
+      </div>
+      <div class="previously-uploaded-evidence d-flex flex-column">
+        <div class="title d-flex flex-column text-center mx-auto">
+          <span class="font-weight-bold">Evidence Previously Uploaded</span>
+          <span>(click to select)</span>
+        </div>
+        <ng-container *ngFor="let item of previousUploadedEvidences">
+          <div class="individual-evidence d-flex align-items-center">
+            <span class="mr-3">Evidence</span>
+            <i class="icon-check" *ngIf="item.checked"></i>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="note-container d-flex flex-column mt-4">
+      <label for="amendmentNote">Note</label>
+      <textarea id="amendmentNote" rows="5" placeholder="Please note here"></textarea>
+    </div>
+  </form>
+</div>
+<div class="modal-footer d-flex justify-content-between">
+  <button type="button" class="btn btn-outline-dark cancel-btn" (click)="modal.dismiss('Cancel click')">Cancel</button>
+  <button type="button" class="btn btn-outline-dark save-btn" (click)="modal.close('Save click')">Save</button>
+</div>

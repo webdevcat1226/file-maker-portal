@@ -11,10 +11,10 @@
         </ng-container>
       </div>
       <div class="tbody-content d-flex flex-column" *ngFor="let item of amendments">
-        <button class="btn btn-outline-primary">Upload Evidence</button>
+        <button class="btn btn-outline-primary" (click)="openAmendmentsModal(item)">Upload Evidence</button>
         <div class="tbody-content-row d-flex align-items-center">
           <div class="tbody-content-cell">{{item.number}}</div>
-          <div class="tbody-content-cell">{{item.character}} {{item.serial}}</div>
+          <div class="tbody-content-cell">{{item.amendmentName}}</div>
           <div class="tbody-content-cell">{{item.content}}</div>
           <button type="button" class="tbody-content-cell btn btn-outline-primary mr-2" placement="left"
                   container="body"
