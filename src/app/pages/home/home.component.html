@@ -18,7 +18,7 @@
               <span class="quote-availability">{{item.availability}}</span>
               <span class="quote-type">{{item.type}}</span>
               <span class="quote-status">{{item.status}}</span>
-              <button class="btn btn-outline-primary" style="{{item.viewButtonStyle}}" (click)="openQuoteModal()">View</button>
+              <button class="btn btn-outline-primary" style="{{item.viewButtonStyle}}" (click)="openUnsubmittedQuoteModal(item)">View</button>
             </div>
           </div>
         </div>
