@@ -14,7 +14,8 @@ export class InspectionsComponent implements OnInit {
 
   id: string;
   data: any;
-  inspectionData = [];
+  public inspections: Array<any> = [];
+  public inspectionTypes: Array<any> = [];
 
   constructor(
     private applicationService: ApplicationService,
@@ -27,7 +28,10 @@ export class InspectionsComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
     this.data = this.applicationService.findById(this.id);
-    this.inspectionData = this.inspectionsService.getAll();
+    this.inspectionsService.getAll().then(res => {
+      this.inspections = res['inspections'];
+      this.inspectionTypes = res['types'];
+    });
   }
 
   openInspectionModal() {
@@ -39,5 +43,13 @@ export class InspectionsComponent implements OnInit {
     }, reason => {
       console.log(reason);
     });
+  }
+
+  detailRequest() {
+    //
+  }
+
+  cancelRequest() {
+    //
   }
 }

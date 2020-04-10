@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
-import { inspectionData } from '../../_fake-db/inspections';
+import { inspectionData, inspectionTypes } from '../../_fake-db/inspections';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InspectionsService {
 
-  constructor() { }
+  constructor() {}
+
+  getInspectionsTypes() {
+    return new Promise(rs => rs(inspectionTypes));
+  }
+
+  getInspections() {
+    return new Promise(rs => rs(inspectionData));
+  }
 
   getAll() {
-    return inspectionData;
+    return new Promise(rs => rs({
+      types: inspectionTypes,
+      inspections: inspectionData
+    }));
   }
 }

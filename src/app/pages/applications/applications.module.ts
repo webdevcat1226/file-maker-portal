@@ -15,6 +15,9 @@ import { ViewDetailAmendmentsComponent } from './view-detail/view-detail-amendme
 import { InspectionModalComponent } from './inspection-modal/inspection-modal.component';
 import { AmendmentsModalComponent } from './view-detail/amendments-modal/amendments-modal.component';
 
+// Pipes
+import { InspectionsPipeModule } from '../../pipes/inspections.pipe';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { AmendmentsModalComponent } from './view-detail/amendments-modal/amendme
     ApplicationsRoutingModule,
     NgxMaskModule.forRoot(),
     FormsModule,
-    NgbDatepickerModule
+    NgbDatepickerModule,
+    InspectionsPipeModule
   ]
 })
 export class ApplicationsModule {

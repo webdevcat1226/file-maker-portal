@@ -1,5 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$custom-white: #FFFFFF;
+
+// Theme colors
+$theme-colors: (
+  info: $custom-white,
+);
+
+@import "~bootstrap";
 @import "~simple-line-icons/css/simple-line-icons.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Sarabun:400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Sarabun:wght@400;500;700&display=swap');
