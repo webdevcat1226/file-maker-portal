@@ -32,23 +32,24 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
   }
 
-  async login() {
-    try {
-      const form = this.loginForm.value;
-      const match = this.authService.login(form.email, form.password);
-      console.log(match);
-      if (match) {
-        this.isLoading = true;
-        await waitForMilliSecond(3000);
-        this.isLoading = false;
-        await this.router.navigate(['/home']);
-      } else {
-        alert('Incorrect email or password');
-      }
-    } catch (e) {
-      console.log(e);
-    } finally {
-
-    }
+  login() {
+    const form = this.loginForm.value;
+    this.authService.Login(form.email, form.password).subscribe(res => {
+      console.log(res);
+    }, err => {
+      console.log(err);
+    });
+    //   console.log(match);
+    //   if (match) {
+    //     this.isLoading = true;
+    //     await waitForMilliSecond(3000);
+    //     this.isLoading = false;
+    //     await this.router.navigate(['/home']);
+    //   } else {
+    //     alert('Incorrect email or password');
+    //   }
+    // } catch (e) {
+    //   console.log(e);
+    // }
   }
 }
