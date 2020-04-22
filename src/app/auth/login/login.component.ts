@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
   }
 
-  login() {
+  async login() {
     const form = this.loginForm.value;
     const match = this.authService.login(form.email, form.password);
     if (match) {
