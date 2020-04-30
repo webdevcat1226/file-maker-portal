@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  sessionServer: 'http://localhost:3000',
+  sessionServer: 'https://file-maker-api.herokuapp.com',
   baseURL: 'https://portal.rhbclimited.co.uk',
   version: 'v1',
   dbName: 'clients-2',
