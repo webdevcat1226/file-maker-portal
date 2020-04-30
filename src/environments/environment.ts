@@ -4,9 +4,11 @@
 
 export const environment = {
   production: false,
+  sessionServer: 'http://localhost:3000',
   baseURL: 'https://portal.rhbclimited.co.uk',
   version: 'v1',
-  dbName: 'clients'
+  dbName: 'clients-2',
+  email: 'will@rhbclimited.co.uk'
 };
 
 /*

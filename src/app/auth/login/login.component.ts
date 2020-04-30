@@ -3,14 +3,15 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthService } from '../../core/services/auth.service';
-import { waitForMilliSecond } from '../../core/utils/common.util';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class LoginComponent {
+
+  public radio: string;
 
   isLoading = false;
   loginForm: FormGroup = this.fb.group({
@@ -22,26 +23,14 @@ export class LoginComponent implements OnInit, OnDestroy {
     private authService: AuthService,
     private fb: FormBuilder,
     private router: Router
-  ) {
+  ) {}
 
-  }
-
-  ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
-  }
-
-  async login() {
+  login() {
     const form = this.loginForm.value;
-    const match = this.authService.login(form.email, form.password);
-    if (match) {
-      this.isLoading = true;
-      await waitForMilliSecond(3000);
-      this.isLoading = false;
-      await this.router.navigate(['/home']);
-    } else {
-      alert('Incorrect email or password');
-    }
+    this.authService.login(form.email, form.password).subscribe(res => {
+      this.router.navigate(['/home']);
+    }, err => {
+      console.log(err);
+    });
   }
 }

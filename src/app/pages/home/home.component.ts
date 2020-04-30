@@ -13,11 +13,11 @@ import { ApplicationService } from '../../core/services/application.service';
 })
 export class HomeComponent implements OnInit {
 
-  quotes = [];
+  arrQuotes: Array<any> = [];
 
-  submittedApplications = [];
+  submittedApplications: Array<any> = [];
 
-  processedApplications = [];
+  processedApplications: Array<any> = [];
 
   constructor(
     private modal: NgbModal,
@@ -27,25 +27,18 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.quotes = this.quoteService.getAll();
-    this.quotes.forEach(function (item) {
-      if (item.status == "Unsubmitted") {
-        item.viewButtonStyle = "visibility: visible"
-      } else {
-        item.viewButtonStyle = "visibility: hidden"
-      }
-    });
-
+    this.initialize();
     this.submittedApplications = this.applicationService.getAll();
   }
 
-  openQuoteModal() {
-    const modalRef = this.modal.open(QuoteModalComponent, {backdrop: 'static'});
-
+  openQuoteModal(quote) {
+    // const modalRef = this.modal.open(QuoteModalComponent, { backdrop: 'static' });
+    const modalRef = this.modal.open(QuoteModalComponent);
+    modalRef.componentInstance.quote = quote;
     modalRef.result.then(res => {
       console.log(res);
     }, reason => {
-      console.log(reason);
+      console.log('Quote Modal Closed.');
     });
   }
 
@@ -56,6 +49,18 @@ export class HomeComponent implements OnInit {
       console.log(res);
     }, reason => {
       console.log(reason);
+    });
+  }
+
+  onClickTestBtn() {
+
+  }
+  initialize() {
+    this.quoteService.getQuotes().subscribe(quotes => {
+      this.arrQuotes = quotes;
+      console.log(this.arrQuotes);
+    }, err => {
+      console.log(err);
     });
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,11 +7,17 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./quote-modal.component.scss']
 })
 export class QuoteModalComponent implements OnInit {
-
+  @Input() public quote;
+  public tempQuote: any;
   constructor(
     public modal: NgbActiveModal
   ) { }
 
   ngOnInit(): void {
+    this.tempQuote = Object.assign(this.quote);
+  }
+
+  onSubmitQuote() {
+    this.modal.close({ quote: this.tempQuote });
   }
 }

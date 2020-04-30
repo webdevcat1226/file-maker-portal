@@ -1,5 +1,5 @@
 .homepage-view {
-  margin: 0 100px;
+  margin: 0 20px;
 
   .homepage-table {
     margin-bottom: 10px;
@@ -8,13 +8,18 @@
     box-shadow: 0 0 1px 0 #2982FE;
     border-radius: 5px;
     overflow-y: auto;
+    &.table-quotes {
+      button {
+        font-size: 12px;
+      }
+    }
 
     &::-webkit-scrollbar {
       display: none;
     }
 
     .table-head {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: bold;
       font-family: 'Sarabun', sans-serif;
       color: white;
@@ -32,11 +37,9 @@
         position: absolute;
         font-size: 12px;
         right: 10px;
-        width: 90px;
         height: 38px;
-        line-height: 13px;
         background: white;
-        padding: 0;
+        padding: 0x;
 
         &:hover, &:focus {
           color: white;
@@ -50,21 +53,10 @@
       font-size: 12px;
       font-family: 'Roboto', sans-serif;
       background: white;
-      height: 75vh;
 
-      .tbody-background {
-        position: absolute;
-        width: 100%;
-
-        div {
-          width: 100%;
-          height: 50.1875px;
-        }
-
-        .even-column {
-          background: #ecf1f9;
-        }
-      }
+      .even-column { background: white; }
+      .even-column { background: #ecf1f9; }
+      .quote-status { width: 100px; }
 
       .tbody-content {
         div {

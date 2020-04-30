@@ -1,37 +1,55 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { users } from '../../_fake-db/users';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 import { environment } from '../../../environments/environment';
 
+interface SessionDTO {
+  token: string;
+  refresh: string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private baseAPIPath: string = environment.baseURL;
-  private version: string = environment.version;
-  private dbName: string = environment.dbName;
-  users = users;
+  private sessionServer: string = environment.sessionServer;
 
   constructor(
     private http: HttpClient
   ) {}
 
-  login(email: string, password: string) {
-    const found = this.users.find(user => user.email === email);
-    return found && found.password === password;
+  login(email: string, password: string): Observable<boolean> {
+    return this.http.get<SessionDTO>(`${this.sessionServer}/auth/login?email=${email}&password=${password}`).pipe(
+      map(response => this.saveToken(response.token, response.refresh))
+    );
   }
 
-  Login(email: string, password: string) {
-    // username : dev, password : blue1234
-    email = 'dev';
-    const basicB64 = `Basic ${btoa(`${email}:${password}`)}==`;
-    const headers = new HttpHeaders()
-      .set('Contet-Type', 'application/json')
-      .set('Authorization', basicB64);
-    return this.http.post(`${this.baseAPIPath}/fmi/data/${this.version}/databases/${this.dbName}/sessions`, {}, { headers });
+  saveToken(token: string, refresh: string): boolean {
+    window.localStorage.setItem('token', token);
+    window.localStorage.setItem('refresh-token', refresh);
+    return true;
   }
 
+  clearToken(): boolean {
+    window.localStorage.clear();
+    return true;
+  }
+
+  getAccesstoken(): string {
+    return window.localStorage.getItem('token') || null;
+  }
+
+  getRefreshToken(): string {
+    return window.localStorage.getItem('refresh-token') || null;
+  }
+
+  logout(): Observable<boolean> {
+    const token = window.localStorage.getItem('token');
+    return this.http.get<boolean>(`${this.sessionServer}/auth/logout?token=${token}`).pipe(
+      map(response => this.clearToken())
+    );
+  }
 }

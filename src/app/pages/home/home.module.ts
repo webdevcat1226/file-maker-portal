@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { HomeRoutingModule } from './home-routing.module';
 
@@ -19,7 +20,7 @@ import { ApplicationModalComponent } from './application-modal/application-modal
   imports: [
     CommonModule,
     HomeRoutingModule,
-    // project scope
+    MatRadioModule,
     UiKitModule,
     ReactiveFormsModule,
     FormsModule

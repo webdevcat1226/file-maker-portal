@@ -1,266 +1,245 @@
+
 <div class="modal-header">
   <h5 class="modal-title m-auto" id="modal-basic-title">New Quote - Unsubmitted</h5>
 </div>
 <div class="modal-body container pt-5">
   <div class="container">
-    <form>
-      <div class="applicant-info-form form-unit">
-        <div class="form-title">
-          <span>Applicant's Information </span>
-          <span>(Must Be Property Owner)</span>
-        </div>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" required>
-        </div>
-        <div class="form-group">
-          <label for="addressLine1">Address Line 1</label>
-          <input type="text" class="form-control" id="addressLine1" required>
-        </div>
-        <div class="form-group">
-          <label for="addressLine2">Address Line 1</label>
-          <input type="text" class="form-control" id="addressLine2" required>
-        </div>
-        <div class="form-group">
-          <label for="city">City</label>
-          <input type="text" class="form-control" id="city" required>
-        </div>
-        <div class="form-group">
-          <label for="postcode">Postcode</label>
-          <input type="text" class="form-control" id="postcode" required>
-        </div>
-        <div class="form-group">
-          <label for="tel">Tel</label>
-          <input type="text" class="form-control" id="tel" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email">
+    <div class="applicant-info-form form-unit">
+      <div class="form-title">
+        <span>Applicant's Information (Must Be Property Owner)</span>
+      </div>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" [(ngModel)]="tempQuote['Applicants name']" required>
+      </div>
+      <div class="form-group">
+        <label>Address Line 1</label>
+        <input type="text" class="form-control" [(ngModel)]="tempQuote['Applicants Address Line 1']" required>
+      </div>
+      <div class="form-group">
+        <label>Address Line 2</label>
+        <input type="text" class="form-control" [(ngModel)]="tempQuote['Applicants Address Line 2']" required>
+      </div>
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" class="form-control" [(ngModel)]="tempQuote['Applicants Address City']" required>
+      </div>
+      <div class="form-group">
+        <label>Postcode</label>
+        <input type="text" class="form-control" [(ngModel)]="tempQuote['Applicants Address Postcode']" required>
+      </div>
+      <div class="form-group">
+        <label>Tel</label>
+        <input type="text" class="form-control" [(ngModel)]="tempQuote['Applicants Tel']" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" [(ngModel)]="tempQuote['Applicants Email']" required>
+      </div>
+    </div>
+
+    <div class="agent-info-form form-unit">
+      <div class="form-title">
+        <span>Agent's Information (Example Architect)</span>
+      </div>
+      <div class="form-group">
+        <label for="agentName">Agents Name</label>
+        <input type="text" class="form-control" [(ngModel)]="tempQuote['Agents Name']" required>
+      </div>
+      <div class="form-group">
+        <label for="agentAddress">Agents Address</label>
+        <input type="text" class="form-control"  [(ngModel)]="tempQuote['Agents Address']" required>
+      </div>
+      <div class="form-group">
+        <label for="agentPostcode">Agents Postcode</label>
+        <input type="text" class="form-control"  [(ngModel)]="tempQuote['Agents Postcode']" required>
+      </div>
+      <div class="form-group">
+        <label for="agentTel">Agents Tel</label>
+        <input type="text" class="form-control"  [(ngModel)]="tempQuote['Agents Tel']" required>
+      </div>
+      <div class="form-group">
+        <label for="agentEmail">Agents Email</label>
+        <input type="email" class="form-control"  [(ngModel)]="tempQuote['Agents Email']" rquired="">
+      </div>
+    </div>
+
+    <div class="location-of-work form-unit">
+      <div class="form-title">
+        <span>Location of Proposed Work</span>
+      </div>
+      <div class="form-group">
+        <label for="workAddress1">Address 1*</label>
+        <input type="text" class="form-control"  [(ngModel)]="tempQuote['Location of proposed Work Address 1']" required>
+      </div>
+      <div class="form-group">
+        <label for="workAddress2">Address 2</label>
+        <input type="text" class="form-control"  [(ngModel)]="tempQuote['Location of proposed Work Address 2']" required>
+      </div>
+      <div class="form-group">
+        <label for="workCity">City*</label>
+        <input type="text" class="form-control"  [(ngModel)]="tempQuote['Location of proposed Work Address City']" required>
+      </div>
+      <div class="form-group">
+        <label for="workPostcode">Postcode*</label>
+        <input type="text" class="form-control"  [(ngModel)]="tempQuote['Location of proposed Work Postcode']" required>
+      </div>
+    </div>
+
+    <div class="proposed-work form-unit">
+      <div class="form-title">
+        <span>Proposed Work (Example single storey rear and side extension at dwelling)</span>
+      </div>
+      <div class="form-group">
+        <label for="proposedWork">Proposed Work*</label>
+        <input type="text" class="form-control"  [(ngModel)]="tempQuote['Proposed Work Decription']" required>
+      </div>
+    </div>
+
+    <div class="new-dwelling-info form-unit">
+      <div class="form-title mb-2">
+        <span>Proposed Work </span>
+      </div>
+      <span>If your project concerns a new dwelling please enclose a copy of the planning consent - Please be aware that your projects may be subject to optional requirements.</span>
+      <div class="form-group">
+        <label for="dwellingInfo">Has Planning permission been granted?</label>
+        <select class="form-control" id="dwellingInfo" [value]="tempQuote['New Dwelling 4']">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="building-client-type form-unit">
+      <div class="form-title mb-2">
+        <span>Use of Building and Client Type</span>
+      </div>
+      <div class="form-group">
+        <label>Proposed use of building</label>
+        <div class="checkbox-container d-flex align-items-center">
+          <mat-radio-group aria-label="Select 'Use of Building 1'" [(ngModel)]="tempQuote['Use of Building 1']">
+            <mat-radio-button class="mr-2" value="Domestic">Domestic</mat-radio-button>
+            <mat-radio-button value="Commercial">Commercial</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
-
-      <div class="agent-info-form form-unit">
-        <div class="form-title">
-          <span>Agent's Information </span>
-          <span>(Example Architect)</span>
-        </div>
-        <div class="form-group">
-          <label for="agentName">Agents Name</label>
-          <input type="text" class="form-control" id="agentName" required value="COEL">
-        </div>
-        <div class="form-group">
-          <label for="agentAddress">Agents Address</label>
-          <input type="text" class="form-control" id="agentAddress" required>
-        </div>
-        <div class="form-group">
-          <label for="agentPostcode">Agents Postcode</label>
-          <input type="text" class="form-control" id="agentPostcode" required>
-        </div>
-        <div class="form-group">
-          <label for="agentTel">Agents Tel</label>
-          <input type="text" class="form-control" id="agentTel" required>
-        </div>
-        <div class="form-group">
-          <label for="agentEmail">Agents Email</label>
-          <input type="email" class="form-control" id="agentEmail" required="">
+      <div class="form-group">
+        <label>Existing use of building</label>
+        <div class="checkbox-container d-flex align-items-center">
+          <mat-radio-group aria-label="Select 'Use of Building 1'" [(ngModel)]="tempQuote['Use of Building 2']">
+            <mat-radio-button class="mr-2" value="Domestic">Domestic</mat-radio-button>
+            <mat-radio-button value="Commercial">Commercial</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
-
-      <div class="location-of-work form-unit">
-        <div class="form-title">
-          <span>Location of Proposed Work</span>
-          <span></span>
-        </div>
-        <div class="form-group">
-          <label for="workAddress1">Address 1*</label>
-          <input type="text" class="form-control" id="workAddress1" required>
-        </div>
-        <div class="form-group">
-          <label for="workAddress2">Address 2</label>
-          <input type="text" class="form-control" id="workAddress2" required>
-        </div>
-        <div class="form-group">
-          <label for="workCity">City*</label>
-          <input type="text" class="form-control" id="workCity" required>
-        </div>
-        <div class="form-group">
-          <label for="workPostcode">Postcode*</label>
-          <input type="text" class="form-control" id="workPostcode" required>
+      <div class="form-group">
+        <label>Is the client a domestic client?</label>
+        <div class="checkbox-container d-flex align-items-center">
+          <mat-radio-group aria-label="Select 'Use of Building 1'" [(ngModel)]="tempQuote['Domestic Client']">
+            <mat-radio-button class="mr-2" value="Domestic">Domestic</mat-radio-button>
+            <mat-radio-button value="Commercial">Commercial</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
+    </div>
 
-      <div class="proposed-work form-unit">
-        <div class="form-title">
-          <span>Proposed Work </span>
-          <span>(Example single storey rear and side extension at dwelling)</span>
-        </div>
-        <div class="form-group">
-          <label for="proposedWork">Proposed Work*</label>
-          <input type="text" class="form-control" id="proposedWork" required>
+    <div class="services-form form-unit">
+      <div class="form-title mb-2">
+        <span>Services</span>
+      </div>
+      <div class="form-group">
+        <label>Please select required service</label>
+        <div class="checkbox-container d-flex align-items-center">
+          <mat-radio-group aria-label="Select 'Use of Building 1'" [(ngModel)]="tempQuote['FP']">
+            <mat-radio-button class="mr-2" value="Domestic">Domestic</mat-radio-button>
+            <mat-radio-button value="Commercial">Commercial</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
+    </div>
 
-      <div class="new-dwelling-info form-unit">
-        <div class="form-title mb-2">
-          <span>Proposed Work </span>
-          <span></span>
-        </div>
-        <span>If your project concerns a new dwelling please enclose a copy of the planning consent - Please be aware that your projects may be subject to optional requirements.</span>
-        <div class="form-group">
-          <label for="dwellingInfo">Has Planning permission been granted?</label>
-          <select class="form-control" id="dwellingInfo">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-          </select>
+    <div class="competent-person-scheme form-unit">
+      <div class="form-title mb-2">
+        <span>Please indicate which competent persons schemes will definitely be used during this project:</span>
+        <span></span>
+      </div>
+      <div class="form-group">
+        <label>Part P Electrician</label>
+        <div class="checkbox-container d-flex align-items-center">
+          <mat-radio-group aria-label="Select 'Use of Building 1'" [(ngModel)]="tempQuote['Exclusion: Part P']">
+            <mat-radio-button class="mr-2" value="Yes">Yes</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
-
-      <div class="building-client-type form-unit">
-        <div class="form-title mb-2">
-          <span>Use of Building and Client Type</span>
-          <span></span>
+      <div class="form-group">
+        <label>Unvented Cylinder Installation</label>
+        <div class="checkbox-container d-flex align-items-center">
+          <mat-radio-group aria-label="Select 'Use of Building 1'" [(ngModel)]="tempQuote['Exclusion: UnventedCylinder']">
+            <mat-radio-button class="mr-2" value="Yes">Yes</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
         </div>
-        <div class="form-group">
-          <label>Proposed use of building</label>
-          <div class="checkbox-container d-flex align-items-center">
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="proposedDomestic">
-              <label class="custom-control-label float-left" for="proposedDomestic">Domestic</label>
-            </div>
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="proposedCommercial">
-              <label class="custom-control-label float-left" for="proposedCommercial">Commercial</label>
-            </div>
+      </div>
+      <div class="form-group">
+        <label>HETAS - Solid Fuel Appliance</label>
+        <div class="checkbox-container d-flex align-items-center">
+          <mat-radio-group aria-label="Select 'Use of Building 1'" [(ngModel)]="tempQuote['Exclusion HETAS']">
+            <mat-radio-button class="mr-2" value="Yes">Yes</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
           </div>
-        </div>
-        <div class="form-group">
-          <label>Existing use of building</label>
-          <div class="checkbox-container d-flex align-items-center">
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="existingDomestic">
-              <label class="custom-control-label float-left" for="existingDomestic">Domestic</label>
-            </div>
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="existingCommercial">
-              <label class="custom-control-label float-left" for="existingCommercial">Commercial</label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Is the client a domestic client?</label>
-          <div class="checkbox-container d-flex align-items-center">
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="clientDomesticYes">
-              <label class="custom-control-label float-left" for="clientDomesticYes">Yes</label>
-            </div>
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="clientDomesticNo">
-              <label class="custom-control-label float-left" for="clientDomesticNo">No</label>
-            </div>
-          </div>
+      </div>
+      <div class="form-group mb-5">
+        <label>OFTEC Oil Boiler</label>
+        <div class="checkbox-container d-flex align-items-center">
+          <mat-radio-group aria-label="Select 'Use of Building 1'" [(ngModel)]="tempQuote['Exclusion: OFTEC']">
+            <mat-radio-button class="mr-2" value="Yes">Yes</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
+      <hr>
+      <span>Note: Where "Yes" has been selected, we will specifically exclude these on our Initial Notice. It will therefore be the applicant's responsibility to ensure that they receive the appropriate competent persons certificates.</span>
+      <br><br>
+      <span>The advantage in some cases is that RH Building Consultancy Limited may be able to issue our Final Certificate more promptly, as at the end of the project we will not seek copies of the competent persons certificates.</span>
+    </div>
 
-      <div class="services-form form-unit">
-        <div class="form-title mb-2">
-          <span>Services</span>
-          <span></span>
-        </div>
-        <div class="form-group">
-          <label>Please select required service</label>
-          <div class="checkbox-container d-flex align-items-center">
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="fullPlan">
-              <label class="custom-control-label float-left" for="fullPlan">Full Plans</label>
-            </div>
-            <div class="custom-control custom-checkbox d-flex mr-2">
-              <input type="checkbox" class="custom-control-input" id="buildingNotice">
-              <label class="custom-control-label float-left" for="buildingNotice">Building Notice</label>
-            </div>
-          </div>
-        </div>
+    <div class="drawing-document-upload form-unit">
+      <div class="form-title mb-2">
+        <span>Upload Drawings and Documents</span>
+        <span></span>
       </div>
+      <div class="container">
+        <button class="btn btn-outline-info">Click to Upload Drawing</button>
+      </div>
+    </div>
 
-      <div class="competent-person-scheme form-unit">
-        <div class="form-title mb-2">
-          <span>Please indicate which competent persons schemes will definitely be used during this project:</span>
-          <span></span>
-        </div>
-        <div class="form-group">
-          <label for="partElectrician">Part P Electrician</label>
-          <select class="form-control" id="partElectrician">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="unventedCylinder">Unvented Cylinder Installation</label>
-          <select class="form-control" id="unventedCylinder">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="solidFuelAppliance">HETAS - Solid Fuel Appliance</label>
-          <select class="form-control" id="solidFuelAppliance">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-        </div>
-        <div class="form-group mb-5">
-          <label for="oilBoiler">OFTEC Oil Boiler</label>
-          <select class="form-control" id="oilBoiler">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-        </div>
-        <hr>
-        <span>Note: Where "Yes" has been selected, we will specifically exclude these on our Initial Notice. It will therefore be the applicant's responsibility to ensure that they receive the appropriate competent persons certificates.</span>
-        <br><br>
-        <span>The advantage in some cases is that RH Building Consultancy Limited may be able to issue our Final Certificate more promptly, as at the end of the project we will not seek copies of the competent persons certificates.</span>
+    <div class="reference-number form-unit">
+      <div class="form-title mb-2">
+        <span>Your Reference Number</span>
+        <span></span>
       </div>
+      <div class="form-group">
+        <label for="referenceNumber">If you have a reference number you would like us to use, please enter it here</label>
+        <input type="text" class="form-control" id="referenceNumber" [(ngModel)]="tempQuote['Customer Reference Number']" required>
+      </div>
+    </div>
 
-      <div class="drawing-document-upload form-unit">
-        <div class="form-title mb-2">
-          <span>Upload Drawings and Documents</span>
-          <span></span>
-        </div>
-        <div class="container">
-          <button class="btn btn-outline-info">Click to Upload Drawing</button>
-        </div>
+    <div class="quoteNote form-unit">
+      <div class="form-title mb-2">
+        <span>Quote Notes</span>
+        <span></span>
       </div>
-
-      <div class="reference-number form-unit">
-        <div class="form-title mb-2">
-          <span>Your Reference Number</span>
-          <span></span>
-        </div>
-        <div class="form-group">
-          <label for="referenceNumber">If you have a reference number you would like us to use, please enter it
-            here</label>
-          <input type="text" class="form-control" id="referenceNumber" required>
-        </div>
+      <div class="form-group">
+        <label for="quoteNote"></label>
+        <textarea id="quoteNote" rows="5" cols="120" style="width: 100%" [(ngModel)]="tempQuote['QuoteNotes']"
+          placeholder="Enter any further information that you feel may help us accurately quote your requirements"></textarea>
       </div>
-
-      <div class="quoteNote form-unit">
-        <div class="form-title mb-2">
-          <span>Quote Notes</span>
-          <span></span>
-        </div>
-        <div class="form-group">
-          <label for="quoteNote"></label>
-          <textarea id="quoteNote" rows="5" cols="120"
-                    placeholder="Enter any further information that you feel may help us accurately quote your requirements"></textarea>
-        </div>
-      </div>
-    </form>
+    </div>
   </div>
 </div>
 <div class="modal-footer d-flex justify-content-between">
   <button type="submit" class="btn btn-outline-primary" (click)="modal.dismiss('Cancel click')">Cancel to Submit</button>
-  <button type="submit" class="btn btn-outline-primary" (click)="modal.close('Submit click')">Submit New Quote</button>
+  <button type="submit" class="btn btn-outline-primary" (click)="onSubmitQuote()">Submit New Quote</button>
 </div>

@@ -4,27 +4,24 @@
   a.edit {
     cursor: pointer;
     position: absolute;
-    right: 0;
+    right: 10px;
+    top: 5px;
     display: none;
   }
   &:hover {
-    a.edit {
-      display: block;
-    }
-  }
-
-  input {
-    width: 60%;
-    margin: auto;
-    height: 25px;
+    a.edit { display: block; }
   }
 
   .edit-btn {
     position: absolute;
     min-width: 80px;
     right: 0;
-    a {
-      cursor: pointer;
-    }
+    top: -10px;
+    a { cursor: pointer; }
+    i.icon-check { color: green; }
+    i.icon-close { color: red; }
   }
+
+  i:hover { font-weight: bold; }
 }
+
