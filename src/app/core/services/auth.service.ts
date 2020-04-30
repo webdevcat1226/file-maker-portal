@@ -15,14 +15,14 @@ interface SessionDTO {
 })
 export class AuthService {
 
-  private sessionServer: string = environment.sessionServer;
+  private baseURL: string = environment.baseAPIURL;
 
   constructor(
     private http: HttpClient
   ) {}
 
   login(email: string, password: string): Observable<boolean> {
-    return this.http.get<SessionDTO>(`${this.sessionServer}/auth/login?email=${email}&password=${password}`).pipe(
+    return this.http.get<SessionDTO>(`${this.baseURL}/auth/login?email=${email}&password=${password}`).pipe(
       map(response => this.saveToken(response.token, response.refresh))
     );
   }
@@ -48,7 +48,7 @@ export class AuthService {
 
   logout(): Observable<boolean> {
     const token = window.localStorage.getItem('token');
-    return this.http.get<boolean>(`${this.sessionServer}/auth/logout?token=${token}`).pipe(
+    return this.http.get<boolean>(`${this.baseURL}/auth/logout?token=${token}`).pipe(
       map(response => this.clearToken())
     );
   }
