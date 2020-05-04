@@ -13,11 +13,9 @@ import { ApplicationService } from '../../core/services/application.service';
 })
 export class HomeComponent implements OnInit {
 
-  arrQuotes: Array<any> = [];
-
-  submittedApplications: Array<any> = [];
-
-  processedApplications: Array<any> = [];
+  public arrQuotes: Array<any> = [];
+  public arrSubmittedApplications: Array<any> = [];
+  public processedApplications: Array<any> = [];
 
   constructor(
     private modal: NgbModal,
@@ -28,7 +26,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.initialize();
-    this.submittedApplications = this.applicationService.getAll();
   }
 
   openQuoteModal(quote) {
@@ -42,25 +39,25 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  openApplicationModal() {
-    const modalRef = this.modal.open(ApplicationModalComponent, {backdrop: 'static'});
-
+  openApplicationModal(application = null) {
+    const modalRef = this.modal.open(ApplicationModalComponent);
+    modalRef.componentInstance.application = application;
     modalRef.result.then(res => {
       console.log(res);
     }, reason => {
-      console.log(reason);
+      console.log('Quote Modal Closed.');
     });
   }
 
-  onClickTestBtn() {
+  onClickTestBtn() {}
 
-  }
-  initialize() {
-    this.quoteService.getQuotes().subscribe(quotes => {
-      this.arrQuotes = quotes;
-      console.log(this.arrQuotes);
-    }, err => {
-      console.log(err);
-    });
+  async initialize(): Promise<void> {
+    try {
+      const data = await this.quoteService.getAll();
+      this.arrQuotes = data.quotes || [];
+      this.arrSubmittedApplications = data.submittedApplications || [];
+    } catch (e) {
+      console.log(e);
+    } finally {}
   }
 }

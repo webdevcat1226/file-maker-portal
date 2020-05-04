@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,6 +7,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./application-modal.component.scss']
 })
 export class ApplicationModalComponent implements OnInit {
+  @Input() public application;
+  public tempApplication: any;
 
   name = '';
   isChecked = false;
@@ -17,6 +19,8 @@ export class ApplicationModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.tempApplication = Object.assign(this.application);
+    console.log(this.tempApplication);
   }
 
   TermsAndConditionChange() {

@@ -24,28 +24,23 @@
     </div>
 
     <div class="col-sm-12 col-md-6 col-xl-4">
-      <div class="homepage-table">
+      <div class="homepage-table table-submitted-apps">
         <div class="table-head">
           <span class="table-title">Submitted Applications</span>
           <button class="new-table-button btn btn-outline-primary" (click)="openApplicationModal()">Submit</button>
         </div>
         <div class="table-body">
-          <div class="tbody-background">
-            <ng-container *ngFor="let item of [1, 2, 3, 4, 5, 6, 7]">
-              <div class="odd-column"></div>
-              <div class="even-column"></div>
-            </ng-container>
-          </div>
-
-          <div class="tbody-content" *ngFor="let item of submittedApplications">
-            <div class="d-flex justify-content-center align-items-center">
-              <span class="our-reference">{{item.applicationName}}</span>
-              <span class="your-reference">{{item.customerRef}}</span>
-              <span class="address">{{item.worksAddress}}</span>
-              <button class="btn btn-outline-primary" (click)="openApplicationModal()">View</button>
+          <ng-container *ngFor="let item of arrSubmittedApplications; let idx = index"
+            [ngTemplateOutlet]="applicationItem" [ngTemplateOutletContext]="{application: item.fieldData, index: idx}">
+          </ng-container>
+          <ng-template #applicationItem let-application="application" let-index="index">
+            <div [class.odd-column]="!!(index%2)" [class.even-column]="!(index%2)" class="d-flex align-items-center p-2">
+              <span class="flex-grow-1">{{application['AgentRef']}}</span>
+              <span class="quote-status">{{application['Location of Proposed Work Address 1']}}</span>
+              <button class="btn btn-outline-primary" (click)="openApplicationModal(application)"
+                [style.visibility]="application.Status==='Pending' ? 'hidden' : 'visible'">View</button>
             </div>
-          </div>
-
+          </ng-template>
         </div>
       </div>
     </div>
@@ -63,7 +58,7 @@
             </ng-container>
           </div>
           <div class="tbody-content">
-            <div class="tbody-content" *ngFor="let item of processedApplications">
+            <div class="tbody-content" *ngFor="let item of []">
               <div class="d-flex justify-content-center align-items-center">
                 <span>Applications {{item.number}}</span>
               </div>
