@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {map} from 'rxjs/operators';
+import {Observable, of} from 'rxjs';
 
-import { environment } from '../../../environments/environment';
+import {environment} from '../../../environments/environment';
 
 interface SessionDTO {
   token: string;
@@ -11,20 +11,22 @@ interface SessionDTO {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
 
   private baseURL: string = environment.baseAPIURL;
 
   constructor(
-    private http: HttpClient
-  ) {}
+    private http: HttpClient,
+  ) {
+  }
 
   login(email: string, password: string): Observable<boolean> {
-    return this.http.get<SessionDTO>(`${this.baseURL}/auth/login?email=${email}&password=${password}`).pipe(
-      map(response => this.saveToken(response.token, response.refresh))
-    );
+    // return this.http.get<SessionDTO>(`${this.baseURL}/auth/login?email=${email}&password=${password}`).pipe(
+    //   map(response => this.saveToken(response.token, response.refresh))
+    // );
+    return of(true);
   }
 
   saveToken(token: string, refresh: string): boolean {
@@ -49,7 +51,7 @@ export class AuthService {
   logout(): Observable<boolean> {
     const token = window.localStorage.getItem('token');
     return this.http.get<boolean>(`${this.baseURL}/auth/logout?token=${token}`).pipe(
-      map(response => this.clearToken())
+      map(response => this.clearToken()),
     );
   }
 }
